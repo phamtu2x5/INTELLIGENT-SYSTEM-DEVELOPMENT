@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI House Price Estimator & Real Estate Knowledge Graph</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1 class="title">Định giá Bất động sản AI & Đồ thị Tri thức Đô thị</h1>
+                <p class="subtitle">Ước tính giá trị nhà đất kết hợp Tiện ích Xung quanh & Gói vay Ngân hàng</p>
+            </div>
+            <div class="header-badge">
+                <span class="dot"></span> 5 Models + Knowledge Graph
+            </div>
+        </header>
+
+        <!-- Presets -->
+        <div class="preset-wrapper">
+            <span class="preset-label">Mẫu nhà:</span>
+            <div class="preset-chips" id="presetChips">
+                {% for preset in presets %}
+                <button type="button" class="chip-btn" data-preset-id="{{ preset.id }}">
+                    {{ preset.name }}
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-grid">
+            <!-- Left: Form -->
+            <div class="card form-card">
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="modelSelect">Mô hình định giá</label>
+                        <select id="modelSelect" class="input-field">
+                            <option value="XGBoost" selected>XGBoost (Tuned — Khuyên dùng)</option>
+                            <option value="Random Forest">Random Forest</option>
+                            <option value="Gradient Boosting">Gradient Boosting</option>
+                            <option value="Linear Regression">Linear Regression (Baseline)</option>
+                            <option value="Decision Tree">Decision Tree</option>
+                            <option value="ALL">📊 So sánh cả 5 mô hình</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="form-group">
+                            <label for="cityInput">Tỉnh / Thành phố</label>
+                            <input type="text" id="cityInput" class="input-field" value="Hồ Chí Minh" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="districtInput">Quận / Huyện</label>
+                            <input type="text" id="districtInput" class="input-field" value="Gò Vấp" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wardInput">Phường / Xã</label>
+                            <input type="text" id="wardInput" class="input-field" value="Phường 11" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="form-group">
+                            <label for="areaInput">Diện tích (m²)</label>
+                            <input type="number" id="areaInput" class="input-field" min="10" max="1000" step="0.5" value="85" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="frontageInput">Mặt tiền (m)</label>
+                            <input type="number" id="frontageInput" class="input-field" min="0" max="50" step="0.5" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="accessRoadInput">Đường vào (m)</label>
+                            <input type="number" id="accessRoadInput" class="input-field" min="0" max="50" step="0.5" value="12">
+                        </div>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="form-group">
+                            <label for="floorsInput">Số tầng</label>
+                            <input type="number" id="floorsInput" class="input-field" min="1" max="30" value="4">
+                        </div>
+                        <div class="form-group">
+                            <label for="bedroomsInput">Phòng ngủ</label>
+                            <input type="number" id="bedroomsInput" class="input-field" min="1" max="20" value="4">
+                        </div>
+                        <div class="form-group">
+                            <label for="bathroomsInput">Phòng tắm</label>
+                            <input type="number" id="bathroomsInput" class="input-field" min="1" max="20" value="4">
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label for="legalSelect">Pháp lý</label>
+                            <select id="legalSelect" class="input-field">
+                                <option value="Have certificate" selected>Sổ đỏ (Đã có sổ)</option>
+                                <option value="In waiting">Đang chờ sổ</option>
+                                <option value="Other">Giấy tờ khác</option>
+                                <option value="Unknown">Chưa rõ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="furnitureSelect">Nội thất</label>
+                            <select id="furnitureSelect" class="input-field">
+                                <option value="Full" selected>Đầy đủ (Full)</option>
+                                <option value="Basic">Cơ bản</option>
+                                <option value="None">Nhà trống</option>
+                                <option value="Unknown">Không rõ</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">Định giá & Phân tích Tri thức</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Result -->
+            <div class="card result-card">
+                <!-- Single Model Result -->
+                <div id="singleResultCard">
+                    <div class="result-header">
+                        <span class="result-title" id="resultBadge">XGBoost (Tuned)</span>
+                        <span class="result-label">Giá ước tính</span>
+                    </div>
+
+                    <div class="price-banner">
+                        <div class="main-price" id="mainPrice">-- tỷ VNĐ</div>
+                        <div class="sub-price" id="priceM2">-- triệu/m²</div>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-label">Diện tích sàn</span>
+                            <span class="metric-value highlight" id="valArea">85 m²</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Quy mô nhà</span>
+                            <span class="metric-value" id="valStructure">3 Tầng • 4 PN</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Mặt tiền / Ngõ</span>
+                            <span class="metric-value" id="valRoads">4.5m / 6.0m</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Phân khúc BĐS</span>
+                            <span class="metric-value" id="valSegment">Nhà phố Đô thị</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Result (Hidden by default) -->
+                <div id="comparisonCard" style="display: none;">
+                    <div class="result-header">
+                        <span class="result-title">So sánh 5 Mô hình</span>
+                        <span class="avg-tag" id="avgPrice">-- tỷ</span>
+                    </div>
+                    <div class="consensus-note" id="rangePrice">Khoảng giá ước tính: --</div>
+                    <div class="bars-container" id="modelBarsContainer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real Estate Ecosystem & Knowledge Graph Section -->
+        <section class="re-section card" id="reSection">
+            <div class="re-header">
+                <div class="re-title-group">
+                    <span class="re-logo-tag">OneHousing & Banking</span>
+                    <h2 class="re-heading">Tiện ích Hạ tầng Đô thị & Gói Tài chính Mua nhà</h2>
+                </div>
+                <a href="tel:18006464" class="hotline-btn">📞 Chuyên viên tư vấn: 1800 6464</a>
+            </div>
+
+            <!-- Tabs: Amenities & Loans vs Knowledge Graph -->
+            <div class="tab-controls">
+                <button type="button" class="tab-btn active" id="tabFinanceBtn">🏦 Tiện ích Xung quanh & Gói Vay Ngân hàng</button>
+                <button type="button" class="tab-btn" id="tabGraphBtn">🕸️ Đồ thị Tri thức Bất động sản (Knowledge Graph)</button>
+            </div>
+
+            <!-- Tab 1: Amenities & Loans Panel -->
+            <div class="tab-content" id="tabFinanceContent">
+                <div class="finance-grid">
+                    <!-- Left: Nearby Amenities -->
+                    <div class="category-block">
+                        <h3 class="cat-title">🚆 Tiện ích & Quy hoạch bán kính 2km</h3>
+                        <div class="amenities-list" id="amenitiesList">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Right: Mortgage Banks Packages -->
+                    <div class="category-block">
+                        <h3 class="cat-title">💳 Gói vay Mua nhà Ngân hàng Liên kết</h3>
+                        <div class="bank-list" id="bankList">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="broker-banner">
+                    <span class="broker-icon">🏢</span>
+                    <div class="broker-info">
+                        <strong>Hỗ trợ Thẩm định Pháp lý & Xem nhà Thực tế:</strong>
+                        <span>Hệ thống chuyên viên OneHousing & Đối tác Batdongsan.com.vn khu vực</span>
+                    </div>
+                    <a href="https://batdongsan.com.vn" target="_blank" class="broker-link">Tra cứu quy hoạch ➔</a>
+                </div>
+            </div>
+
+            <!-- Tab 2: Interactive Knowledge Graph Panel -->
+            <div class="tab-content" id="tabGraphContent" style="display: none;">
+                <div class="graph-box">
+                    <div class="graph-legend">
+                        <span class="legend-dot dot-property">Căn nhà</span>
+                        <span class="legend-dot dot-location">Vị trí Quận/Huyện</span>
+                        <span class="legend-dot dot-amenity">Tiện ích Đô thị</span>
+                        <span class="legend-dot dot-valuation">Định giá AI</span>
+                        <span class="legend-dot dot-bank">Gói vay Ngân hàng</span>
+                    </div>
+                    <div id="graphCanvasWrapper" class="graph-canvas-wrapper">
+                        <!-- 2D Canvas Graph -->
+                        <canvas id="knowledgeGraphCanvas" width="960" height="380"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Diabetes Diagnostic & FPT Long Châu Healthcare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1 class="title">Chẩn đoán Tiểu đường & Hệ sinh thái FPT Long Châu</h1>
+                <p class="subtitle">Mô hình AI kết hợp Đồ thị Tri thức Y tế & Tư vấn Dược phẩm</p>
+            </div>
+            <div class="header-badge">
+                <span class="dot"></span> 5 Models + Knowledge Graph
+            </div>
+        </header>
+
+        <!-- Presets -->
+        <div class="preset-wrapper">
+            <span class="preset-label">Mẫu hồ sơ:</span>
+            <div class="preset-chips" id="presetChips">
+                {% for preset in presets %}
+                <button type="button" class="chip-btn" data-preset-id="{{ preset.id }}">
+                    {{ preset.name }}
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-grid">
+            <!-- Left: Form -->
+            <div class="card form-card">
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="modelSelect">Mô hình AI</label>
+                        <select id="modelSelect" class="input-field">
+                            <option value="XGBoost" selected>XGBoost (Tuned — Khuyên dùng)</option>
+                            <option value="Random Forest">Random Forest</option>
+                            <option value="Support Vector Machine">Support Vector Machine (SVM)</option>
+                            <option value="Logistic Regression">Logistic Regression (Baseline)</option>
+                            <option value="K-Nearest Neighbors">K-Nearest Neighbors (KNN)</option>
+                            <option value="ALL">📊 So sánh cả 5 mô hình</option>
+                        </select>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label for="glucoseInput">Đường huyết Glucose (mg/dL)</label>
+                            <input type="number" id="glucoseInput" class="input-field" min="40" max="300" value="180" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="insulinInput">Insulin 2h (mu U/ml)</label>
+                            <input type="number" id="insulinInput" class="input-field" min="0" max="850" value="220">
+                        </div>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="form-group">
+                            <label for="bmiInput">BMI (kg/m²)</label>
+                            <input type="number" id="bmiInput" class="input-field" min="10" max="70" step="0.1" value="38.0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bpInput">Huyết áp (mm Hg)</label>
+                            <input type="number" id="bpInput" class="input-field" min="30" max="150" value="85">
+                        </div>
+                        <div class="form-group">
+                            <label for="skinInput">Nếp gấp da (mm)</label>
+                            <input type="number" id="skinInput" class="input-field" min="5" max="99" value="35">
+                        </div>
+                    </div>
+
+                    <div class="grid-3">
+                        <div class="form-group">
+                            <label for="ageInput">Tuổi</label>
+                            <input type="number" id="ageInput" class="input-field" min="15" max="100" value="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pregInput">Số lần mang thai</label>
+                            <input type="number" id="pregInput" class="input-field" min="0" max="20" value="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="dpfInput">Hệ số di truyền (DPF)</label>
+                            <input type="number" id="dpfInput" class="input-field" min="0.05" max="2.5" step="0.01" value="0.85">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-primary">
+                        <span class="btn-text">Chẩn đoán & Phân tích Tri thức</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Result -->
+            <div class="card result-card">
+                <!-- Single Model Result -->
+                <div id="singleResultCard">
+                    <div class="result-header">
+                        <span class="result-title" id="resultBadge">XGBoost (Tuned)</span>
+                        <span class="result-label">Kết quả phân tích</span>
+                    </div>
+
+                    <div class="status-banner" id="statusBanner">
+                        <div class="status-title" id="statusHeadline">Nguy cơ cao mắc Tiểu đường</div>
+                        <div class="status-prob" id="riskProbValue">Xác suất: 88.6%</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="probFill" style="width: 88.6%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <span class="metric-label">Mã Bệnh Lý</span>
+                            <span class="metric-value highlight" id="valIcd">ICD-10 E11</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Ngưỡng Sàng lọc</span>
+                            <span class="metric-value" id="valThreshold">&theta; &ge; 0.25</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Glucose Huyết</span>
+                            <span class="metric-value" id="valGlucoseBio">180 mg/dL</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-label">Chỉ số Khối BMI</span>
+                            <span class="metric-value" id="valBmiBio">38.0 kg/m²</span>
+                        </div>
+                    </div>
+
+                    <div class="advice-box" id="adviceText">
+                        Chỉ số Glucose và BMI vượt ngưỡng an toàn. Cần tiến hành xét nghiệm HbA1c và tư vấn bác sĩ chuyên khoa nội tiết.
+                    </div>
+                </div>
+
+                <!-- Comparison Result (Hidden by default) -->
+                <div id="comparisonCard" style="display: none;">
+                    <div class="result-header">
+                        <span class="result-title">So sánh 5 Mô hình</span>
+                        <span class="avg-tag" id="avgProb">88.6%</span>
+                    </div>
+                    <div class="consensus-note" id="consensusText">Đang phân tích...</div>
+                    <div class="bars-container" id="modelBarsContainer">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Long Chau Healthcare Ecosystem Section -->
+        <section class="longchau-section card" id="longchauSection">
+            <div class="lc-header">
+                <div class="lc-title-group">
+                    <span class="lc-logo-tag">FPT Long Châu</span>
+                    <h2 class="lc-heading">Gói Chăm sóc Sức khỏe & Giải pháp Dược phẩm Khuyến nghị</h2>
+                </div>
+                <a href="tel:18006928" class="hotline-btn">📞 Dược sĩ tư vấn: 1800 6928</a>
+            </div>
+
+            <!-- Tabs: Products vs Knowledge Graph -->
+            <div class="tab-controls">
+                <button type="button" class="tab-btn active" id="tabProductsBtn">🛍️ Thiết bị & Dinh dưỡng Y học</button>
+                <button type="button" class="tab-btn" id="tabGraphBtn">🕸️ Đồ thị Tri thức Y khoa (Knowledge Graph)</button>
+            </div>
+
+            <!-- Tab 1: Products Panel -->
+            <div class="tab-content" id="tabProductsContent">
+                <div class="products-grid">
+                    <!-- Left: Medical Devices -->
+                    <div class="category-block">
+                        <h3 class="cat-title">📟 Thiết bị đo đường huyết tại nhà</h3>
+                        <div class="product-list" id="devicesList">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Right: Medical Nutrition -->
+                    <div class="category-block">
+                        <h3 class="cat-title">🥛 Dinh dưỡng chuyên biệt & Thảo dược</h3>
+                        <div class="product-list" id="supplementsList">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pharmacy-locator">
+                    <span class="store-icon">📍</span>
+                    <div class="store-info">
+                        <strong>Điểm tư vấn & Mua sắm gần nhất:</strong>
+                        <span id="nearestStoreText">Nhà thuốc FPT Long Châu — 123 Quang Trung, Gò Vấp, TP.HCM</span>
+                    </div>
+                    <a href="https://nhathuoclongchau.com.vn" target="_blank" class="store-link">Xem hệ thống nhà thuốc ➔</a>
+                </div>
+            </div>
+
+            <!-- Tab 2: Interactive Knowledge Graph Panel -->
+            <div class="tab-content" id="tabGraphContent" style="display: none;">
+                <div class="graph-box">
+                    <div class="graph-legend">
+                        <span class="legend-dot dot-patient">Bệnh nhân</span>
+                        <span class="legend-dot dot-pred">Kết quả AI</span>
+                        <span class="legend-dot dot-bio">Chỉ số sinh hóa</span>
+                        <span class="legend-dot dot-dis">Bệnh lý (ICD-10)</span>
+                        <span class="legend-dot dot-lc">Sản phẩm Long Châu</span>
+                    </div>
+                    <div id="graphCanvasWrapper" class="graph-canvas-wrapper">
+                        <!-- Canvas / Dynamic SVG graph -->
+                        <canvas id="knowledgeGraphCanvas" width="960" height="380"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
