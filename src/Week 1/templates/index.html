@@ -10,29 +10,79 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div>
-                <h1 class="title">Chẩn đoán Tiểu đường & Hệ sinh thái FPT Long Châu</h1>
-                <p class="subtitle">Mô hình AI kết hợp Đồ thị Tri thức Y tế & Tư vấn Dược phẩm</p>
-            </div>
-            <div class="header-badge">
-                <span class="dot"></span> 5 Models + Knowledge Graph
-            </div>
-        </header>
-
-        <!-- Presets -->
-        <div class="preset-wrapper">
-            <span class="preset-label">Mẫu hồ sơ:</span>
-            <div class="preset-chips" id="presetChips">
-                {% for preset in presets %}
-                <button type="button" class="chip-btn" data-preset-id="{{ preset.id }}">
-                    {{ preset.name }}
-                </button>
-                {% endfor %}
-            </div>
+    <!-- Top Mode Switcher Bar -->
+    <div class="top-mode-bar">
+        <div class="view-switch-pill">
+            <button type="button" class="mode-btn active" id="desktopModeBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>Desktop View</span>
+            </button>
+            <button type="button" class="mode-btn" id="mobileModeBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                <span>Mobile App View (3D)</span>
+            </button>
         </div>
+    </div>
+
+    <!-- Outer Device Stage for Mobile Mode -->
+    <div class="device-stage" id="deviceStage">
+        <!-- 3D Smartphone Mockup Shell -->
+        <div class="smartphone-shell" id="smartphoneShell">
+            <!-- Dynamic Island Notch -->
+            <div class="phone-dynamic-island">
+                <span class="island-camera"></span>
+                <span class="island-sensor"></span>
+            </div>
+
+            <!-- iOS Status Bar -->
+            <div class="phone-status-bar">
+                <span class="phone-time">09:41</span>
+                <div class="phone-status-icons">
+                    <span class="signal-dots">●●●●</span>
+                    <span class="wifi-symbol">📶</span>
+                    <span class="battery-symbol">🔋 100%</span>
+                </div>
+            </div>
+
+            <!-- Scrollable App Screen -->
+            <div class="phone-screen-container">
+                <div class="container">
+                    <!-- Native-style Mobile App Header (Visible in Mobile Mode) -->
+                    <div class="app-mobile-header">
+                        <div class="app-brand">
+                            <div class="app-logo-badge">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm1 14h-2v-3H8v-2h3V8h2v3h3v2h-3v3z"/></svg>
+                            </div>
+                            <div class="app-header-texts">
+                                <div class="app-main-title">Dự Đoán Tiểu Đường</div>
+                                <div class="app-sub-title" id="appHeaderModel">XGBoost Classifier (Tuned)</div>
+                            </div>
+                        </div>
+                        <button type="button" class="app-settings-btn" title="Cài đặt">⚙️</button>
+                    </div>
+
+                    <!-- Header (Desktop Mode) -->
+                    <header class="header desktop-only-header">
+                        <div>
+                            <h1 class="title">Chẩn đoán Tiểu đường & Hệ sinh thái FPT Long Châu</h1>
+                            <p class="subtitle">Mô hình AI kết hợp Đồ thị Tri thức Y tế & Tư vấn Dược phẩm</p>
+                        </div>
+                        <div class="header-badge">
+                            <span class="dot"></span> 5 Models + Knowledge Graph
+                        </div>
+                    </header>
+
+                    <!-- Presets -->
+                    <div class="preset-wrapper">
+                        <span class="preset-label">Mẫu hồ sơ:</span>
+                        <div class="preset-chips" id="presetChips">
+                            {% for preset in presets %}
+                            <button type="button" class="chip-btn" data-preset-id="{{ preset.id }}">
+                                {{ preset.name }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </div>
 
         <!-- Main Content -->
         <div class="main-grid">
@@ -53,47 +103,51 @@
 
                     <div class="grid-2">
                         <div class="form-group">
-                            <label for="glucoseInput">Đường huyết Glucose (mg/dL)</label>
-                            <input type="number" id="glucoseInput" class="input-field" min="40" max="300" value="180" required>
+                            <label for="pregInput"><span class="input-icon">👤</span> Số lần mang thai</label>
+                            <input type="number" id="pregInput" class="input-field" min="0" max="20" value="1">
                         </div>
                         <div class="form-group">
-                            <label for="insulinInput">Insulin 2h (mu U/ml)</label>
-                            <input type="number" id="insulinInput" class="input-field" min="0" max="850" value="220">
-                        </div>
-                    </div>
-
-                    <div class="grid-3">
-                        <div class="form-group">
-                            <label for="bmiInput">BMI (kg/m²)</label>
-                            <input type="number" id="bmiInput" class="input-field" min="10" max="70" step="0.1" value="38.0" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="bpInput">Huyết áp (mm Hg)</label>
-                            <input type="number" id="bpInput" class="input-field" min="30" max="150" value="85">
-                        </div>
-                        <div class="form-group">
-                            <label for="skinInput">Nếp gấp da (mm)</label>
-                            <input type="number" id="skinInput" class="input-field" min="5" max="99" value="35">
+                            <label for="glucoseInput"><span class="input-icon">💧</span> Glucose (mg/dL)</label>
+                            <input type="number" id="glucoseInput" class="input-field" min="40" max="300" value="85" required>
                         </div>
                     </div>
 
-                    <div class="grid-3">
+                    <div class="grid-2">
                         <div class="form-group">
-                            <label for="ageInput">Tuổi</label>
-                            <input type="number" id="ageInput" class="input-field" min="15" max="100" value="50" required>
+                            <label for="bpInput"><span class="input-icon">⏱️</span> Huyết áp (mm Hg)</label>
+                            <input type="number" id="bpInput" class="input-field" min="30" max="150" value="66">
                         </div>
                         <div class="form-group">
-                            <label for="pregInput">Số lần mang thai</label>
-                            <input type="number" id="pregInput" class="input-field" min="0" max="20" value="6">
+                            <label for="skinInput"><span class="input-icon">📏</span> Độ dày da (mm)</label>
+                            <input type="number" id="skinInput" class="input-field" min="5" max="99" value="29">
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label for="insulinInput"><span class="input-icon">💉</span> Insulin (mu U/ml)</label>
+                            <input type="number" id="insulinInput" class="input-field" min="0" max="850" value="0">
                         </div>
                         <div class="form-group">
-                            <label for="dpfInput">Hệ số di truyền (DPF)</label>
-                            <input type="number" id="dpfInput" class="input-field" min="0.05" max="2.5" step="0.01" value="0.85">
+                            <label for="bmiInput"><span class="input-icon">⚖️</span> BMI (kg/m²)</label>
+                            <input type="number" id="bmiInput" class="input-field" min="10" max="70" step="0.1" value="26.6" required>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="form-group">
+                            <label for="dpfInput"><span class="input-icon">👥</span> Phả hệ (DPF)</label>
+                            <input type="number" id="dpfInput" class="input-field" min="0.05" max="2.5" step="0.001" value="0.351">
+                        </div>
+                        <div class="form-group">
+                            <label for="ageInput"><span class="input-icon">🎂</span> Tuổi (Năm)</label>
+                            <input type="number" id="ageInput" class="input-field" min="15" max="100" value="31" required>
                         </div>
                     </div>
 
                     <button type="submit" id="submitBtn" class="btn-primary">
-                        <span class="btn-text">Chẩn đoán & Phân tích Tri thức</span>
+                        <span class="btn-icon">📊</span>
+                        <span class="btn-text">Dự Đoán Nguy Cơ</span>
                     </button>
                 </form>
             </div>
@@ -108,10 +162,10 @@
                     </div>
 
                     <div class="status-banner" id="statusBanner">
-                        <div class="status-title" id="statusHeadline">Nguy cơ cao mắc Tiểu đường</div>
-                        <div class="status-prob" id="riskProbValue">Xác suất: 88.6%</div>
+                        <div class="status-title" id="statusHeadline">Bình thường — Nguy cơ thấp</div>
+                        <div class="status-prob" id="riskProbValue">Xác suất: 12.4%</div>
                         <div class="progress-bar-bg">
-                            <div class="progress-bar-fill" id="probFill" style="width: 88.6%;"></div>
+                            <div class="progress-bar-fill" id="probFill" style="width: 12.4%;"></div>
                         </div>
                     </div>
 
@@ -126,16 +180,16 @@
                         </div>
                         <div class="metric-item">
                             <span class="metric-label">Glucose Huyết</span>
-                            <span class="metric-value" id="valGlucoseBio">180 mg/dL</span>
+                            <span class="metric-value" id="valGlucoseBio">85 mg/dL</span>
                         </div>
                         <div class="metric-item">
                             <span class="metric-label">Chỉ số Khối BMI</span>
-                            <span class="metric-value" id="valBmiBio">38.0 kg/m²</span>
+                            <span class="metric-value" id="valBmiBio">26.6 kg/m²</span>
                         </div>
                     </div>
 
                     <div class="advice-box" id="adviceText">
-                        Chỉ số Glucose và BMI vượt ngưỡng an toàn. Cần tiến hành xét nghiệm HbA1c và tư vấn bác sĩ chuyên khoa nội tiết.
+                        Chỉ số sinh hóa nằm trong ngưỡng an toàn. Duy trì lối sống lành mạnh và tái khám định kỳ 6 tháng/lần.
                     </div>
                 </div>
 
@@ -143,7 +197,7 @@
                 <div id="comparisonCard" style="display: none;">
                     <div class="result-header">
                         <span class="result-title">So sánh 5 Mô hình</span>
-                        <span class="avg-tag" id="avgProb">88.6%</span>
+                        <span class="avg-tag" id="avgProb">12.4%</span>
                     </div>
                     <div class="consensus-note" id="consensusText">Đang phân tích...</div>
                     <div class="bars-container" id="modelBarsContainer">
@@ -216,7 +270,29 @@
                 </div>
             </div>
         </section>
-    </div>
+                </div> <!-- End .container -->
+            </div> <!-- End .phone-screen-container -->
+
+            <!-- Mobile App Bottom Navigation Bar -->
+            <div class="phone-bottom-nav">
+                <button type="button" class="nav-item active" id="navDiagnoseBtn">
+                    <span class="nav-icon">💙</span>
+                    <span class="nav-label">Tiểu Đường</span>
+                </button>
+                <button type="button" class="nav-item" id="navPharmacyBtn">
+                    <span class="nav-icon">💊</span>
+                    <span class="nav-label">Long Châu</span>
+                </button>
+                <button type="button" class="nav-item" id="navGraphBtn">
+                    <span class="nav-icon">🕸️</span>
+                    <span class="nav-label">Tri Thức</span>
+                </button>
+            </div>
+
+            <!-- Home Indicator Pill -->
+            <div class="phone-home-indicator"></div>
+        </div> <!-- End .smartphone-shell -->
+    </div> <!-- End .device-stage -->
 
     <script src="/static/app.js"></script>
 </body>

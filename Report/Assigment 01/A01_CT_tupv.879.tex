@@ -814,18 +814,18 @@ Hệ thống tiến hành huấn luyện và so sánh các mô hình trên 3 kh�
 \begin{table}[H]
 \centering
 \small
-\setlength{\tabcolsep}{4pt}
-\begin{tabularx}{\textwidth}{lXXXp{3.2cm}}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lccc}
 \toprule
-\textbf{Mô hình Học máy} & \textbf{Thô ($X_{\text{unscaled}}$)} & \textbf{Chuẩn hóa ($X_{\text{scaled}}$)} & \textbf{Kỹ nghệ ($X_{\text{engineered}}$)} & \textbf{Đặc tính Ranh giới Học} \\
+\textbf{Mô hình Học máy} & \textbf{Thang đo Thô ($X_{\text{unscaled}}$)} & \textbf{Chuẩn hóa ($X_{\text{scaled}}$)} & \textbf{Kỹ nghệ ($X_{\text{engineered}}$)} \\
 \midrule
-\textbf{K-NN ($k=5$)} & $67.53\%$ ($0.7120$) & $70.78\%$ ($0.7850$) & \textbf{71.43\% (0.7980)} & Nhạy cảm Khoảng cách \\
-\textbf{SVM (RBF Kernel)} & $64.94\%$ ($0.5820$) & $73.38\%$ ($0.7910$) & \textbf{74.03\% (0.7976)} & Nhạy cảm Hình học Kernel \\
-\textbf{Logistic Regression} & $70.13\%$ ($0.8090$) & $70.78\%$ ($0.8130$) & \textbf{70.78\% (0.8130)} & Ranh giới Tuyến tính Phẳng \\
-\textbf{Random Forest} & $71.43\%$ ($0.8190$) & $71.43\%$ ($0.8190$) & \textbf{71.43\% (0.8230)} & Bất biến Thang đo (Tree) \\
-\textbf{XGBoost (Tuned)} & $74.68\%$ ($0.8150$) & $74.68\%$ ($0.8150$) & \textbf{75.32\% (0.8289)} & Gradient Tree Boosting \\
+\textbf{K-Nearest Neighbors (KNN)} & $67.53\%$ ($0.7120$) & $70.78\%$ ($0.7850$) & \textbf{71.43\% (0.7980)} \\
+\textbf{Support Vector Machine (SVM)} & $64.94\%$ ($0.5820$) & $73.38\%$ ($0.7910$) & \textbf{74.03\% (0.7976)} \\
+\textbf{Logistic Regression} & $70.13\%$ ($0.8090$) & $70.78\%$ ($0.8130$) & \textbf{70.78\% (0.8130)} \\
+\textbf{Random Forest Classifier} & $71.43\%$ ($0.8190$) & $71.43\%$ ($0.8190$) & \textbf{71.43\% (0.8230)} \\
+\textbf{XGBoost (Tuned)} & $74.68\%$ ($0.8150$) & $74.68\%$ ($0.8150$) & \textbf{75.32\% (0.8289)} \\
 \bottomrule
-\end{tabularx}
+\end{tabular}
 \caption{Bảng Đối chứng Hiệu năng Accuracy (ROC-AUC) trên Các Không gian Biểu diễn Dữ liệu}
 \label{tab:week1_exp3}
 \end{table}
@@ -1076,14 +1076,14 @@ Dựa trên kết quả hiệu chuẩn ngưỡng tối ưu $\mathbf{\theta = 0.2
 \label{tab:longchau_care_packages}
 \end{table}
 
-\subsection{Minh họa Thực nghiệm trên Giao diện Ứng dụng Web Lâm sàng}
+\subsection{Minh họa Thực nghiệm trên Giao diện Ứng dụng Web \& Mobile App Lâm sàng}
 
-Nhằm kiểm chứng khả năng tích hợp thực tế, hệ thống đã được triển khai hoàn chỉnh thành ứng dụng web tương tác thời gian thực (\texttt{app.py}). Các hình ảnh dưới đây minh họa trực quan quy trình chẩn đoán khép kín đối với một ca bệnh nhân nguy cơ cao ($50$ tuổi, $\text{Glucose} = 180\,\text{mg/dL}$, $\text{BMI} = 38.0\,\text{kg/m}^2$, $\text{Insulin} = 220\,\mu\text{U/mL}$):
+Nhằm kiểm chứng khả năng tích hợp thực tế, hệ thống đã được triển khai hoàn chỉnh thành ứng dụng đa nền tảng (Web Desktop \& Mobile App Simulator) tương tác thời gian thực (\texttt{app.py}). Các hình ảnh dưới đây minh họa trực quan quy trình chẩn đoán khép kín đối với một ca bệnh nhân nguy cơ cao ($50$ tuổi, $\text{Glucose} = 180\,\text{mg/dL}$, $\text{BMI} = 38.0\,\text{kg/m}^2$, $\text{Insulin} = 220\,\mu\text{U/mL}$):
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.72\textwidth]{images/web_ui_diagnosis.png}
-\caption{Giao diện Nhập liệu Hồ sơ Y sinh và Kết quả Chẩn đoán Cá thể từ Mô hình AI XGBoost}
+\caption{Giao diện Web Desktop: Nhập liệu Hồ sơ Y sinh và Kết quả Chẩn đoán Cá thể từ Mô hình AI XGBoost}
 \label{fig:web_ui_diagnosis}
 \end{figure}
 
@@ -1099,16 +1099,36 @@ Nhằm kiểm chứng khả năng tích hợp thực tế, hệ thống đã đ�
     \includegraphics[width=\textwidth]{images/web_ui_knowledge_graph.png}
     \caption{Trực quan hóa Mạng lưới Đồ thị Tri thức Y sinh Tương tác (HTML5 2D Canvas)}
 \end{subfigure}
-\caption{Hệ sinh thái Can thiệp Y tế và Mạng lưới Đồ thị Tri thức FPT Long Châu trên Web Demo}
+\caption{Hệ sinh thái Can thiệp Y tế và Mạng lưới Đồ thị Tri thức FPT Long Châu trên Web Desktop}
 \label{fig:web_ui_care_and_kg}
 \end{figure}
 
-\textbf{Quy trình vận hành khép kín trên giao diện thực tế (Hình \ref{fig:web_ui_diagnosis} \& Hình \ref{fig:web_ui_care_and_kg}):}
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.31\textwidth}
+    \includegraphics[width=\textwidth]{images/mobile_ui_diabetes_input.png}
+    \caption{Giao diện Nhập liệu Y sinh}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.31\textwidth}
+    \includegraphics[width=\textwidth]{images/mobile_ui_diabetes_result.png}
+    \caption{Kết quả Sàng lọc \& Lời khuyên}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.31\textwidth}
+    \includegraphics[width=\textwidth]{images/mobile_ui_diabetes_products.png}
+    \caption{Hệ sinh thái Dược phẩm Long Châu}
+\end{subfigure}
+\caption{Trực quan hóa Giao diện Ứng dụng Di động (Mobile App View) Hệ thống Chẩn đoán Tiểu đường}
+\label{fig:mobile_ui_diabetes}
+\end{figure}
+
+\textbf{Quy trình vận hành khép kín trên giao diện thực tế (Hình \ref{fig:web_ui_diagnosis}, \ref{fig:web_ui_care_and_kg} \& \ref{fig:mobile_ui_diabetes}):}
 \begin{enumerate}[leftmargin=1.5em]
-    \item \textbf{Tiếp nhận Hồ sơ Sinh học Cá thể (Hình \ref{fig:web_ui_diagnosis}):} Người dùng chọn mẫu hồ sơ hoặc nhập 8 chỉ số y sinh vào form bên trái. Hệ thống tự động tính toán chỉ dấu tương tác phi tuyến $\texttt{Glucose\_BMI\_Risk} = 180 \times 38.0 = 6,840$.
-    \item \textbf{Suy luận Chẩn đoán Cá thể (\texttt{XGBoost (Tuned)}):} Mô hình tính toán xác suất mắc bệnh đạt $\mathbf{83.9\%}$ (vượt xa ngưỡng sàng lọc tối ưu $\theta \ge 0.25$), phân loại người bệnh vào nhóm \textit{Nguy cơ cao (Diabetic)}, gán mã bệnh học \textbf{ICD-10 E11} và xuất lời khuyên lâm sàng yêu cầu xét nghiệm HbA1c tĩnh mạch ngay.
-    \item \textbf{Gói Can thiệp Cá nhân hóa Long Châu (Hình \ref{fig:web_ui_care_and_kg}a):} Tự động đề xuất danh mục giải pháp y tế: Máy đo đường huyết \textit{Accu-Chek Instant} ($950.000$ đ), Que thử ($360.000$ đ), Sữa y học \textit{Abbott Glucerna 850g} ($865.000$ đ), Viên thảo dược \textit{Diabetna} ($115.000$ đ) và kết nối tức thì tới \textbf{Tổng đài Dược sĩ 1800 6928}.
-    \item \textbf{Khám phá Mạng lưới Đồ thị Tri thức Động (Hình \ref{fig:web_ui_care_and_kg}b):} Bảng Canvas 2D biểu diễn trực quan toàn bộ liên kết ngữ nghĩa giữa thực thể Bệnh nhân $\longleftrightarrow$ Chỉ số sinh học $\longleftrightarrow$ Kết quả AI ($83.9\%$) $\longleftrightarrow$ Mã bệnh ICD-10 E11 $\longleftrightarrow$ Sản phẩm Long Châu $\longleftrightarrow$ Điểm nhà thuốc gần nhất.
+    \item \textbf{Tiếp nhận Hồ sơ Sinh học Cá thể (Hình \ref{fig:web_ui_diagnosis} \& \ref{fig:mobile_ui_diabetes}a):} Người dùng chọn mẫu hồ sơ hoặc nhập 8 chỉ số y sinh vào form. Trên giao diện Mobile App, các trường dữ liệu được thiết kế dạng thẻ tương tác gắn biểu tượng trực quan, hỗ trợ tự động tính toán chỉ số $\texttt{Glucose\_BMI\_Risk} = 180 \times 38.0 = 6,840$.
+    \item \textbf{Suy luận Chẩn đoán Cá thể (\texttt{XGBoost (Tuned)}):} Mô hình tính toán xác suất mắc bệnh đạt $\mathbf{83.9\%}$ (vượt xa ngưỡng sàng lọc tối ưu $\theta \ge 0.25$), phân loại người bệnh vào nhóm \textit{Nguy cơ cao (Diabetic)}, gán mã bệnh học \textbf{ICD-10 E11} và xuất lời khuyên lâm sàng yêu cầu xét nghiệm HbA1c tĩnh mạch ngay (Hình \ref{fig:mobile_ui_diabetes}b).
+    \item \textbf{Gói Can thiệp Cá nhân hóa Long Châu (Hình \ref{fig:web_ui_care_and_kg}a \& \ref{fig:mobile_ui_diabetes}c):} Tự động đề xuất danh mục giải pháp y tế: Máy đo đường huyết \textit{Accu-Chek Instant} ($950.000$ đ), Que thử ($360.000$ đ), Sữa y học \textit{Abbott Glucerna 850g} ($865.000$ đ), Viên thảo dược \textit{Diabetna} ($115.000$ đ) và kết nối tức thì tới \textbf{Tổng đài Dược sĩ 1800 6928}.
+    \item \textbf{Khám phá Mạng lưới Đồ thị Tri thức Động (Hình \ref{fig:web_ui_care_and_kg}b):} Bảng Canvas 2D trên Web Desktop biểu diễn trực quan toàn bộ liên kết ngữ nghĩa giữa thực thể Bệnh nhân $\longleftrightarrow$ Chỉ số sinh học $\longleftrightarrow$ Kết quả AI ($83.9\%$) $\longleftrightarrow$ Mã bệnh ICD-10 E11 $\longleftrightarrow$ Sản phẩm Long Châu $\longleftrightarrow$ Điểm nhà thuốc gần nhất.
 \end{enumerate}
 
 % =========================================================================
@@ -1553,14 +1573,14 @@ Dựa trên kết quả định giá AI, hệ thống tự động lập hồ s�
 \label{tab:re_mortgage_packages}
 \end{table}
 
-\subsection{Minh họa Thực nghiệm trên Giao diện Ứng dụng Web Định giá Bất động sản}
+\subsection{Minh họa Thực nghiệm trên Giao diện Ứng dụng Web \& Mobile App Định giá Bất động sản}
 
-Nhằm kiểm chứng khả năng tích hợp thực tế, hệ thống đã được triển khai hoàn chỉnh thành ứng dụng web tương tác thời gian thực (\texttt{app.py}). Các hình ảnh dưới đây minh họa trực quan quy trình định giá và phân tích đồ thị tri thức đối với một căn nhà phố tại đường Phan Văn Trị, Quận Gò Vấp, TP. Hồ Chí Minh ($85\,\text{m}^2$, $4$ tầng, $4$ phòng ngủ, $4$ phòng tắm, mặt tiền $5\,\text{m}$, đường vào $12\,\text{m}$, sổ đỏ đầy đủ):
+Nhằm kiểm chứng khả năng tích hợp thực tế, hệ thống đã được triển khai hoàn chỉnh thành ứng dụng đa nền tảng (Web Desktop \& Mobile App Simulator) tương tác thời gian thực (\texttt{app.py}). Các hình ảnh dưới đây minh họa trực quan quy trình định giá và phân tích đồ thị tri thức đối với một căn nhà phố tại đường Phan Văn Trị, Quận Gò Vấp, TP. Hồ Chí Minh ($85\,\text{m}^2$, $4$ tầng, $4$ phòng ngủ, $4$ phòng tắm, mặt tiền $5\,\text{m}$, đường vào $12\,\text{m}$, sổ đỏ đầy đủ):
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.72\textwidth]{images/web_ui_house_price.png}
-\caption{Giao diện Nhập liệu Thuộc tính Bất động sản và Kết quả Định giá AI XGBoost ($8.13$ tỷ VNĐ)}
+\caption{Giao diện Web Desktop: Nhập liệu Thuộc tính Bất động sản và Kết quả Định giá AI XGBoost ($8.13$ tỷ VNĐ)}
 \label{fig:web_ui_re_valuation}
 \end{figure}
 
@@ -1576,18 +1596,36 @@ Nhằm kiểm chứng khả năng tích hợp thực tế, hệ thống đã đ�
     \includegraphics[width=\textwidth]{images/web_ui_re_knowledge_graph.png}
     \caption{Trực quan hóa Mạng lưới Đồ thị Tri thức Bất động sản - Đô thị - Tài chính (HTML5 2D Canvas)}
 \end{subfigure}
-\caption{Hệ sinh thái Tiện ích Đô thị, Gói Vay Ngân hàng và Mạng lưới Đồ thị Tri thức trên Web Demo}
+\caption{Hệ sinh thái Tiện ích Đô thị, Gói Vay Ngân hàng và Mạng lưới Đồ thị Tri thức trên Web Desktop}
 \label{fig:web_ui_re_amenities_kg}
 \end{figure}
 
-\newpage
+\begin{figure}[H]
+\centering
+\begin{subfigure}[b]{0.31\textwidth}
+    \includegraphics[width=\textwidth]{images/mobile_app_house_step1_input.png}
+    \caption{Giao diện Nhập liệu Không gian}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.31\textwidth}
+    \includegraphics[width=\textwidth]{images/mobile_app_house_step2_price.png}
+    \caption{Kết quả Định giá AI Cá thể}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.31\textwidth}
+    \includegraphics[width=\textwidth]{images/mobile_app_house_step3_amenities.png}
+    \caption{Tiện ích Đô thị \& Gói Vay Bank}
+\end{subfigure}
+\caption{Trực quan hóa Giao diện Ứng dụng Di động (Mobile App View) Hệ thống Định giá Nhà đất}
+\label{fig:mobile_ui_house}
+\end{figure}
 
-\textbf{Quy trình vận hành khép kín trên giao diện thực tế (Hình \ref{fig:web_ui_re_valuation} \& Hình \ref{fig:web_ui_re_amenities_kg}):}
+\textbf{Quy trình vận hành khép kín trên giao diện thực tế (Hình \ref{fig:web_ui_re_valuation}, \ref{fig:web_ui_re_amenities_kg} \& \ref{fig:mobile_ui_house}):}
 \begin{enumerate}[leftmargin=1.5em]
-    \item \textbf{Tiếp nhận Thuộc tính Bất động sản (Hình \ref{fig:web_ui_re_valuation}):} Người dùng chọn mẫu căn nhà (Nhà phố Gò Vấp, Liền kề Cầu Giấy, Biệt thự Ecopark, v.v.) hoặc nhập trực tiếp các thông số không gian (vị trí địa lý, diện tích $85\,\text{m}^2$, số tầng, mặt tiền $5\,\text{m}$, độ rộng đường vào $12\,\text{m}$, pháp lý, nội thất).
-    \item \textbf{Suy luận Định giá Cá thể (\texttt{XGBoost (Tuned)}):} Mô hình AI suy luận giá trị ước tính đạt $\mathbf{8.13\text{ tỷ VNĐ}}$ (đơn giá $\mathbf{95.6\text{ triệu/m}^2}$), hoàn toàn phù hợp với mặt bằng thị trường nhà phố mặt tiền ngõ rộng tại khu vực Gò Vấp.
-    \item \textbf{Khai phá Tiện ích Đô thị \& Gói Vay Ngân hàng (Hình \ref{fig:web_ui_re_amenities_kg}a):} Tự động truy vấn mạng lưới tiện ích trong bán kính $2\,\text{km}$ (Vincom Phan Văn Trị $1.2\,\text{km}$, Công viên Gia Định $2.0\,\text{km}$, BV Quân Y 175 $2.5\,\text{km}$, Tuyến Metro số 2 $1.8\,\text{km}$) và tính toán 3 gói vay mua nhà đối tác: \textbf{Techcombank} (Hạn mức $6.10$ tỷ - $75\%$, trả góp $49.1$ tr/tháng), \textbf{Vietcombank} (Hạn mức $5.69$ tỷ - $70\%$, lãi suất $6.5\%$/năm), \textbf{VPBank} (Hạn mức $6.50$ tỷ - $80\%$).
-    \item \textbf{Khám phá Mạng lưới Đồ thị Tri thức Đa tầng (Hình \ref{fig:web_ui_re_amenities_kg}b):} Bảng Canvas 2D biểu diễn trực quan toàn bộ liên kết đồ thị tri thức giữa Căn nhà $\longleftrightarrow$ Vị trí Quận/Huyện $\longleftrightarrow$ Cụm tiện ích đô thị xung quanh $\longleftrightarrow$ Định giá AI ($8.13$ tỷ) $\longleftrightarrow$ Bảo lãnh tín dụng Ngân hàng ($6.10$ tỷ) $\longleftrightarrow$ Nền tảng niêm yết OneHousing/Batdongsan.
+    \item \textbf{Tiếp nhận Thuộc tính Bất động sản (Hình \ref{fig:web_ui_re_valuation} \& \ref{fig:mobile_ui_house}a):} Người dùng chọn mẫu căn nhà (Nhà phố Gò Vấp, Liền kề Cầu Giấy, Biệt thự Ecopark, v.v.) hoặc nhập trực tiếp các thông số không gian (vị trí địa lý, diện tích $85\,\text{m}^2$, số tầng, mặt tiền $5\,\text{m}$, độ rộng đường vào $12\,\text{m}$, pháp lý, nội thất) qua hệ thống trường thông tin tối ưu hóa trải nghiệm chạm trên di động.
+    \item \textbf{Suy luận Định giá Cá thể (\texttt{XGBoost (Tuned)}):} Mô hình AI suy luận giá trị ước tính đạt $\mathbf{8.13\text{ tỷ VNĐ}}$ (đơn giá $\mathbf{95.6\text{ triệu/m}^2}$), hiển thị nổi bật với các thẻ chỉ số tóm lược về diện tích sàn, quy mô phòng và phân khúc bất động sản (Hình \ref{fig:mobile_ui_house}b).
+    \item \textbf{Khai phá Tiện ích Đô thị \& Gói Vay Ngân hàng (Hình \ref{fig:web_ui_re_amenities_kg}a \& \ref{fig:mobile_ui_house}c):} Tự động truy vấn mạng lưới tiện ích trong bán kính $2\,\text{km}$ (Vincom Phan Văn Trị $1.2\,\text{km}$, Công viên Gia Định $2.0\,\text{km}$, BV Quân Y 175 $2.5\,\text{km}$, Tuyến Metro số 2 $1.8\,\text{km}$) và tính toán 3 gói vay mua nhà đối tác: \textbf{Techcombank} (Hạn mức $6.10$ tỷ - $75\%$, trả góp $49.1$ tr/tháng), \textbf{Vietcombank} (Hạn mức $5.69$ tỷ - $70\%$, lãi suất $6.5\%$/năm), \textbf{VPBank} (Hạn mức $6.50$ tỷ - $80\%$).
+    \item \textbf{Khám phá Mạng lưới Đồ thị Tri thức Đa tầng (Hình \ref{fig:web_ui_re_amenities_kg}b):} Bảng Canvas 2D trên Web Desktop biểu diễn trực quan toàn bộ liên kết đồ thị tri thức giữa Căn nhà $\longleftrightarrow$ Vị trí Quận/Huyện $\longleftrightarrow$ Cụm tiện ích đô thị xung quanh $\longleftrightarrow$ Định giá AI ($8.13$ tỷ) $\longleftrightarrow$ Bảo lãnh tín dụng Ngân hàng ($6.10$ tỷ) $\longleftrightarrow$ Nền tảng niêm yết OneHousing/Batdongsan.
 \end{enumerate}
 
 \newpage

@@ -40,6 +40,59 @@ document.addEventListener('DOMContentLoaded', async () => {
     let presetsData = {};
     let currentGraphData = null;
 
+    // View Mode Switcher (Desktop vs 3D Mobile App Simulator)
+    const desktopModeBtn = document.getElementById('desktopModeBtn');
+    const mobileModeBtn = document.getElementById('mobileModeBtn');
+    const appHeaderModel = document.getElementById('appHeaderModel');
+
+    if (desktopModeBtn && mobileModeBtn) {
+        desktopModeBtn.addEventListener('click', () => {
+            document.body.classList.remove('mobile-device-active');
+            desktopModeBtn.classList.add('active');
+            mobileModeBtn.classList.remove('active');
+            setTimeout(() => { if (currentGraphData) drawKnowledgeGraph(currentGraphData); }, 150);
+        });
+
+        mobileModeBtn.addEventListener('click', () => {
+            document.body.classList.add('mobile-device-active');
+            mobileModeBtn.classList.add('active');
+            desktopModeBtn.classList.remove('active');
+            setTimeout(() => { if (currentGraphData) drawKnowledgeGraph(currentGraphData); }, 150);
+        });
+    }
+
+    // Bottom Navigation Bar for Mobile App
+    const navDiagnoseBtn = document.getElementById('navDiagnoseBtn');
+    const navPharmacyBtn = document.getElementById('navPharmacyBtn');
+    const navGraphBtn = document.getElementById('navGraphBtn');
+    const longchauSection = document.getElementById('longchauSection');
+
+    function setActiveBottomNav(btn) {
+        [navDiagnoseBtn, navPharmacyBtn, navGraphBtn].forEach(b => b?.classList.remove('active'));
+        btn?.classList.add('active');
+    }
+
+    if (navDiagnoseBtn) {
+        navDiagnoseBtn.addEventListener('click', () => {
+            setActiveBottomNav(navDiagnoseBtn);
+            document.querySelector('.phone-screen-container')?.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    if (navPharmacyBtn) {
+        navPharmacyBtn.addEventListener('click', () => {
+            setActiveBottomNav(navPharmacyBtn);
+            if (tabProductsBtn) tabProductsBtn.click();
+            longchauSection?.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+    if (navGraphBtn) {
+        navGraphBtn.addEventListener('click', () => {
+            setActiveBottomNav(navGraphBtn);
+            if (tabGraphBtn) tabGraphBtn.click();
+            longchauSection?.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
     // 1. Fetch Presets & Models
     try {
         const [presetsRes, modelsRes] = await Promise.all([
@@ -90,6 +143,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 3. Model Switch
     modelSelect.addEventListener('change', () => {
+        if (appHeaderModel) {
+            appHeaderModel.textContent = modelSelect.value === 'ALL' ? 'So sánh 5 Mô hình AI' : `${modelSelect.value} (Classifier)`;
+        }
         handlePrediction();
     });
 

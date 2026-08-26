@@ -35,6 +35,59 @@ document.addEventListener('DOMContentLoaded', async () => {
     let presetsData = {};
     let currentGraphData = null;
 
+    // View Mode Switcher (Desktop vs 3D Mobile App Simulator)
+    const desktopModeBtn = document.getElementById('desktopModeBtn');
+    const mobileModeBtn = document.getElementById('mobileModeBtn');
+    const appHeaderModel = document.getElementById('appHeaderModel');
+
+    if (desktopModeBtn && mobileModeBtn) {
+        desktopModeBtn.addEventListener('click', () => {
+            document.body.classList.remove('mobile-device-active');
+            desktopModeBtn.classList.add('active');
+            mobileModeBtn.classList.remove('active');
+            setTimeout(() => { if (currentGraphData) drawKnowledgeGraph(currentGraphData); }, 150);
+        });
+
+        mobileModeBtn.addEventListener('click', () => {
+            document.body.classList.add('mobile-device-active');
+            mobileModeBtn.classList.add('active');
+            desktopModeBtn.classList.remove('active');
+            setTimeout(() => { if (currentGraphData) drawKnowledgeGraph(currentGraphData); }, 150);
+        });
+    }
+
+    // Bottom Navigation Bar for Mobile App
+    const navValuationBtn = document.getElementById('navValuationBtn');
+    const navFinanceBtn = document.getElementById('navFinanceBtn');
+    const navGraphBtn = document.getElementById('navGraphBtn');
+    const reSection = document.getElementById('reSection');
+
+    function setActiveBottomNav(btn) {
+        [navValuationBtn, navFinanceBtn, navGraphBtn].forEach(b => b?.classList.remove('active'));
+        btn?.classList.add('active');
+    }
+
+    if (navValuationBtn) {
+        navValuationBtn.addEventListener('click', () => {
+            setActiveBottomNav(navValuationBtn);
+            document.querySelector('.phone-screen-container')?.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    if (navFinanceBtn) {
+        navFinanceBtn.addEventListener('click', () => {
+            setActiveBottomNav(navFinanceBtn);
+            if (tabFinanceBtn) tabFinanceBtn.click();
+            reSection?.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+    if (navGraphBtn) {
+        navGraphBtn.addEventListener('click', () => {
+            setActiveBottomNav(navGraphBtn);
+            if (tabGraphBtn) tabGraphBtn.click();
+            reSection?.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
     // 1. Fetch Presets & Models
     try {
         const [presetsRes, modelsRes] = await Promise.all([
@@ -45,6 +98,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         pData.presets.forEach(p => {
             presetsData[p.id] = p.data;
         });
+        if (pData.presets.length > 0) {
+            fillFormData(pData.presets[0].data);
+            handlePrediction();
+        }
     } catch (err) {
         console.error('Error fetching presets/models:', err);
     }
@@ -84,6 +141,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // 3. Model Switch
     modelSelect.addEventListener('change', () => {
+        if (appHeaderModel) {
+            appHeaderModel.textContent = modelSelect.value === 'ALL' ? 'So sánh 5 Mô hình AI' : `${modelSelect.value} Regressor`;
+        }
         handlePrediction();
     });
 

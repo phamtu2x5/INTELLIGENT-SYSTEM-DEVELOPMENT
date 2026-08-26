@@ -206,13 +206,13 @@ PRESETS = [
 # Request Schema
 class PatientInput(BaseModel):
     Pregnancies: Optional[float] = Field(0.0, ge=0.0, le=25.0, description="Số lần mang thai")
-    Glucose: float = Field(..., ge=40.0, le=350.0, description="Nồng độ đường huyết (mg/dL)")
-    BloodPressure: Optional[float] = Field(None, ge=30.0, le=200.0, description="Huyết áp tâm trương (mm Hg)")
-    SkinThickness: Optional[float] = Field(None, ge=5.0, le=100.0, description="Độ dày nếp gấp da (mm)")
-    Insulin: Optional[float] = Field(None, ge=5.0, le=900.0, description="Nồng độ Insulin 2h (mu U/ml)")
+    Glucose: float = Field(..., ge=20.0, le=350.0, description="Nồng độ đường huyết (mg/dL)")
+    BloodPressure: Optional[float] = Field(None, ge=0.0, le=250.0, description="Huyết áp tâm trương (mm Hg)")
+    SkinThickness: Optional[float] = Field(None, ge=0.0, le=100.0, description="Độ dày nếp gấp da (mm)")
+    Insulin: Optional[float] = Field(None, ge=0.0, le=900.0, description="Nồng độ Insulin 2h (mu U/ml)")
     BMI: float = Field(..., ge=10.0, le=80.0, description="Chỉ số khối cơ thể (kg/m²)")
-    DiabetesPedigreeFunction: Optional[float] = Field(0.47, ge=0.05, le=3.0, description="Hệ số di truyền tiểu đường")
-    Age: float = Field(..., ge=15.0, le=110.0, description="Tuổi bệnh nhân")
+    DiabetesPedigreeFunction: Optional[float] = Field(0.47, ge=0.0, le=3.0, description="Hệ số di truyền tiểu đường")
+    Age: float = Field(..., ge=1.0, le=120.0, description="Tuổi bệnh nhân")
     model_name: Optional[str] = Field("XGBoost", description="Mô hình được chọn")
 
 
