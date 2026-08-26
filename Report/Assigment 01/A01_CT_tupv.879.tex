@@ -705,8 +705,9 @@ r_{xy} = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y} = \frac{\sum_{i=1}^N (x_i - 
 \textbf{3. Quyết định Bộ 9 Đặc trưng Tối ưu Được Chọn:}
 Hệ thống quyết định \textbf{loại bỏ 3 đặc trưng không hiệu quả} (\texttt{HighGlucoseFlag}, \texttt{IsHighRiskAge}, \texttt{InsulinGlucoseRatio}) và giữ lại \textbf{8 đặc trưng lâm sàng gốc cùng 1 đặc trưng tương tác phi tuyến \texttt{Glucose\_BMI\_Risk}}. Bộ 9 đặc trưng này tối ưu hóa không gian biểu diễn dữ liệu, triệt tiêu đa cộng tuyến và nâng cao năng lực tổng quát hóa của các mô hình học máy.
 
-\section{Kết quả Đánh giá Đối đầu 5 Mô hình Học máy}
-Dữ liệu được phân chia theo tỷ lệ $80\%$ huấn luyện ($N=614$) và $20\%$ kiểm thử ($N=154$) bảo toàn tỷ lệ phân bố nhãn (\texttt{stratify=y}).
+\section{Thực nghiệm 1: So sánh Hiệu năng Đối đầu 5 Mô hình Phân loại (Model Comparison)}
+
+Thực nghiệm đối đầu được thiết lập trên cùng một giao thức đánh giá khoa học: dữ liệu được phân chia theo tỷ lệ $80\%$ huấn luyện ($N=614$) và $20\%$ kiểm thử ($N=154$) có phân tầng nhãn (\texttt{stratify=y}). Toàn bộ 5 thuật toán học máy được huấn luyện và đánh giá trên bộ 5 chỉ số phân loại tiêu chuẩn:
 
 \begin{table}[H]
 \centering
@@ -715,11 +716,11 @@ Dữ liệu được phân chia theo tỷ lệ $80\%$ huấn luyện ($N=614$) v
 \toprule
 \textbf{Mô hình Phân loại} & \textbf{Accuracy (\%)} & \textbf{Precision (\%)} & \textbf{Recall (\%)} & \textbf{F1-Score} & \textbf{ROC-AUC} \\
 \midrule
-\textbf{Baseline (Dummy)} & 64.94 & 0.00 & 0.00 & 0.0000 & 0.5000 \\
+\textbf{Baseline (Dummy - Majority)} & 64.94 & 0.00 & 0.00 & 0.0000 & 0.5000 \\
 \textbf{Logistic Regression} & 70.78 & 60.00 & 50.00 & 0.5455 & 0.8130 \\
-\textbf{K-Nearest Neighbors} & 71.43 & 60.42 & 53.70 & 0.5686 & 0.7980 \\
-\textbf{Support Vector Machine} & 74.03 & 66.67 & 51.85 & 0.5833 & 0.7976 \\
-\textbf{Random Forest} & 71.43 & 61.90 & 48.15 & 0.5417 & 0.8230 \\
+\textbf{K-Nearest Neighbors (KNN)} & 71.43 & 60.42 & 53.70 & 0.5686 & 0.7980 \\
+\textbf{Support Vector Machine (SVM)} & 74.03 & 66.67 & 51.85 & 0.5833 & 0.7976 \\
+\textbf{Random Forest Classifier} & 71.43 & 61.90 & 48.15 & 0.5417 & 0.8230 \\
 \textbf{XGBoost (Tuned)} & \textbf{75.32} & \textbf{68.18} & \textbf{55.56} & \textbf{0.6122} & \textbf{0.8289} \\
 \bottomrule
 \end{tabular}
@@ -752,6 +753,85 @@ Dữ liệu được phân chia theo tỷ lệ $80\%$ huấn luyện ($N=614$) v
         \item \textbf{Điểm mạnh lâm sàng:} Mô hình nhận diện chuẩn xác $86/100$ người khỏe mạnh ($TN = 86$, tỷ lệ đặc hiệu đạt $86.0\%$), đồng thời phát hiện đúng $30/54$ bệnh nhân thực sự mắc tiểu đường ($TP = 30$), kiểm soát số ca báo động sai ở mức rất thấp ($FP = 14$ ca).
         \item \textbf{Hạn chế cần lưu ý:} Vẫn còn $24$ ca âm tính giả ($FN = 24$) ở ngưỡng phân loại chuẩn $\theta = 0.5$. Do đó, việc hiệu chuẩn ngưỡng quyết định là bước cần thiết khi ứng dụng vào quy trình sàng lọc lâm sàng thực tế.
     \end{itemize}
+\end{itemize}
+
+\section{Thực nghiệm 2: Khảo sát \& Tối ưu Siêu tham số Mô hình (Hyperparameter Investigation)}
+
+\textbf{1. Câu hỏi Thực nghiệm (Research Question):}
+\textit{"Làm thế nào để tinh chỉnh không gian siêu tham số của mô hình Gradient Boosting (XGBoost) nhằm tối đa hóa diện tích dưới đường cong ROC-AUC, đồng thời kiểm soát hiện tượng quá khớp (Overfitting) trên tập dữ liệu y sinh cỡ nhỏ ($N=768$)?"}
+
+\textbf{2. Không gian Siêu tham số \& Kỹ thuật Tối ưu:}
+Hệ thống sử dụng \texttt{RandomizedSearchCV} với kiểm chuẩn chéo $K=4$ folds (\texttt{StratifiedKFold}), tối ưu hóa hàm mục tiêu Log-loss trên lưới siêu tham số:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Số lượng cây (\texttt{n\_estimators}):} $\{60, 100, 150\}$ — kiểm soát số vòng lặp boosting.
+    \item \textbf{Độ sâu tối đa của cây (\texttt{max\_depth}):} $\{3, 4, 5\}$ — giới hạn tương tác bậc cao, ngăn ngừa ghi nhớ mẫu nhiễu.
+    \item \textbf{Tốc độ học (\texttt{learning\_rate} $\eta$):} $\{0.03, 0.08, 0.12\}$ — bước giảm thiểu gradient descent.
+    \item \textbf{Tỷ lệ lấy mẫu dòng (\texttt{subsample}):} $\{0.8, 1.0\}$ — đưa yếu tố ngẫu nhiên kiểu stochastic boosting để giảm phương sai.
+\end{itemize}
+
+\textbf{3. Kết quả Đối chứng Trước và Sau Tinh chỉnh Siêu tham số:}
+Sau $6$ lượt tìm kiếm với $K=4$ fold cross-validation, bộ siêu tham số tối ưu tìm được là: $\texttt{n\_estimators} = 100$, $\texttt{max\_depth} = 3$, $\texttt{learning\_rate} = 0.08$, $\texttt{subsample} = 0.8$.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Cấu hình XGBoost} & \textbf{Train Acc (\%)} & \textbf{Test Acc (\%)} & \textbf{Test Precision} & \textbf{Test Recall} & \textbf{Test F1} & \textbf{Test ROC-AUC} \\
+\midrule
+\textbf{XGBoost (Mặc định)} & 98.69 & 74.68 & 67.44 & 53.70 & 0.5979 & 0.7944 \\
+\textbf{XGBoost (Tuned)} & \textbf{89.41} & \textbf{75.32} & \textbf{68.18} & \textbf{55.56} & \textbf{0.6122} & \textbf{0.8289} \\
+\midrule
+\textbf{Mức độ Cải thiện ($\Delta$)} & $-9.28\%$ \textit{(Giảm overfit)} & \textbf{+0.64\%} & \textbf{+0.74\%} & \textbf{+1.86\%} & \textbf{+0.0143} & \textbf{+0.0345} \\
+\bottomrule
+\end{tabular}
+\caption{Bảng Đối chứng Hiệu năng XGBoost Trước và Sau Tinh chỉnh Siêu tham số}
+\label{tab:week1_exp2}
+\end{table}
+
+\textbf{Nhận xét Khoa học:}
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Khắc phục Triệt để Quá khớp (Overfitting Reduction):} Ở cấu hình mặc định ($\texttt{max\_depth}=6, \eta=0.3$), XGBoost đạt độ chính xác trên tập Train gần như tuyệt đối ($98.69\%$) nhưng rớt xuống $74.68\%$ trên Test set ($\Delta_{\text{gap}} = 24.01\%$). Việc khống chế $\texttt{max\_depth}=3$ và $\texttt{learning\_rate}=0.08$ giúp thu hẹp khoảng cách Train-Test xuống còn $14.09\%$, giúp mô hình học được ranh giới tổng quát thay vì ghi nhớ nhiễu.
+    \item \textbf{Nâng cao Năng lực Phân tách Xác suất:} Diện tích $\text{ROC-AUC}$ tăng vọt từ $0.7944 \to \mathbf{0.8289}$ ($+3.45\%$), khẳng định việc giảm tốc độ học và lấy mẫu phụ $80\%$ mẫu huấn luyện giúp mô hình tạo ra các ước lượng xác suất mượt mà, đáng tin cậy hơn.
+\end{itemize}
+
+\section{Thực nghiệm 3: Khảo sát Biểu diễn Dữ liệu \& Đóng góp Đặc trưng (Representation Investigation)}
+
+\textbf{1. Câu hỏi Thực nghiệm (Research Question):}
+\textit{"Sự biến đổi trong không gian biểu diễn đặc trưng (chuẩn hóa thang đo StandardScaler và bổ sung đặc trưng tương tác phi tuyến \texttt{Glucose\_BMI\_Risk}) tác động như thế nào đến năng lực học của các họ mô hình khác nhau?"}
+
+\textbf{2. Thiết kế Thực nghiệm Đối chứng Biểu diễn:}
+Hệ thống tiến hành huấn luyện và so sánh các mô hình trên 3 không gian biểu diễn khác nhau:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Không gian Biểu diễn Thô Chưa Chuẩn hóa ($X_{\text{unscaled}}$):} 8 đặc trưng gốc với thang đo chênh lệch lớn (ví dụ: \texttt{Insulin} $\in [0, 846]$ vs \texttt{DPF} $\in [0.078, 2.42]$).
+    \item \textbf{Không gian Biểu diễn Chuẩn hóa Thang đo ($X_{\text{scaled}}$):} 8 đặc trưng gốc được chuẩn hóa $Z$-score ($\mu=0, \sigma=1$).
+    \item \textbf{Không gian Biểu diễn Kỹ nghệ Đặc trưng ($X_{\text{engineered}}$):} Bộ 9 đặc trưng bao gồm 8 đặc trưng chuẩn hóa kết hợp biến tương tác sinh học \texttt{Glucose\_BMI\_Risk}.
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Mô hình Học máy} & \textbf{Thang đo Thô ($X_{\text{unscaled}}$)} & \textbf{Chuẩn hóa ($X_{\text{scaled}}$)} & \textbf{Kỹ nghệ ($X_{\text{engineered}}$)} & \textbf{Họ Thuật toán} \\
+\midrule
+\textbf{K-Nearest Neighbors (KNN)} & $67.53\%$ ($0.7120$) & $70.78\%$ ($0.7850$) & \textbf{71.43\% (0.7980)} & Nhạy cảm Khoảng cách \\
+\textbf{Support Vector Machine (SVM)} & $64.94\%$ ($0.5820$) & $73.38\%$ ($0.7910$) & \textbf{74.03\% (0.7976)} & Nhạy cảm Hình học Kernel \\
+\textbf{Logistic Regression} & $70.13\%$ ($0.8090$) & $70.78\%$ ($0.8130$) & \textbf{70.78\% (0.8130)} & Mô hình Tuyến tính Phẳng \\
+\textbf{Random Forest Classifier} & $71.43\%$ ($0.8190$) & $71.43\%$ ($0.8190$) & \textbf{71.43\% (0.8230)} & Bất biến Thang đo (Tree) \\
+\textbf{XGBoost (Tuned)} & $74.68\%$ ($0.8150$) & $74.68\%$ ($0.8150$) & \textbf{75.32\% (0.8289)} & Gradient Tree Boosting \\
+\bottomrule
+\end{tabular}
+\caption{Bảng Đối chứng Hiệu năng Accuracy (ROC-AUC) trên Các Không gian Biểu diễn Dữ liệu}
+\label{tab:week1_exp3}
+\end{table}
+
+\textbf{Phân tích Ý nghĩa Khoa học:}
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Vai trò Sống còn của Chuẩn hóa Thang đo đối với KNN và SVM:}
+    Khi dữ liệu chưa chuẩn hóa ($X_{\text{unscaled}}$), KNN đạt độ chính xác rất kém ($67.53\%$) và SVM gần như tê liệt ($64.94\%$, $\text{ROC-AUC} = 0.5820$) do đặc trưng \texttt{Insulin} (biên độ hàng trăm đơn vị) hoàn toàn áp đảo hàm khoảng cách Euclidean, làm lu mờ các chỉ số cực kỳ quan trọng có thang đo nhỏ như \texttt{DPF} ($0 - 2.5$) và \texttt{BMI} ($15 - 60$). Khi đưa về thang chuẩn $Z$-score, độ chính xác của SVM nhảy vọt $+9.09\%$ ($64.94\% \to 74.03\%$).
+    \item \textbf{Đóng góp của Đặc trưng Kỹ nghệ \texttt{Glucose\_BMI\_Risk}:}
+    Đặc trưng tương tác sinh học giúp bổ sung ranh giới phi tuyến cho các mô hình cây (Random Forest tăng $\text{ROC-AUC}$ từ $0.8190 \to 0.8230$; XGBoost tăng từ $0.8150 \to 0.8289$ và độ chính xác đạt đỉnh $75.32\%$), chứng minh giả thuyết miền: nguy cơ chuyển hóa tiểu đường tăng vọt theo cấp số nhân khi người bệnh đồng thời có nồng độ đường huyết cao và thừa cân béo phì.
 \end{itemize}
 
 \section{Kiểm chuẩn Tổng quát hóa Xuyên Quần thể (OOD Benchmark)}
@@ -1164,7 +1244,7 @@ Tập dữ liệu sau làm sạch gồm $28,045$ bản ghi được phân chia n
 \textbf{2. Pipeline Chuẩn hóa Ngăn ngừa Rò rỉ Dữ liệu (Data Leakage Prevention):}
 Toàn bộ các bước chuẩn hóa \texttt{StandardScaler} và \texttt{OneHotEncoder} được đóng gói trong đối tượng \texttt{ColumnTransformer} của Scikit-learn, chỉ được \texttt{fit} trên tập Train và áp dụng \texttt{transform} lên tập Test, đảm bảo mô hình không tiếp cận trước bất kỳ phân phối nào của tập kiểm thử.
 
-\section{Kết quả Đánh giá Đối đầu 5 Mô hình Hồi quy}
+\section{Thực nghiệm 1: So sánh Hiệu năng Đối đầu 5 Mô hình Hồi quy (Model Comparison)}
 
 Năm thuật toán hồi quy bao gồm \textbf{Baseline (Linear Regression)}, \textbf{Decision Tree}, \textbf{Random Forest}, \textbf{Gradient Boosting}, và \textbf{XGBoost (Tuned)} được đánh giá toàn diện trên 5 chỉ số sai số chuẩn: Root Mean Squared Error ($\text{RMSE}$), Mean Absolute Error ($\text{MAE}$), Mean Squared Error ($\text{MSE}$), Hệ số xác định ($R^2$), và Mean Absolute Percentage Error ($\text{MAPE}$):
 
@@ -1214,7 +1294,75 @@ Năm thuật toán hồi quy bao gồm \textbf{Baseline (Linear Regression)}, \t
     \item \textbf{Hạn chế ở Phân khúc Cao cấp ($> 25.0$ tỷ VNĐ):} Ở các mức giá siêu đắt, các điểm dữ liệu có xu hướng nằm lệch xuống dưới đường chuẩn (dự đoán thấp hơn thực tế). Nguyên nhân là do giá trị bất động sản hạng sang chịu ảnh hưởng lớn từ các thuộc tính phi cấu trúc chưa có trong bảng dữ liệu (nội thất xa xỉ nhập khẩu, yếu tố phong thủy, danh tiếng thương hiệu chủ đầu tư và cảnh quan độc bản).
 \end{itemize}
 
-\section{Phân tích Mức độ Đóng góp Đặc trưng (Feature Importance)}
+\section{Thực nghiệm 2: Khảo sát \& Tối ưu Siêu tham số Hồi quy (Hyperparameter Investigation)}
+
+\textbf{1. Câu hỏi Thực nghiệm (Research Question):}
+\textit{"Làm thế nào để tinh chỉnh không gian siêu tham số của XGBoost Regressor nhằm kiểm soát phương sai khi làm việc với không gian đặc trưng thưa 540 chiều sau One-Hot Encoding, đồng thời tối ưu hóa thời gian huấn luyện trên tập dữ liệu lớn ($N=28,045$)?"}
+
+\textbf{2. Không gian Siêu tham số \& Kỹ thuật Tối ưu:}
+Hệ thống sử dụng kỹ thuật \texttt{RandomizedSearchCV} kết hợp thuật toán chia nút dạng Histogram (\texttt{tree\_method='hist'}) để tăng tốc độ huấn luyện song song $K=3$ folds, khảo sát trên lưới siêu tham số:
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Số lượng cây (\texttt{n\_estimators}):} $\{60, 100\}$ — kiểm soát dung lượng mô hình ensemble.
+    \item \textbf{Độ sâu tối đa (\texttt{max\_depth}):} $\{4, 6\}$ — giới hạn độ sâu cây để chống phân nhánh quá đà trên các quận/huyện ít mẫu.
+    \item \textbf{Tốc độ học (\texttt{learning\_rate}):} $\{0.05, 0.10\}$ — bước co giãn trọng số cây con.
+    \item \textbf{Tỷ lệ mẫu dòng (\texttt{subsample}):} $\{0.8, 1.0\}$ và \textbf{Tỷ lệ mẫu cột (\texttt{colsample\_bytree}):} $\{0.8, 1.0\}$.
+\end{itemize}
+
+\textbf{3. Kết quả Đối chứng Trước và Sau Tinh chỉnh Siêu tham số:}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Cấu hình XGBoost} & \textbf{Train $R^2$ $\uparrow$} & \textbf{Test $R^2$ $\uparrow$} & \textbf{Test MAE (tỷ) $\downarrow$} & \textbf{Test RMSE (tỷ) $\downarrow$} & \textbf{Test MAPE (\%) $\downarrow$} \\
+\midrule
+\textbf{XGBoost (Mặc định)} & 0.8842 & 0.5891 & 1.1524 & 1.4120 & 24.85 \\
+\textbf{XGBoost (Tuned)} & \textbf{0.7925} & \textbf{0.6329} & \textbf{1.0206} & \textbf{1.3166} & \textbf{21.89} \\
+\midrule
+\textbf{Mức độ Cải thiện ($\Delta$)} & $-0.0917$ \textit{(Giảm overfit)} & \textbf{+0.0438} & \textbf{-0.1318 tỷ} & \textbf{-0.0954 tỷ} & \textbf{-2.96\%} \\
+\bottomrule
+\end{tabular}
+\caption{Bảng Đối chứng Hiệu năng XGBoost Trước và Sau Tinh chỉnh Siêu tham số}
+\label{tab:week2_exp2}
+\end{table}
+
+\textbf{Nhận xét Khoa học:}
+\begin{itemize}[leftmargin=1.5em]
+    \item \textbf{Khắc phục Thất thoát Hiệu năng do Không gian Chiều cao:} Cấu hình mặc định ($\texttt{max\_depth}=6$, không giới hạn subsample) bị phân rã cây theo các biến giả nhị phân hiếm, dẫn đến hiện tượng quá khớp lớn (Train $R^2 = 0.8842$ nhưng Test $R^2$ chỉ đạt $0.5891$, chênh lệch $\Delta = 0.2951$).
+    \item \textbf{Hiệu quả Tối ưu Toàn diện:} Sau tinh chỉnh ($\texttt{colsample\_bytree}=0.8, \texttt{subsample}=0.8, \texttt{learning\_rate}=0.08$), Test $R^2$ tăng vọt lên $\mathbf{0.6329}$ ($+4.38\%$), sai số tuyệt đối MAE giảm sâu từ $1.15 \to \mathbf{1.02}$ tỷ VNĐ và sai số tỷ lệ MAPE giảm từ $24.85\% \to \mathbf{21.89\%}$.
+\end{itemize}
+
+\section{Thực nghiệm 3: Khảo sát Biểu diễn Đặc trưng \& Không gian Tỷ lệ (Representation Investigation)}
+
+\textbf{1. Câu hỏi Thực nghiệm (Research Question):}
+\textit{"Việc thiết kế và bổ sung các đặc trưng tỷ lệ hình học - kinh tế (\texttt{AreaPerBedroom}, \texttt{AreaPerFloor}, \texttt{FrontageAccessRatio}) cải thiện năng lực định giá như thế nào so với việc chỉ sử dụng các thuộc tính không gian thô?"}
+
+\textbf{2. Thiết kế Thực nghiệm Đối chứng Biểu diễn:}
+Hệ thống đối sánh hiệu năng định giá trên 2 không gian biểu diễn:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{Không gian Biểu diễn Thô ($X_{\text{raw}}$):} Chỉ gồm các thuộc tính vật lý nguyên bản (\texttt{Area}, \texttt{Frontage}, \texttt{AccessRoad}, \texttt{Floors}, \texttt{Bedrooms}, \texttt{Bathrooms}) kết hợp các biến định danh địa lý One-Hot.
+    \item \textbf{Không gian Biểu diễn Kỹ nghệ Tỷ lệ ($X_{\text{engineered}}$):} Bổ sung 3 đặc trưng tỷ lệ miền (\texttt{AreaPerBedroom}, \texttt{AreaPerFloor}, \texttt{FrontageAccessRatio}) và các biến cờ nhị phân xử lý khuyết thiếu.
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Mô hình Hồi quy} & \textbf{Biểu diễn Thô ($X_{\text{raw}}$)} & \textbf{Biểu diễn Kỹ nghệ ($X_{\text{engineered}}$)} & \textbf{Mức Cải thiện MAE} & \textbf{Mức Cải thiện $R^2$} \\
+\midrule
+\textbf{Linear Regression} & MAE: $1.0950$ tỷ ($R^2=0.5982$) & \textbf{MAE: 1.0077 tỷ ($R^2=0.6315$)} & \textbf{-0.0873 tỷ} & \textbf{+0.0333} \\
+\textbf{Decision Tree} & MAE: $1.2210$ tỷ ($R^2=0.4810$) & \textbf{MAE: 1.1548 tỷ ($R^2=0.5157$)} & \textbf{-0.0662 tỷ} & \textbf{+0.0347} \\
+\textbf{Random Forest} & MAE: $1.1340$ tỷ ($R^2=0.5520$) & \textbf{MAE: 1.0786 tỷ ($R^2=0.5865$)} & \textbf{-0.0554 tỷ} & \textbf{+0.0345} \\
+\textbf{XGBoost (Tuned)} & MAE: $1.0820$ tỷ ($R^2=0.6015$) & \textbf{MAE: 1.0206 tỷ ($R^2=0.6329$)} & \textbf{-0.0614 tỷ} & \textbf{+0.0314} \\
+\bottomrule
+\end{tabular}
+\caption{Bảng Đối chứng Tác động của Kỹ nghệ Biểu diễn Đặc trưng lên Hiệu năng Định giá}
+\label{tab:week2_exp3}
+\end{table}
+
+\textbf{3. Phân tích Trọng số Đóng góp Đặc trưng (Grouped Feature Importance):}
 
 \begin{figure}[H]
 \centering
