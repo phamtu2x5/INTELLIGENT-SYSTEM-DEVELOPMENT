@@ -174,6 +174,16 @@ Báo cáo Assignment 02 trình bày toàn diện công trình nghiên cứu, hi�
 
 Toàn bộ ba hệ thống được đóng gói triển khai chuẩn hóa theo mô hình kiến trúc Microservice với backend \textbf{FastAPI RESTful API} và giao diện người dùng hiện đại \textbf{Web Application} kết hợp \textbf{Mobile Viewport Simulator} (tỷ lệ chuẩn iPhone 380x650px).
 
+\begin{tcolorbox}[colback=blue!3!white, colframe=blue!75!black, title=\textbf{Kho lưu trữ Mã nguồn \& Jupyter Notebook Thực nghiệm Dự án}]
+\small
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{Kho lưu trữ GitHub chính thức của Dự án:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}{\texttt{INTELLIGENT-SYSTEM-DEVELOPMENT}}
+    \item \textbf{Notebook Hệ thống 1 (Dự đoán Tiểu đường):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/diabetes/notebook/01_diabetes_pipeline.ipynb}{\texttt{01\_diabetes\_pipeline.ipynb}}
+    \item \textbf{Notebook Hệ thống 2 (Định giá Bất động sản):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/house_price/notebook/01_house_price_pipeline.ipynb}{\texttt{01\_house\_price\_pipeline.ipynb}}
+    \item \textbf{Notebook Hệ thống 3 (E-Commerce Đa nhiệm):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/customer_behavior/notebook/01_customer_behavior_pipeline.ipynb}{\texttt{01\_customer\_behavior\_pipeline.ipynb}}
+\end{itemize}
+\end{tcolorbox}
+
 \begin{table}[H]
 \centering
 \scriptsize
@@ -315,6 +325,11 @@ Theo hướng dẫn chuyên môn của Hiệp hội Đái tháo đường Hoa K�
         \item Đái tháo đường: $\text{FPG} \ge 126\text{ mg/dL}$
     \end{itemize}
     \item \textbf{Chỉ số Khối cơ thể (BMI):} Thể trạng thừa cân ($\text{BMI} \ge 25$) và béo phì ($\text{BMI} \ge 30$) làm suy giảm thụ thể insulin, dẫn tới tình trạng kháng insulin ngoại vi.
+\end{itemize}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{Mã nguồn Notebook Huấn luyện \& Thực nghiệm:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/diabetes/notebook/01_diabetes_pipeline.ipynb}{\texttt{01\_diabetes\_pipeline.ipynb}}
+    \item \textbf{Nguồn dữ liệu thực nghiệm trên Kaggle:} \href{https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset}{\texttt{Kaggle -- Diabetes Prediction Dataset (100,000 Records)}}
 \end{itemize}
 
 \section{Quy Trình Tiền Xử Lý và Làm Sạch Dữ Liệu Y Sinh}
@@ -539,6 +554,11 @@ trong đó:
     \item $\mathbf{N}_{\text{neighborhood}}$: Môi trường dân cư và mặt bằng giá trị khu vực lân cận.
 \end{itemize}
 
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{Mã nguồn Notebook Huấn luyện \& Thực nghiệm:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/house_price/notebook/01_house_price_pipeline.ipynb}{\texttt{01\_house\_price\_pipeline.ipynb}}
+    \item \textbf{Nguồn dữ liệu thực nghiệm trên Kaggle:} \href{https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset}{\texttt{Kaggle -- USA Real Estate Dataset}}
+\end{itemize}
+
 \section{Quy Trình Tiền Xử Lý và Làm Sạch Dữ Liệu Thị Trường Bất Động Sản}
 Dữ liệu bất động sản thực tế thu thập từ môi trường mạng chứa nhiều tin đăng ảo, môi giới đăng lặp và các lỗi nhập liệu nghiêm trọng. Tuân thủ phương pháp luận từ Assignment 01, quy trình làm sạch 5 bước được thiết kế bài bản:
 
@@ -740,6 +760,11 @@ Hệ thống triển khai kiến trúc \textbf{Học Đa Nhiệm (Dual-Task Lear
 \begin{equation}
 \mathbf{x} = \text{TF-IDF}(\text{Text}) \implies \begin{cases} \hat{y}_1 = \text{Model}_{\text{Task1}}(\mathbf{x}) \in \{0, 1\} & \text{(Sentiment / Recommend)} \\ \hat{y}_2 = \text{Model}_{\text{Task2}}(\mathbf{x}) \in \{1, \dots, 8\} & \text{(Category Discovery)} \end{cases}
 \end{equation}
+
+\begin{itemize}[leftmargin=1.5em, itemsep=2pt]
+    \item \textbf{Mã nguồn Notebook Huấn luyện \& Thực nghiệm:}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/customer_behavior/notebook/01_customer_behavior_pipeline.ipynb}{\texttt{01\_customer\_behavior\_pipeline.ipynb}}
+    \item \textbf{Nguồn dữ liệu thực nghiệm trên Kaggle:} \href{https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews}{\texttt{Kaggle -- Women's Clothing E-Commerce Reviews}}
+\end{itemize}
 
 \section{Quy Trình Tiền Xử Lý và Làm Sạch Dữ Liệu Văn Bản}
 Dữ liệu đánh giá của khách hàng từ trang thương mại điện tử chứa các đánh giá rỗng và đánh giá không thuộc các danh mục thời trang mục tiêu. Quy trình làm sạch gồm các bước:
@@ -1148,6 +1173,13 @@ Hình~\ref{fig:ui_sys3_crm} minh họa kết quả phân tích kép đồng th�
 \section{Khả Năng Tái Lập Thực Nghiệm (Reproducibility Audit)}
 Để đảm bảo chuẩn mực khoa học, toàn bộ quy trình thực nghiệm được thiết kế có khả năng tái lập 100\%:
 \begin{itemize}[leftmargin=2em]
+    \item \textbf{Kho Lưu Trữ Mã Nguồn Dự Án (GitHub):}\\Toàn bộ mã nguồn, dữ liệu thực nghiệm, pipeline xử lý và giao diện ứng dụng được lưu trữ công khai tại kho lưu trữ:\\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}{\texttt{INTELLIGENT-SYSTEM-DEVELOPMENT}}.
+    \item \textbf{Liên Kết Trực Tiếp Tới Notebooks Của Ba Hệ Thống:}
+    \begin{itemize}
+        \item \textit{Hệ thống 1 (Tiểu đường):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/diabetes/notebook/01_diabetes_pipeline.ipynb}{\texttt{01\_diabetes\_pipeline.ipynb}}
+        \item \textit{Hệ thống 2 (Bất động sản):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/house_price/notebook/01_house_price_pipeline.ipynb}{\texttt{01\_house\_price\_pipeline.ipynb}}
+        \item \textit{Hệ thống 3 (E-Commerce):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2002/customer_behavior/notebook/01_customer_behavior_pipeline.ipynb}{\texttt{01\_customer\_behavior\_pipeline.ipynb}}
+    \end{itemize}
     \item \textbf{Cố định Hạt giống Ngẫu nhiên:} Toàn bộ các thao tác xáo trộn dữ liệu, chia tập Train/Test, khởi tạo trọng số mô hình đều được cố định tại \texttt{random\_state = 42}.
     \item \textbf{Môi trường Thực thi Đồng nhất:} Quản lý thư viện phụ thuộc thông qua môi trường ảo Python 3.12 với các phiên bản chính xác: \texttt{scikit-learn==1.4.2}, \texttt{fastapi==0.110.0}, \texttt{uvicorn==0.29.0}, \texttt{pandas==2.2.1}, \texttt{numpy==1.26.4}.
     \item \textbf{Đóng gói Mô hình:} Toàn bộ các mô hình và đối tượng biến đổi dữ liệu được lưu trữ nhị phân tại thư mục \texttt{model/}, sẵn sàng cho việc tái kiểm chuẩn độc lập bất kỳ lúc nào.
