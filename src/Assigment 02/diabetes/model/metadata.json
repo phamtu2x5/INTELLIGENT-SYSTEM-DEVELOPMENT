@@ -1,0 +1,87 @@
+{
+  "application_name": "Diabetes Risk Prediction System",
+  "dataset_source": "Kaggle - 100,000 Patient Records (Cleaned 95,155)",
+  "n_samples": 95155,
+  "feature_names_raw": [
+    "gender",
+    "age",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "glucose_hba1c_interaction",
+    "age_hypertension_risk"
+  ],
+  "feature_names_encoded": [
+    "gender_Male",
+    "smoking_history_current",
+    "smoking_history_ever",
+    "smoking_history_former",
+    "smoking_history_never",
+    "smoking_history_not current",
+    "age",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "glucose_hba1c_interaction",
+    "age_hypertension_risk",
+    "hypertension",
+    "heart_disease"
+  ],
+  "best_model_name": "HistGradientBoosting",
+  "test_metrics": [
+    {
+      "Model": "HistGradientBoosting",
+      "Accuracy (%)": 96.72,
+      "Precision (%)": 87.37,
+      "Recall (%)": 73.86,
+      "F1-Score (%)": 80.05,
+      "ROC-AUC": 0.9797,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.488
+    },
+    {
+      "Model": "Random Forest",
+      "Accuracy (%)": 97.09,
+      "Precision (%)": 96.57,
+      "Recall (%)": 69.79,
+      "F1-Score (%)": 81.03,
+      "ROC-AUC": 0.9759,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.461
+    },
+    {
+      "Model": "Decision Tree",
+      "Accuracy (%)": 97.14,
+      "Precision (%)": 100.0,
+      "Recall (%)": 67.91,
+      "F1-Score (%)": 80.89,
+      "ROC-AUC": 0.9684,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.067
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy (%)": 95.27,
+      "Precision (%)": 74.22,
+      "Recall (%)": 71.86,
+      "F1-Score (%)": 73.02,
+      "ROC-AUC": 0.9625,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.159
+    },
+    {
+      "Model": "Linear SVM",
+      "Accuracy (%)": 95.34,
+      "Precision (%)": 74.94,
+      "Recall (%)": 71.62,
+      "F1-Score (%)": 73.24,
+      "ROC-AUC": 0.9616,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.261
+    }
+  ],
+  "decision_threshold": 0.32
+}

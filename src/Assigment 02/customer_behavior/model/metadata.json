@@ -1,0 +1,108 @@
+{
+  "application_name": "Multi-task E-Commerce: Sentiment & Category Discovery",
+  "dataset_source": "Kaggle - Womens Clothing E-Commerce Reviews (Cleaned 19,550)",
+  "n_samples": 19550,
+  "top_classes": [
+    "Blouses",
+    "Dresses",
+    "Fine gauge",
+    "Jeans",
+    "Knits",
+    "Pants",
+    "Skirts",
+    "Sweaters"
+  ],
+  "task1_benchmark": [
+    {
+      "Model": "LinearSVC (Balanced)",
+      "Accuracy (%)": 88.54,
+      "Precision (%)": 95.49,
+      "Recall (%)": 90.22,
+      "F1-Score (%)": 92.78,
+      "ROC-AUC": 0.9394,
+      "Fit Time (s)": 0.076
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy (%)": 90.1,
+      "Precision (%)": 91.23,
+      "Recall (%)": 97.21,
+      "F1-Score (%)": 94.13,
+      "ROC-AUC": 0.9498,
+      "Fit Time (s)": 0.106
+    },
+    {
+      "Model": "Multinomial Naive Bayes",
+      "Accuracy (%)": 88.54,
+      "Precision (%)": 90.23,
+      "Recall (%)": 96.39,
+      "F1-Score (%)": 93.21,
+      "ROC-AUC": 0.9407,
+      "Fit Time (s)": 0.002
+    },
+    {
+      "Model": "SGDClassifier (Log Loss)",
+      "Accuracy (%)": 88.16,
+      "Precision (%)": 97.36,
+      "Recall (%)": 87.87,
+      "F1-Score (%)": 92.37,
+      "ROC-AUC": 0.9484,
+      "Fit Time (s)": 0.055
+    },
+    {
+      "Model": "Complement Naive Bayes",
+      "Accuracy (%)": 84.45,
+      "Precision (%)": 98.06,
+      "Recall (%)": 82.57,
+      "F1-Score (%)": 89.65,
+      "ROC-AUC": 0.9407,
+      "Fit Time (s)": 0.003
+    }
+  ],
+  "task2_benchmark": [
+    {
+      "Model": "Logistic Regression (Softmax)",
+      "Accuracy (%)": 73.76,
+      "Macro Precision (%)": 72.68,
+      "Macro Recall (%)": 66.1,
+      "Weighted F1 (%)": 72.66,
+      "Fit Time (s)": 1.271
+    },
+    {
+      "Model": "SGDClassifier (Modified Huber)",
+      "Accuracy (%)": 72.3,
+      "Macro Precision (%)": 69.28,
+      "Macro Recall (%)": 66.71,
+      "Weighted F1 (%)": 71.87,
+      "Fit Time (s)": 0.169
+    },
+    {
+      "Model": "Complement Naive Bayes",
+      "Accuracy (%)": 72.07,
+      "Macro Precision (%)": 68.85,
+      "Macro Recall (%)": 65.47,
+      "Weighted F1 (%)": 69.64,
+      "Fit Time (s)": 0.004
+    },
+    {
+      "Model": "LinearSVC (One-vs-Rest)",
+      "Accuracy (%)": 72.05,
+      "Macro Precision (%)": 68.3,
+      "Macro Recall (%)": 66.11,
+      "Weighted F1 (%)": 71.47,
+      "Fit Time (s)": 0.568
+    },
+    {
+      "Model": "Multinomial Naive Bayes",
+      "Accuracy (%)": 64.73,
+      "Macro Precision (%)": 65.22,
+      "Macro Recall (%)": 47.4,
+      "Weighted F1 (%)": 59.51,
+      "Fit Time (s)": 0.003
+    }
+  ],
+  "best_models": {
+    "task1": "LinearSVC (Balanced)",
+    "task2": "Logistic Regression (Softmax)"
+  }
+}

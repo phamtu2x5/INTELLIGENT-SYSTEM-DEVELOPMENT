@@ -1,0 +1,73 @@
+{
+  "application_name": "Real Estate House Price Prediction",
+  "dataset_source": "Kaggle - USA Real Estate 150,000 Records (Cleaned 144,995)",
+  "n_samples": 144995,
+  "best_model_name": "HistGB Tuned",
+  "test_metrics": [
+    {
+      "Model": "HistGB Tuned",
+      "R\u00b2 (Log)": 0.836,
+      "R\u00b2 (Raw)": 0.8069,
+      "MAE ($)": 145322.68,
+      "Median Error ($)": 67848.65,
+      "MAPE (%)": 26.93,
+      "RMSE ($)": 292102.9,
+      "Train Time (s)": 1.373
+    },
+    {
+      "Model": "Random Forest",
+      "R\u00b2 (Log)": 0.8324,
+      "R\u00b2 (Raw)": 0.8091,
+      "MAE ($)": 144386.73,
+      "Median Error ($)": 68205.78,
+      "MAPE (%)": 27.04,
+      "RMSE ($)": 290433.22,
+      "Train Time (s)": 5.206
+    },
+    {
+      "Model": "Decision Tree",
+      "R\u00b2 (Log)": 0.7885,
+      "R\u00b2 (Raw)": 0.7431,
+      "MAE ($)": 165540.28,
+      "Median Error ($)": 77313.97,
+      "MAPE (%)": 30.89,
+      "RMSE ($)": 336886.5,
+      "Train Time (s)": 0.556
+    },
+    {
+      "Model": "Linear Regression",
+      "R\u00b2 (Log)": 0.7746,
+      "R\u00b2 (Raw)": 0.5257,
+      "MAE ($)": 181412.37,
+      "Median Error ($)": 83489.13,
+      "MAPE (%)": 33.11,
+      "RMSE ($)": 457735.6,
+      "Train Time (s)": 0.048
+    },
+    {
+      "Model": "Ridge Regression",
+      "R\u00b2 (Log)": 0.7746,
+      "R\u00b2 (Raw)": 0.5258,
+      "MAE ($)": 181411.32,
+      "Median Error ($)": 83489.79,
+      "MAPE (%)": 33.11,
+      "RMSE ($)": 457698.64,
+      "Train Time (s)": 0.032
+    }
+  ],
+  "feature_columns": [
+    "log_house_size",
+    "bed",
+    "bath",
+    "total_rooms",
+    "bed_bath_prod",
+    "sqft_per_room",
+    "bath_bed_ratio",
+    "log_acre_lot",
+    "relative_sqft",
+    "state_enc",
+    "zip3_enc",
+    "zip_enc",
+    "city_enc"
+  ]
+}

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Thông Minh AI</title>
+    <!-- Google Fonts: Plus Jakarta Sans for a premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-sub: #64748b;
+            --border-light: #e2e8f0;
+            
+            /* Theme Colors per App */
+            --theme-diabetes: #0ea5e9; /* Emerald/Teal */
+            --theme-diabetes-light: #e0f2fe;
+            --theme-house: #6366f1; /* Indigo */
+            --theme-house-light: #e0e7ff;
+            --theme-ecom: #ec4899; /* Rose/Pink */
+            --theme-ecom-light: #fce7f3;
+            
+            --current-theme: var(--theme-diabetes);
+            --current-theme-light: var(--theme-diabetes-light);
+            
+            --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem;
+            transition: background 0.5s ease;
+        }
+
+        /* Mobile Simulator Mode */
+        body.mobile-mode {
+            padding: 1.25rem 1rem;
+        }
+        body.mobile-mode .top-bar {
+            margin-bottom: 0.8rem;
+        }
+        body.mobile-mode .app-wrapper {
+            width: 380px;
+            height: 650px;
+            overflow: hidden; /* Không cuộn cái vỏ điện thoại */
+            border-radius: 42px;
+            border: 12px solid #0f172a;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4);
+            padding: 0;
+            background: var(--bg-body);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-sizing: content-box; /* Đảm bảo viền đen nằm ngoài 380px nội dung */
+        }
+        /* Mobile Notch */
+        body.mobile-mode .app-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 130px;
+            height: 24px;
+            background: #0f172a;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            z-index: 100;
+        }
+        body.mobile-mode .app-container {
+            border-radius: 30px; /* Khớp với bo góc bên trong điện thoại */
+            box-shadow: none;
+            padding: 2.8rem 1.25rem 2rem 1.25rem;
+            height: 100%;
+            overflow-y: auto; /* Scroll nội dung bên trong điện thoại */
+            overflow-x: hidden; /* Ngăn chặn cuộn ngang gây tràn chữ */
+            width: 100%;
+        }
+        /* Tùy chỉnh thanh cuộn cho giống điện thoại thật */
+        body.mobile-mode .app-container::-webkit-scrollbar { width: 4px; }
+        body.mobile-mode .app-container::-webkit-scrollbar-track { background: transparent; }
+        body.mobile-mode .app-container::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 10px; }
+
+        /* Top Bar */
+        .top-bar {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+        }
+        .btn-simulator {
+            background: white;
+            border: 1px solid var(--border-light);
+            padding: 0.6rem 1.2rem;
+            border-radius: 100px;
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            cursor: pointer;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-simulator:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .app-wrapper {
+            width: 100%;
+            max-width: 900px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .app-container {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* App Header */
+        .app-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .app-title {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--current-theme) 0%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.5s ease;
+        }
+        .app-desc {
+            color: var(--text-sub);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Segmented Control / Tabs */
+        .tab-nav {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f1f5f9;
+            padding: 0.4rem;
+            border-radius: 16px;
+            margin-bottom: 2.5rem;
+            position: relative;
+            gap: 0.4rem;
+        }
+        .tab-btn {
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+            padding: 0.8rem 0.2rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            z-index: 2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tab-btn i { margin-right: 8px; }
+        .tab-btn.active {
+            color: var(--current-theme);
+            background: white;
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* Tab Content */
+        .tab-content { display: none; animation: slideUp 0.4s ease forwards; }
+        .tab-content.active { display: block; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Forms */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .form-group.full { grid-column: 1 / -1; }
+        
+        .input-wrapper {
+            position: relative;
+            background: #f8fafc;
+            border: 1.5px solid transparent;
+            border-radius: 14px;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .input-wrapper:focus-within {
+            background: white;
+            border-color: var(--current-theme);
+            box-shadow: 0 0 0 4px var(--current-theme-light);
+        }
+        .input-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-sub);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+        .input-field {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-main);
+            outline: none;
+            padding: 4px 0;
+        }
+        select.input-field { cursor: pointer; appearance: none; }
+        textarea.input-field { resize: vertical; min-height: 120px; line-height: 1.5; font-weight: 500; }
+        
+        /* Select arrow custom */
+        .select-wrapper::after {
+            content: '\f078';
+            font-family: 'FontAwesome';
+            position: absolute;
+            right: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-sub);
+            pointer-events: none;
+            font-size: 0.8rem;
+        }
+
+        /* Action Button */
+        .btn-action {
+            width: 100%;
+            background: var(--current-theme);
+            color: white;
+            border: none;
+            padding: 1.2rem;
+            border-radius: 14px;
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 15px -3px var(--current-theme-light);
+        }
+        .btn-action:hover {
+            transform: translateY(-2px);
+            filter: brightness(110%);
+        }
+        .btn-action:active { transform: translateY(0); }
+
+        /* Results Area */
+        .result-container {
+            margin-top: 2.5rem;
+            display: none;
+            animation: slideUp 0.5s ease;
+        }
+        .result-container.show { display: block; }
+        
+        /* Beautiful Result Cards */
+        .res-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .res-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px;
+            background: var(--current-theme);
+        }
+
+        .res-icon {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: inline-flex; justify-content: center; align-items: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            background: var(--current-theme-light);
+            color: var(--current-theme);
+        }
+
+        .res-title {
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .res-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+        
+        .res-sub {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* E-commerce dual card specific */
+        .dual-result {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media(max-width: 600px) { .dual-result { grid-template-columns: 1fr; } }
+        .dual-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: left;
+            box-shadow: var(--shadow-soft);
+        }
+        .dual-icon { font-size: 1.5rem; margin-bottom: 1rem; color: var(--theme-ecom); }
+        .dual-label { font-size: 0.85rem; color: var(--text-sub); font-weight: 600; text-transform: uppercase; }
+        .dual-val { font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-top: 0.3rem; }
+
+        /* Loader */
+        .spinner {
+            display: none;
+            width: 24px; height: 24px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Responsive AI Engine Bar */
+        .ai-engine-bar {
+            background: var(--current-theme-light);
+            padding: 1rem 1.25rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(0,0,0,0.05);
+            gap: 1rem;
+        }
+        .ai-engine-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--current-theme);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+        .ai-engine-select-wrapper {
+            margin: 0;
+            padding: 0.2rem 0.5rem;
+            width: 65%;
+            background: white;
+        }
+        
+        @media(max-width: 600px) {
+            .ai-engine-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+            .ai-engine-select-wrapper { width: 100%; }
+            .app-container { padding: 2rem 1.5rem; }
+            .res-value { font-size: 2rem; }
+        }
+        body.mobile-mode .ai-engine-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+        body.mobile-mode .ai-engine-select-wrapper { width: 100%; }
+        body.mobile-mode .res-value { font-size: 2rem; }
+
+        /* Advisory and Decision Support Styling */
+        .advisory-box {
+            margin-top: 1.25rem;
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: left;
+            box-shadow: var(--shadow-soft);
+        }
+        .advisory-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.8rem;
+        }
+        .advisory-title i { color: var(--current-theme); }
+        .flag-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.84rem;
+        }
+        .flag-row:last-child { border-bottom: none; }
+        .flag-badge {
+            padding: 0.2rem 0.55rem;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .badge-danger { background: #fee2e2; color: #dc2626; }
+        .badge-warning { background: #fef3c7; color: #b45309; }
+        .badge-normal { background: #dcfce7; color: #15803d; }
+        .badge-info { background: #e0f2fe; color: #0369a1; }
+        .adv-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .adv-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.84rem;
+            line-height: 1.45;
+            color: #334155;
+        }
+        .adv-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0.2rem;
+            color: var(--current-theme);
+            font-weight: bold;
+        }
+        .tag-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: #f1f5f9;
+            color: #1e293b;
+            padding: 0.25rem 0.65rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.35rem;
+            margin-bottom: 0.35rem;
+        }
+        .tag-pill.pos { background: #dcfce7; color: #166534; }
+        .tag-pill.neg { background: #fee2e2; color: #991b1b; }
+        .market-badge {
+            display: inline-block;
+            background: var(--current-theme-light);
+            color: var(--current-theme);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.3rem 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <button class="btn-simulator" onclick="toggleMobileMode()" id="btnSim">
+            <i class="fa-solid fa-mobile-screen"></i> Bật Mobile Simulator
+        </button>
+    </div>
+
+    <div class="app-wrapper">
+        <div class="app-container">
+            
+            <div class="app-header">
+                <h1 class="app-title" id="mainTitle">Sức khỏe Thông minh</h1>
+                <p class="app-desc" id="mainDesc">Hỗ trợ tầm soát rủi ro bằng Trí tuệ Nhân tạo</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="tab-nav">
+                <div class="tab-btn active" onclick="switchTab('diabetes', this, '#0ea5e9', '#e0f2fe', 'Sức khỏe Thông minh', 'Hỗ trợ tầm soát rủi ro y tế bằng AI')">
+                    <i class="fa-solid fa-stethoscope"></i> Tiểu đường
+                </div>
+                <div class="tab-btn" onclick="switchTab('house', this, '#6366f1', '#e0e7ff', 'Định giá Bất động sản', 'Ước tính giá trị thị trường chuẩn xác')">
+                    <i class="fa-solid fa-house-chimney"></i> Giá nhà
+                </div>
+                <div class="tab-btn" onclick="switchTab('ecom', this, '#ec4899', '#fce7f3', 'Phân tích Khách hàng', 'Thấu hiểu hành vi và nhu cầu mua sắm')">
+                    <i class="fa-solid fa-bag-shopping"></i> E-Commerce
+                </div>
+            </div>
+
+            <!-- =====================================
+                 1. DIABETES APP
+            ====================================== -->
+            <div id="diabetes" class="tab-content active">
+                <form onsubmit="predictDiabetes(event)">
+                    
+                    <!-- AI Model Configuration -->
+                    <div class="ai-engine-bar">
+                        <span class="ai-engine-label">
+                            <i class="fa-solid fa-microchip"></i> Động cơ AI
+                        </span>
+                        <div class="input-wrapper select-wrapper ai-engine-select-wrapper">
+                            <select id="dia_model" class="input-field" style="font-size: 0.9rem;">
+                                <option value="hist_gb">HistGradientBoosting</option>
+                                <option value="lr">Logistic Regression</option>
+                                <option value="rf">Random Forest</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="input-wrapper">
+                            <label class="input-label">Độ tuổi</label>
+                            <input type="number" id="dia_age" class="input-field" value="45" required>
+                        </div>
+                        <div class="input-wrapper select-wrapper">
+                            <label class="input-label">Giới tính</label>
+                            <select id="dia_gender" class="input-field">
+                                <option value="Female">Nữ giới</option>
+                                <option value="Male">Nam giới</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Chỉ số BMI</label>
+                            <input type="number" step="0.1" id="dia_bmi" class="input-field" value="28.5" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Đường huyết</label>
+                            <input type="number" id="dia_glucose" class="input-field" value="140" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Chỉ số HbA1c</label>
+                            <input type="number" step="0.1" id="dia_hba1c" class="input-field" value="6.5" required>
+                        </div>
+                        <div class="input-wrapper select-wrapper">
+                            <label class="input-label">Tiền sử hút thuốc</label>
+                            <select id="dia_smoke" class="input-field">
+                                <option value="never">Không hút thuốc</option>
+                                <option value="current">Đang hút</option>
+                                <option value="former">Đã bỏ</option>
+                                <option value="No Info">Không rõ</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper select-wrapper">
+                            <label class="input-label">Tăng huyết áp</label>
+                            <select id="dia_hyp" class="input-field">
+                                <option value="0">Không có</option>
+                                <option value="1">Có</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper select-wrapper">
+                            <label class="input-label">Bệnh tim mạch</label>
+                            <select id="dia_heart" class="input-field">
+                                <option value="0">Không có</option>
+                                <option value="1">Có</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-action" id="dia_btn">
+                        <span>Phân tích Hồ sơ</span>
+                        <div class="spinner" id="dia_loader"></div>
+                    </button>
+                </form>
+
+                <div id="dia_result" class="result-container">
+                    <div class="res-card" id="dia_card">
+                        <div class="res-icon" id="dia_icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div class="res-title">Mức độ Cảnh báo</div>
+                        <div class="res-value" id="dia_val">Rủi ro Thấp</div>
+                        <div class="res-sub" id="dia_msg">Độ tin cậy: 95%</div>
+                    </div>
+                    <div id="dia_advisory"></div>
+                </div>
+            </div>
+
+            <!-- =====================================
+                 2. HOUSE PRICE APP
+            ====================================== -->
+            <div id="house" class="tab-content">
+                <form onsubmit="predictHouse(event)">
+                    <div class="form-grid">
+                        <div class="input-wrapper">
+                            <label class="input-label">Diện tích (sqft)</label>
+                            <input type="number" id="house_size" class="input-field" value="2400" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Khuôn viên (acre)</label>
+                            <input type="number" step="0.01" id="acre_lot" class="input-field" value="0.25" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Phòng ngủ</label>
+                            <input type="number" id="bed" class="input-field" value="4" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Phòng tắm</label>
+                            <input type="number" id="bath" class="input-field" value="3" required>
+                        </div>
+                        
+                        <div class="input-wrapper select-wrapper full">
+                            <label class="input-label">Tiểu bang (State)</label>
+                            <select id="state" class="input-field" required>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="New York">New York</option>
+                                <option value="California">California</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Florida">Florida</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper select-wrapper">
+                            <label class="input-label">Thành phố (City)</label>
+                            <select id="city" class="input-field" required>
+                                <option value="Boston">Boston</option>
+                                <option value="New York">New York</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="Houston">Houston</option>
+                                <option value="Miami">Miami</option>
+                            </select>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="input-label">Mã bưu chính (Zip)</label>
+                            <input type="number" id="zip_code" class="input-field" value="2130" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-action" id="house_btn">
+                        <span>Định giá Bất động sản</span>
+                        <div class="spinner" id="house_loader"></div>
+                    </button>
+                </form>
+
+                <div id="house_result" class="result-container">
+                    <div class="res-card" style="--current-theme: var(--theme-house); --current-theme-light: var(--theme-house-light);">
+                        <div class="res-icon" style="color: var(--theme-house); background: var(--theme-house-light);">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <div class="res-title">Giá trị Ước tính</div>
+                        <div class="res-value" id="house_val">$0</div>
+                        <div class="res-sub" id="house_msg">Đơn giá: $0 / sqft</div>
+                    </div>
+                    <div id="house_advisory"></div>
+                </div>
+            </div>
+
+            <!-- =====================================
+                 3. E-COMMERCE APP
+            ====================================== -->
+            <div id="ecom" class="tab-content">
+                <form onsubmit="predictEcom(event)">
+                    <div class="form-grid">
+                        <div class="input-wrapper full">
+                            <label class="input-label">Nội dung đánh giá của khách hàng</label>
+                            <textarea id="review_text" class="input-field" required placeholder="Nhập review bằng tiếng Anh..."></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-action" id="ecom_btn">
+                        <span>Đọc hiểu Ngôn ngữ</span>
+                        <div class="spinner" id="ecom_loader"></div>
+                    </button>
+                </form>
+
+                <div id="ecom_result" class="result-container">
+                    <div class="dual-result">
+                        <div class="dual-card">
+                            <div class="dual-icon"><i class="fa-solid fa-face-smile" id="ecom_icon_sent"></i></div>
+                            <div class="dual-label">Mức độ Hài lòng</div>
+                            <div class="dual-val" id="ecom_sentiment">Tích cực</div>
+                        </div>
+                        <div class="dual-card">
+                            <div class="dual-icon"><i class="fa-solid fa-shirt"></i></div>
+                            <div class="dual-label">Sở thích Ngành hàng</div>
+                            <div class="dual-val" id="ecom_category">Dresses</div>
+                        </div>
+                    </div>
+                    <div id="ecom_advisory"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const API_URL = "http://localhost:8000/api/v1";
+
+        function switchTab(tabId, el, color, colorLight, title, desc) {
+            document.documentElement.style.setProperty('--current-theme', color);
+            document.documentElement.style.setProperty('--current-theme-light', colorLight);
+            
+            document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            el.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+            
+            document.getElementById('mainTitle').innerText = title;
+            document.getElementById('mainDesc').innerText = desc;
+        }
+
+        function toggleMobileMode() {
+            document.body.classList.toggle('mobile-mode');
+            const btn = document.getElementById('btnSim');
+            if(document.body.classList.contains('mobile-mode')) {
+                btn.innerHTML = '<i class="fa-solid fa-desktop"></i> Chế độ Desktop';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-mobile-screen"></i> Bật Mobile Simulator';
+            }
+        }
+
+        function setLoading(btnId, loaderId, isLoading) {
+            const btn = document.getElementById(btnId);
+            const loader = document.getElementById(loaderId);
+            const text = btn.querySelector('span');
+            if (isLoading) {
+                text.style.display = 'none';
+                loader.style.display = 'block';
+                btn.disabled = true;
+            } else {
+                text.style.display = 'block';
+                loader.style.display = 'none';
+                btn.disabled = false;
+            }
+        }
+
+        async function predictDiabetes(e) {
+            e.preventDefault();
+            setLoading('dia_btn', 'dia_loader', true);
+            
+            const payload = {
+                age: parseFloat(document.getElementById('dia_age').value),
+                gender: document.getElementById('dia_gender').value,
+                bmi: parseFloat(document.getElementById('dia_bmi').value),
+                blood_glucose_level: parseFloat(document.getElementById('dia_glucose').value),
+                HbA1c_level: parseFloat(document.getElementById('dia_hba1c').value),
+                hypertension: parseInt(document.getElementById('dia_hyp').value),
+                heart_disease: parseInt(document.getElementById('dia_heart').value),
+                smoking_history: document.getElementById('dia_smoke').value,
+                model_name: document.getElementById('dia_model').value
+            };
+
+            try {
+                const res = await fetch(`${API_URL}/diabetes/predict`, {
+                    method: 'POST', headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                
+                const card = document.getElementById('dia_card');
+                const icon = document.getElementById('dia_icon');
+                
+                if(data.prediction_class === 1) {
+                    // High risk - Red styling
+                    card.style.setProperty('--current-theme', '#ef4444');
+                    card.style.setProperty('--current-theme-light', '#fee2e2');
+                    icon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+                    document.getElementById('dia_val').innerText = "Nguy cơ Cao";
+                    document.getElementById('dia_val').style.color = '#ef4444';
+                } else {
+                    // Low risk - Emerald styling
+                    card.style.setProperty('--current-theme', '#10b981');
+                    card.style.setProperty('--current-theme-light', '#d1fae5');
+                    icon.innerHTML = '<i class="fa-solid fa-shield-check"></i>';
+                    document.getElementById('dia_val').innerText = "An toàn";
+                    document.getElementById('dia_val').style.color = '#10b981';
+                }
+                
+                document.getElementById('dia_msg').innerText = `Xác suất AI dự báo: ${(data.probability*100).toFixed(1)}%`;
+                
+                // Render Clinical Advisory & Risk Factors
+                let flagsHtml = (data.clinical_flags || []).map(f => {
+                    const badgeClass = f.status === 'danger' ? 'badge-danger' : (f.status === 'warning' ? 'badge-warning' : 'badge-normal');
+                    const badgeText = f.status === 'danger' ? 'Báo động' : (f.status === 'warning' ? 'Lưu ý' : 'Bình thường');
+                    return `
+                        <div class="flag-row">
+                            <div>
+                                <strong style="color:#0f172a;">${f.param}:</strong> <span style="color:#475569; font-weight:600;">${f.value}</span>
+                                <div style="font-size:0.75rem; color:#64748b; margin-top:2px;">${f.note}</div>
+                            </div>
+                            <span class="flag-badge ${badgeClass}">${badgeText}</span>
+                        </div>
+                    `;
+                }).join('');
+
+                let lifestyleHtml = (data.lifestyle_recommendations || []).map(item => `<li>${item}</li>`).join('');
+                let actionsHtml = (data.clinical_actions || []).map(item => `<li>${item}</li>`).join('');
+
+                document.getElementById('dia_advisory').innerHTML = `
+                    <div class="advisory-box">
+                        <div class="advisory-title"><i class="fa-solid fa-list-check"></i> Đánh giá Yếu tố Nguy cơ Lâm sàng</div>
+                        <div>${flagsHtml}</div>
+                    </div>
+                    <div class="advisory-box">
+                        <div class="advisory-title"><i class="fa-solid fa-apple-whole"></i> Khuyến nghị Dinh dưỡng & Lối sống</div>
+                        <ul class="adv-list">${lifestyleHtml}</ul>
+                    </div>
+                    <div class="advisory-box">
+                        <div class="advisory-title"><i class="fa-solid fa-user-doctor"></i> Hướng dẫn Tầm soát Y khoa Tiếp theo</div>
+                        <ul class="adv-list">${actionsHtml}</ul>
+                    </div>
+                `;
+
+                document.getElementById('dia_result').classList.add('show');
+            } catch(err) { alert("Không thể kết nối đến máy chủ AI."); }
+            setLoading('dia_btn', 'dia_loader', false);
+        }
+
+        async function predictHouse(e) {
+            e.preventDefault();
+            setLoading('house_btn', 'house_loader', true);
+            
+            const payload = {
+                house_size: parseFloat(document.getElementById('house_size').value),
+                acre_lot: parseFloat(document.getElementById('acre_lot').value),
+                bed: parseFloat(document.getElementById('bed').value),
+                bath: parseFloat(document.getElementById('bath').value),
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                zip_code: parseFloat(document.getElementById('zip_code').value)
+            };
+
+            try {
+                const res = await fetch(`${API_URL}/house-price/predict`, {
+                    method: 'POST', headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                
+                document.getElementById('house_val').innerText = data.price_formatted;
+                document.getElementById('house_msg').innerText = `Đơn giá: ${data.price_per_sqft}`;
+
+                // Render Real Estate Advisory
+                const strat = data.strategic_advisory || {};
+                document.getElementById('house_advisory').innerHTML = `
+                    <div class="advisory-box">
+                        <div class="market-badge">${data.segment || 'Phân khúc Nhà ở'}</div>
+                        <div class="advisory-title"><i class="fa-solid fa-chart-line"></i> Phân tích Bối cảnh Thị trường</div>
+                        <p style="font-size: 0.85rem; color:#334155; margin-bottom: 0.5rem;">• <strong>Vị thế giá:</strong> ${data.market_position}</p>
+                        <p style="font-size: 0.85rem; color:#334155; margin-bottom: 0.2rem;">• <strong>Đánh giá không gian:</strong> ${data.layout_evaluation}</p>
+                    </div>
+                    <div class="advisory-box">
+                        <div class="advisory-title"><i class="fa-solid fa-handshake"></i> Tư vấn Chiến lược Giao dịch</div>
+                        <ul class="adv-list">
+                            <li><strong>Khoảng giá chào bán khuyến nghị (Bên bán):</strong> <span style="color:var(--theme-house); font-weight:700;">${strat.listing_range || 'N/A'}</span></li>
+                            <li><strong>Vùng giá đàm phán hợp lý (Bên mua):</strong> <span style="font-weight:700; color:#059669;">${strat.buyer_target || 'N/A'}</span></li>
+                            <li><strong>Dự kiến thanh khoản:</strong> ${strat.liquidity_timeline || '30 - 45 ngày'}</li>
+                        </ul>
+                    </div>
+                `;
+
+                document.getElementById('house_result').classList.add('show');
+            } catch(err) { alert("Không thể kết nối đến máy chủ AI."); }
+            setLoading('house_btn', 'house_loader', false);
+        }
+
+        async function predictEcom(e) {
+            e.preventDefault();
+            setLoading('ecom_btn', 'ecom_loader', true);
+            
+            const payload = { review_text: document.getElementById('review_text').value };
+
+            try {
+                const res = await fetch(`${API_URL}/customer-behavior/predict`, {
+                    method: 'POST', headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+                
+                const sentEl = document.getElementById('ecom_sentiment');
+                const iconSent = document.getElementById('ecom_icon_sent');
+                
+                if (data.sentiment_class === 1) {
+                    sentEl.innerText = "Hài lòng (Khuyên mua)";
+                    sentEl.style.color = "#059669"; // Emerald
+                    iconSent.className = "fa-solid fa-face-smile";
+                    iconSent.style.color = "#059669";
+                } else {
+                    sentEl.innerText = "Thất vọng (Không mua)";
+                    sentEl.style.color = "#dc2626"; // Red
+                    iconSent.className = "fa-solid fa-face-frown";
+                    iconSent.style.color = "#dc2626";
+                }
+                
+                const catMap = {
+                    "Dresses": "Váy liền",
+                    "Knits": "Đồ dệt kim",
+                    "Blouses": "Áo kiểu nữ",
+                    "Sweaters": "Áo len",
+                    "Pants": "Quần tây",
+                    "Jeans": "Quần bò / Jeans",
+                    "Fine gauge": "Đồ len mỏng",
+                    "Skirts": "Chân váy",
+                    "Jackets": "Áo khoác"
+                };
+                const catEng = data.category_prediction;
+                const catVie = catMap[catEng] || catEng;
+                document.getElementById('ecom_category').innerText = `${catEng} (${catVie})`;
+
+                // Render CRM & Marketing Advisory
+                const crm = data.crm_action_plan || {};
+                const signalsHtml = (data.key_signals || []).map(s => `
+                    <span class="tag-pill ${data.sentiment_class === 1 ? 'pos' : 'neg'}">
+                        <i class="fa-solid ${data.sentiment_class === 1 ? 'fa-check' : 'fa-triangle-exclamation'}"></i> ${s}
+                    </span>
+                `).join('');
+
+                document.getElementById('ecom_advisory').innerHTML = `
+                    <div class="advisory-box">
+                        <div class="advisory-title"><i class="fa-solid fa-tags"></i> Tín hiệu Cảm xúc Then chốt (Key Drivers)</div>
+                        <div style="margin-top:0.4rem;">${signalsHtml}</div>
+                    </div>
+                    <div class="advisory-box">
+                        <div class="advisory-title"><i class="fa-solid fa-headset"></i> Kế hoạch Hành động CSKH Tự động (CRM Automation)</div>
+                        <div style="margin-bottom:0.75rem;">
+                            <span class="flag-badge ${data.sentiment_class === 1 ? 'badge-normal' : 'badge-danger'}">
+                                ${crm.priority || 'Đang xử lý'}
+                            </span>
+                        </div>
+                        <ul class="adv-list">
+                            <li><strong>Can thiệp tức thì:</strong> ${crm.immediate_action || 'N/A'}</li>
+                            <li><strong>Chiến lược thương mại:</strong> ${crm.commercial_strategy || 'N/A'}</li>
+                            <li><strong>Phối hợp nội bộ & QC:</strong> ${crm.marketing_action || 'N/A'}</li>
+                        </ul>
+                    </div>
+                `;
+
+                document.getElementById('ecom_result').classList.add('show');
+            } catch(err) { alert("Không thể kết nối đến máy chủ AI."); }
+            setLoading('ecom_btn', 'ecom_loader', false);
+        }
+        
+        // Auto-fill random review for convenience
+        document.getElementById('review_text').value = "I bought this for my vacation in Hawaii. The fabric is very light and breathable. Fits my waist perfectly! Would definitely recommend to a friend.";
+    </script>
+</body>
+</html>
