@@ -281,6 +281,19 @@ Cập nhật trọng số theo luật Gradient Descent với tốc độ học $
     \item \textbf{Sự khác biệt giữa xác suất và phân lớp dự đoán:} Xác suất $\hat{y} \in [0, 1]$ biểu thị mức độ tự tin liên tục của mô hình; phân lớp dự đoán $\hat{y}_{\text{class}} \in \{0, 1\}$ là quyết định rời rạc thu được sau khi áp dụng ngưỡng quyết định (Threshold cut-off).
 \end{enumerate}
 
+\begin{tcolorbox}[colback=blue!3!white, colframe=blue!75!black, title=\textbf{Kho Lưu Trữ Mã Nguồn \& Hệ Thống Jupyter Notebooks Thực Nghiệm Dự Án (GitHub)}]
+\small
+Toàn bộ mã nguồn triển khai từ đầu (100\% pure NumPy), các thực nghiệm đối chuẩn Machine Learning vs Deep Learning, nghiên cứu bóc tách kiến trúc (Ablation Studies) và báo cáo nghiên cứu được quản lý phiên bản công khai trên GitHub:
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item \textbf{Kho lưu trữ GitHub chính thức của Dự án:}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}{\texttt{phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}}
+    \item \textbf{Notebook 1 (Mô hình Cơ sở Baseline Tutorial -- 768 mẫu Pima):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes/notebooks/01_diabetes_dl_from_scratch_numpy.ipynb}{\texttt{01\_diabetes\_dl\_from\_scratch\_numpy.ipynb}}
+    \item \textbf{Notebook 2 (Mô hình Cải tiến \& Nghiên cứu Bóc tách Ablation -- 768 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes/notebooks/02_diabetes_dl_from_scratch_improvements.ipynb}{\texttt{02\_diabetes\_dl\_from\_scratch\_improvements.ipynb}}
+    \item \textbf{Notebook 3 (Hệ thống 1 -- Sàng lọc Tiểu đường Lâm sàng 100,000 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes_large/notebooks/01_diabetes_large_ml_vs_dl_scratch.ipynb}{\texttt{01\_diabetes\_large\_ml\_vs\_dl\_scratch.ipynb}}
+    \item \textbf{Notebook 4 (Hệ thống 2 -- Định giá Bất động sản Thực nghiệm 150,000 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/house_price_large/notebooks/02_house_price_large_ml_vs_dl_scratch.ipynb}{\texttt{02\_house\_price\_large\_ml\_vs\_dl\_scratch.ipynb}}
+    \item \textbf{Notebook 5 (Hệ thống 3 -- Phân loại Đánh giá Văn bản NLP 22,641 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/customer_comments/notebooks/03_comments_large_ml_vs_dl_scratch.ipynb}{\texttt{03\_comments\_large\_ml\_vs\_dl\_scratch.ipynb}}
+\end{itemize}
+\end{tcolorbox}
+
 % =========================================================================
 % CHƯƠNG 2: THỰC NGHIỆM CƠ SỞ (BASELINE) & PHÂN TÍCH BÓC TÁCH KIẾN TRÚC
 % =========================================================================
@@ -288,6 +301,12 @@ Cập nhật trọng số theo luật Gradient Descent với tốc độ học $
 
 \section{Mô Hình Cơ Sở (Baseline Neural Network) \& Đánh Giá Khuyết Tật Phương Pháp Luận}
 Bước đầu tiên của nghiên cứu thực nghiệm là xây dựng và khảo sát mô hình mạng nơ-ron 3 tầng cơ sở (\texttt{Baseline Multi-Layer Perceptron}) thuần túy bằng thư viện số học NumPy trên tập dữ liệu chuẩn đoán tiểu đường gốc Pima Indians Diabetes gồm 768 bệnh nhân và 8 đặc trưng y sinh.
+
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item \textbf{Mã nguồn Notebook Mô hình Cơ sở (Baseline Tutorial):}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes/notebooks/01_diabetes_dl_from_scratch_numpy.ipynb}{\texttt{01\_diabetes\_dl\_from\_scratch\_numpy.ipynb}}
+    \item \textbf{Mã nguồn Notebook Cải tiến \& Nghiên cứu Bóc tách (Ablation Studies):}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes/notebooks/02_diabetes_dl_from_scratch_improvements.ipynb}{\texttt{02\_diabetes\_dl\_from\_scratch\_improvements.ipynb}}
+    \item \textbf{Tập dữ liệu chuẩn đoán y sinh Pima Indians Diabetes (Kaggle):}\\ \href{https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database}{\texttt{Kaggle -- Pima Indians Diabetes Database (768 Records)}}
+\end{itemize}
 
 \subsection{1. Cấu hình kiến trúc và tham số mô hình cơ sở}
 \begin{itemize}
@@ -468,7 +487,12 @@ Những bài học nền tảng này chính là kim chỉ nam để tác giả m
 \chapter{Hệ Thống 1: Sàng Lọc Nguy Cơ Tiểu Đường Quy Mô Lớn (100,000 Mẫu Dữ Liệu)}
 
 \section{Bối Cảnh Y Tế Lâm Sàng \& Khám Phá Dữ Liệu (EDA)}
-Tập dữ liệu sàng lọc tiểu đường gồm 100,000 hồ sơ bệnh nhân với các thông số lâm sàng và nhân khẩu học (Tuổi, Giới tính, Chỉ số khối cơ thể BMI, Tiền sử hút thuốc, Tăng huyết áp, Bệnh tim mạch, HbA1c, Đường huyết Glucose lúc đói). 
+Tập dữ liệu sàng lọc tiểu đường gồm 100,000 hồ sơ bệnh nhân với các thông số lâm sàng và nhân khẩu học (Tuổi, Giới tính, Chỉ số khối cơ thể BMI, Tiền sử hút thuốc, Tăng huyết áp, Bệnh tim mạch, HbA1c, Đường huyết Glucose lúc đói).
+
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item \textbf{Mã nguồn Notebook Huấn luyện \& Thực nghiệm Đối chuẩn:}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes_large/notebooks/01_diabetes_large_ml_vs_dl_scratch.ipynb}{\texttt{01\_diabetes\_large\_ml\_vs\_dl\_scratch.ipynb}}
+    \item \textbf{Nguồn dữ liệu thực nghiệm sàng lọc tiểu đường trên Kaggle:}\\ \href{https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset}{\texttt{Kaggle -- Diabetes Prediction Dataset (100,000 Records)}}
+\end{itemize} 
 
 \begin{figure}[H]
     \centering
@@ -688,6 +712,11 @@ Dựa trên bảng đối chuẩn định lượng (Bảng \ref{tab:diabetes_ben
 \section{Bối Cảnh Thị Trường Bất Động Sản \& Phân Tích EDA}
 Tập dữ liệu nhà ở bao gồm 150,000 giao dịch bất động sản với các đặc trưng không gian, diện tích và kết cấu công trình. Đặc tính cốt lõi của giá nhà là tính phi âm và phân phối lệch phải cực kỳ nặng (Right-Skewed Distribution): đa số nhà có giá từ 100,000 USD đến 600,000 USD, trong khi một số ít biệt thự siêu sang vượt ngưỡng 5,000,000 USD.
 
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item \textbf{Mã nguồn Notebook Huấn luyện \& Thực nghiệm Đối chuẩn:}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/house_price_large/notebooks/02_house_price_large_ml_vs_dl_scratch.ipynb}{\texttt{02\_house\_price\_large\_ml\_vs\_dl\_scratch.ipynb}}
+    \item \textbf{Nguồn dữ liệu thực nghiệm giao dịch bất động sản trên Kaggle:}\\ \href{https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset}{\texttt{Kaggle -- USA Real Estate Dataset (150,000 Records)}}
+\end{itemize}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\textwidth]{images/fig01_house_price_distribution.png}
@@ -884,6 +913,11 @@ Từ bảng kết quả đối chuẩn đa chiều (Bảng \ref{tab:house_benchm
 
 \section{Bối Cảnh Văn Bản E-Commerce \& Không Gian TF-IDF}
 Tập dữ liệu bao gồm 23,486 đánh giá sản phẩm thương mại điện tử thực tế của khách hàng (\texttt{Womens Clothing E-Commerce Reviews}). Mỗi bản ghi bao gồm tiêu đề ngắn (\texttt{Title}), nội dung đánh giá chi tiết (\texttt{Review Text}), xếp hạng sao (\texttt{Rating} từ 1 đến 5), và nhãn mục tiêu nhị phân (\texttt{Recommended IND}): nhãn 1 đại diện cho khách hàng hài lòng và khuyến nghị sản phẩm; nhãn 0 đại diện cho khách hàng không hài lòng hoặc phàn nàn về chất lượng dịch vụ.
+
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item \textbf{Mã nguồn Notebook Huấn luyện \& Thực nghiệm Đối chuẩn:}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/customer_comments/notebooks/03_comments_large_ml_vs_dl_scratch.ipynb}{\texttt{03\_comments\_large\_ml\_vs\_dl\_scratch.ipynb}}
+    \item \textbf{Nguồn dữ liệu thực nghiệm đánh giá thương mại điện tử trên Kaggle:}\\ \href{https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews}{\texttt{Kaggle -- Women's Clothing E-Commerce Reviews (23,486 Records)}}
+\end{itemize}
 
 Khảo sát khám phá dữ liệu (Hình \ref{fig:comments_eda}a) cho thấy nhãn mục tiêu bị mất cân bằng rõ rệt: 82.2\% khách hàng sẵn sàng khuyến nghị sản phẩm (18,540 đánh giá) và chỉ có 17.8\% không khuyến nghị (4,101 đánh giá). Phân phối số sao tập trung áp đảo ở mức 5 sao (11,044 đánh giá, 55.4\%) và 4 sao (4,448 đánh giá, 22.3\%). Về độ dài nhận xét (Hình \ref{fig:comments_eda}b), các đánh giá tiêu cực (nhãn 0) có trung vị độ dài khoảng 64 từ, nhỉnh hơn so với đánh giá tích cực (trung vị 60 từ), phản ánh tâm lý khách hàng phàn nàn thường có xu hướng viết dài hơn để diễn giải chi tiết vấn đề. Đồng thời, biểu đồ từ khóa (Hình \ref{fig:comments_keywords}) chỉ ra các danh từ và tính từ xuất hiện với tần suất áp đảo như \textit{dress, love, size, top, fit, like, wear}.
 
@@ -1165,8 +1199,17 @@ Dựa trên nguyên tắc đánh giá khoa học đa chiều (\textit{"Một mô
 \end{enumerate}
 
 \section{Kiểm Toán Khả Năng Tái Lập (Reproducibility Audit)}
-Toàn bộ mã nguồn, dữ liệu và số liệu thực nghiệm được cam kết tuân thủ tiêu chuẩn tái lập khoa học:
-\begin{itemize}
+Toàn bộ mã nguồn, dữ liệu và số liệu thực nghiệm được cam kết tuân thủ tiêu chuẩn tái lập khoa học 100\%:
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{Kho Lưu Trữ Mã Nguồn Dự Án (GitHub):}\\Toàn bộ mã nguồn, dữ liệu thực nghiệm, pipeline xử lý thuần số học NumPy và báo cáo nghiên cứu được lưu trữ công khai tại kho lưu trữ:\\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}{\texttt{INTELLIGENT-SYSTEM-DEVELOPMENT}}.
+    \item \textbf{Liên Kết Trực Tiếp Tới Toàn Bộ Notebooks Thực Nghiệm Assignment 03:}
+    \begin{itemize}
+        \item \textit{Mô hình Cơ sở Baseline Tutorial (768 mẫu Pima):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes/notebooks/01_diabetes_dl_from_scratch_numpy.ipynb}{\texttt{01\_diabetes\_dl\_from\_scratch\_numpy.ipynb}}
+        \item \textit{Mô hình Cải tiến \& Nghiên cứu Bóc tách Ablation (768 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes/notebooks/02_diabetes_dl_from_scratch_improvements.ipynb}{\texttt{02\_diabetes\_dl\_from\_scratch\_improvements.ipynb}}
+        \item \textit{Hệ thống 1 -- Sàng lọc Tiểu đường Lâm sàng (100,000 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/diabetes_large/notebooks/01_diabetes_large_ml_vs_dl_scratch.ipynb}{\texttt{01\_diabetes\_large\_ml\_vs\_dl\_scratch.ipynb}}
+        \item \textit{Hệ thống 2 -- Định giá Bất động sản Thực nghiệm (150,000 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/house_price_large/notebooks/02_house_price_large_ml_vs_dl_scratch.ipynb}{\texttt{02\_house\_price\_large\_ml\_vs\_dl\_scratch.ipynb}}
+        \item \textit{Hệ thống 3 -- Phân loại Nhận xét NLP Thương mại điện tử (22,641 mẫu):} \\\href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2003/customer_comments/notebooks/03_comments_large_ml_vs_dl_scratch.ipynb}{\texttt{03\_comments\_large\_ml\_vs\_dl\_scratch.ipynb}}
+    \end{itemize}
     \item \textbf{Cố định Seed ngẫu nhiên:} Mọi phân chia tập dữ liệu và khởi tạo trọng số đều cố định \texttt{random\_state = 42}.
     \item \textbf{Chống rò rỉ dữ liệu (Data Leakage):} Mọi biến đổi chuẩn hóa (Z-Score, TF-IDF) và tìm kiếm ngưỡng tối ưu đều chỉ thực hiện trên tập Train (\texttt{fit\_transform}) và ánh xạ sang tập Test (\texttt{transform}).
     \item \textbf{Tính toàn vẹn thực thi (Execution Integrity):} Toàn bộ mã nguồn thực nghiệm và quy trình tiền xử lý được lập trình chuẩn hóa, có thể thực thi tự động từ đầu đến cuối và tái lập chính xác 100\% các kết quả công bố.
