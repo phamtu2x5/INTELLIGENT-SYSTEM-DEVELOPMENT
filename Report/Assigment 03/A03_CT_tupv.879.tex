@@ -782,7 +782,7 @@ Dựa trên nguyên lý định giá bất động sản Hedonic, các đặc tr
     Đo lường mức độ bề thế tương đối của ngôi nhà so với mặt bằng quy mô dân cư lân cận cùng mã bưu chính.
 \end{itemize}
 
-\subsection{Mã hóa đích Bayes làm mượt (Smooth Bayesian Target Encoding) chống rò rỉ}
+\subsection[Mã hóa đích Bayes làm mượt chống rò rỉ]{Mã hóa đích Bayes làm mượt (Smooth Bayesian Target Encoding) chống rò rỉ}
 Vị trí địa lý là nhân tố định đoạt giá trị bất động sản. Tuy nhiên, việc One-Hot Encoding hàng nghìn mã bưu chính zip code sẽ làm bùng nổ chiều dữ liệu và gây thưa thớt nghiêm trọng. Để khắc phục, tác giả triển khai kỹ thuật Smooth Target Encoding có suy biến Bayes (Bayesian Shrinkage Smoothing) cho 4 cấp độ địa lý:
 \begin{equation}
     S_i = \frac{n_i \cdot \bar{y}_i + m \cdot \bar{y}_{\text{global}}}{n_i + m}
@@ -978,7 +978,7 @@ Dữ liệu thô ban đầu & Tập đánh giá sản phẩm thương mại đi�
 \subsection{Phân chia phân tầng \& Trích xuất TF-IDF chống rò rỉ dữ liệu}
 Dữ liệu văn bản được phân chia phân tầng (\texttt{stratify=y}) theo tỷ lệ 80/20: tập Train gồm 18,112 mẫu và tập Test gồm 4,529 mẫu. 
 
-Không gian đặc trưng được số hóa thông qua giải thuật \textbf{TF-IDF} (\texttt{Term Frequency - Inverse Document Frequency}):
+Không gian đặc trưng được số hóa thông qua giải thuật \textbf{TF-IDF} (Term Frequency -- Inverse Document Frequency):
 \begin{equation}
     \text{TF-IDF}(t, d, D) = \text{TF}(t, d) \times \ln\left( \frac{1 + |D|}{1 + |\{d \in D : t \in d\}|} \right) + 1
 \end{equation}
