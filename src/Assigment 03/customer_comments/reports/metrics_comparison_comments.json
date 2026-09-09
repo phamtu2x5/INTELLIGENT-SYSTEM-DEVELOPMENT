@@ -1,0 +1,54 @@
+[
+    {
+        "Mô hình": "Logistic Regression",
+        "Loại mô hình": "ML Tuyến tính (Linear)",
+        "Số tham số": "1001",
+        "Thời gian Train (s)": "0.567",
+        "Ngưỡng tối ưu": "0.68",
+        "Accuracy (Opt)": "89.20%",
+        "Recall Lớp 0 (Không hài lòng)": "75.49%",
+        "Recall Lớp 1 (Khuyến nghị)": "92.24%",
+        "Macro F1 (Opt)": "82.51%",
+        "ROC-AUC": "0.9343",
+        "Tính giải thích": "Cao (Trọng số từ vựng)"
+    },
+    {
+        "Mô hình": "Multinomial Naive Bayes",
+        "Loại mô hình": "Xác suất Bayes",
+        "Số tham số": "2000",
+        "Thời gian Train (s)": "0.021",
+        "Ngưỡng tối ưu": "0.72",
+        "Accuracy (Opt)": "88.45%",
+        "Recall Lớp 0 (Không hài lòng)": "71.83%",
+        "Recall Lớp 1 (Khuyến nghị)": "92.13%",
+        "Macro F1 (Opt)": "81.07%",
+        "ROC-AUC": "0.9274",
+        "Tính giải thích": "Cao (Xác suất tiên nghiệm)"
+    },
+    {
+        "Mô hình": "Random Forest",
+        "Loại mô hình": "Ensemble 50 Cây quyết định",
+        "Số tham số": "18,942 nút",
+        "Thời gian Train (s)": "0.672",
+        "Ngưỡng tối ưu": "0.75",
+        "Accuracy (Opt)": "86.55%",
+        "Recall Lớp 0 (Không hài lòng)": "63.41%",
+        "Recall Lớp 1 (Khuyến nghị)": "91.67%",
+        "Macro F1 (Opt)": "77.42%",
+        "ROC-AUC": "0.8971",
+        "Tính giải thích": "Trung bình (Feature Importance)"
+    },
+    {
+        "Mô hình": "Wide DL Text Scratch",
+        "Loại mô hình": "Mạng nơ-ron 2 lớp ẩn rộng (1000 → 128 → 64 → 1)",
+        "Số tham số": "136,449 trọng số",
+        "Thời gian Train (s)": "14.800",
+        "Ngưỡng tối ưu": "0.44",
+        "Accuracy (Opt)": "89.51%",
+        "Recall Lớp 0 (Không hài lòng)": "69.27%",
+        "Recall Lớp 1 (Khuyến nghị)": "93.99%",
+        "Macro F1 (Opt)": "82.07%",
+        "ROC-AUC": "0.9303",
+        "Tính giải thích": "Thấp (Tầng biểu diễn ẩn)"
+    }
+]

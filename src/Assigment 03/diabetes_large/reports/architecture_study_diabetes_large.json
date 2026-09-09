@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Shallow MLP (1 Lớp Ẩn)",
+        "dims_str": "14 → 32 → 1",
+        "depth": 1,
+        "params": 513,
+        "train_time": 1.47,
+        "final_loss": 0.1172,
+        "test_acc": 96.04,
+        "precision": 88.04,
+        "recall": 64.25,
+        "f1": 74.28
+    },
+    {
+        "name": "Standard MLP (2 Lớp Ẩn)",
+        "dims_str": "14 → 32 → 16 → 1",
+        "depth": 2,
+        "params": 1025,
+        "train_time": 1.1,
+        "final_loss": 0.1086,
+        "test_acc": 96.31,
+        "precision": 91.61,
+        "recall": 64.42,
+        "f1": 75.65
+    },
+    {
+        "name": "Deeper MLP (3 Lớp Ẩn)",
+        "dims_str": "14 → 64 → 32 → 16 → 1",
+        "depth": 3,
+        "params": 3585,
+        "train_time": 4.14,
+        "final_loss": 0.1021,
+        "test_acc": 96.47,
+        "precision": 89.68,
+        "recall": 68.2,
+        "f1": 77.48
+    },
+    {
+        "name": "Wide MLP (2 Lớp Ẩn Rộng)",
+        "dims_str": "14 → 128 → 64 → 1",
+        "depth": 2,
+        "params": 10241,
+        "train_time": 6.76,
+        "final_loss": 0.1035,
+        "test_acc": 96.44,
+        "precision": 92.14,
+        "recall": 65.66,
+        "f1": 76.68
+    }
+]

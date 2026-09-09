@@ -1,0 +1,50 @@
+[
+    {
+        "Cấu hình Kiến trúc": "8 -> 16 -> 8 -> 1 (Chuẩn chọn)",
+        "Số tham số": 289,
+        "Hàm ẩn": "ReLU",
+        "Final Loss": "0.3565",
+        "Test Acc": "81.17%",
+        "Test Prec": "71.93%",
+        "Test Recall": "75.93%",
+        "Test F1": "73.87%",
+        "Số ca FN": "13 ca",
+        "Đánh giá khoa học": "Tối ưu cân bằng giữa năng lực biểu diễn và tổng quát hóa; tỷ lệ bắt bệnh cao nhất."
+    },
+    {
+        "Cấu hình Kiến trúc": "8 -> 32 -> 16 -> 1 (Mở rộng rộng)",
+        "Số tham số": 833,
+        "Hàm ẩn": "ReLU",
+        "Final Loss": "0.3570",
+        "Test Acc": "77.27%",
+        "Test Prec": "66.10%",
+        "Test Recall": "72.22%",
+        "Test F1": "69.03%",
+        "Số ca FN": "15 ca",
+        "Đánh giá khoa học": "Train Loss giảm nhưng Test Acc giảm (-3.9%); dư thừa tham số gây quá khớp nhẹ."
+    },
+    {
+        "Cấu hình Kiến trúc": "8 -> 16 -> 1 (Rút gọn nông)",
+        "Số tham số": 145,
+        "Hàm ẩn": "ReLU",
+        "Final Loss": "0.4059",
+        "Test Acc": "75.32%",
+        "Test Prec": "62.50%",
+        "Test Recall": "74.07%",
+        "Test F1": "67.80%",
+        "Số ca FN": "14 ca",
+        "Đánh giá khoa học": "Thiếu tầng biểu diễn phân cấp; độ chính xác và F1 đều giảm sút rõ rệt."
+    },
+    {
+        "Cấu hình Kiến trúc": "8 -> 16 -> 8 -> 1 (Không ReLU)",
+        "Số tham số": 289,
+        "Hàm ẩn": "Tuyến tính (Linear)",
+        "Final Loss": "0.4330",
+        "Test Acc": "70.13%",
+        "Test Prec": "57.41%",
+        "Test Recall": "57.41%",
+        "Test F1": "57.41%",
+        "Số ca FN": "23 ca",
+        "Đánh giá khoa học": "Mất tính phi tuyến, mạng suy biến về hồi quy tuyến tính; FN tăng vọt lên 23 ca."
+    }
+]

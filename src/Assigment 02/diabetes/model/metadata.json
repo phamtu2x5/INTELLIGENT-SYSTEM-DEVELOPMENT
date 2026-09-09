@@ -1,6 +1,6 @@
 {
   "application_name": "Diabetes Risk Prediction System",
-  "dataset_source": "Kaggle - 100,000 Patient Records (Cleaned 95,155)",
+  "dataset_source": "Kaggle - 100,000 Patient Records",
   "n_samples": 95155,
   "feature_names_raw": [
     "gender",
@@ -30,37 +30,61 @@
     "hypertension",
     "heart_disease"
   ],
+  "categorical_mapping": {
+    "gender": [
+      "Female",
+      "Male"
+    ],
+    "smoking_history": [
+      "never",
+      "No Info",
+      "current",
+      "former",
+      "ever",
+      "not current"
+    ]
+  },
   "best_model_name": "HistGradientBoosting",
   "test_metrics": [
     {
-      "Model": "HistGradientBoosting",
-      "Accuracy (%)": 96.72,
-      "Precision (%)": 87.37,
-      "Recall (%)": 73.86,
-      "F1-Score (%)": 80.05,
-      "ROC-AUC": 0.9797,
-      "Threshold": 0.32,
-      "Train Time (s)": 0.488
-    },
-    {
       "Model": "Random Forest",
-      "Accuracy (%)": 97.09,
-      "Precision (%)": 96.57,
-      "Recall (%)": 69.79,
-      "F1-Score (%)": 81.03,
-      "ROC-AUC": 0.9759,
+      "Accuracy (%)": 96.97,
+      "Precision (%)": 92.68,
+      "Recall (%)": 71.68,
+      "F1-Score (%)": 80.84,
+      "ROC-AUC": 0.977,
       "Threshold": 0.32,
-      "Train Time (s)": 0.461
+      "Train Time (s)": 0.523
     },
     {
       "Model": "Decision Tree",
-      "Accuracy (%)": 97.14,
-      "Precision (%)": 100.0,
-      "Recall (%)": 67.91,
-      "F1-Score (%)": 80.89,
-      "ROC-AUC": 0.9684,
+      "Accuracy (%)": 96.92,
+      "Precision (%)": 91.78,
+      "Recall (%)": 71.8,
+      "F1-Score (%)": 80.57,
+      "ROC-AUC": 0.9748,
       "Threshold": 0.32,
-      "Train Time (s)": 0.067
+      "Train Time (s)": 0.115
+    },
+    {
+      "Model": "HistGradientBoosting",
+      "Accuracy (%)": 96.76,
+      "Precision (%)": 88.17,
+      "Recall (%)": 73.45,
+      "F1-Score (%)": 80.14,
+      "ROC-AUC": 0.9798,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.408
+    },
+    {
+      "Model": "Linear SVM",
+      "Accuracy (%)": 95.33,
+      "Precision (%)": 74.92,
+      "Recall (%)": 71.56,
+      "F1-Score (%)": 73.2,
+      "ROC-AUC": 0.9616,
+      "Threshold": 0.32,
+      "Train Time (s)": 0.467
     },
     {
       "Model": "Logistic Regression",
@@ -70,17 +94,7 @@
       "F1-Score (%)": 73.02,
       "ROC-AUC": 0.9625,
       "Threshold": 0.32,
-      "Train Time (s)": 0.159
-    },
-    {
-      "Model": "Linear SVM",
-      "Accuracy (%)": 95.34,
-      "Precision (%)": 74.94,
-      "Recall (%)": 71.62,
-      "F1-Score (%)": 73.24,
-      "ROC-AUC": 0.9616,
-      "Threshold": 0.32,
-      "Train Time (s)": 0.261
+      "Train Time (s)": 0.145
     }
   ],
   "decision_threshold": 0.32

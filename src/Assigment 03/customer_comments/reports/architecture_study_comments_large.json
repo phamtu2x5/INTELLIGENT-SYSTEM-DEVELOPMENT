@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Shallow Text MLP (1 Lớp Ẩn)",
+        "dims_str": "1000 → 32 → 1",
+        "depth": 1,
+        "params": 32065,
+        "train_time": 5.44,
+        "final_loss": 0.2172,
+        "test_acc": 89.71,
+        "macro_f1": 81.54,
+        "recall_class0": 64.02,
+        "recall_class1": 95.39
+    },
+    {
+        "name": "Standard Text MLP (2 Lớp Ẩn)",
+        "dims_str": "1000 → 32 → 16 → 1",
+        "depth": 2,
+        "params": 32577,
+        "train_time": 5.82,
+        "final_loss": 0.195,
+        "test_acc": 89.45,
+        "macro_f1": 81.05,
+        "recall_class0": 63.17,
+        "recall_class1": 95.25
+    },
+    {
+        "name": "Deeper Text MLP (3 Lớp Ẩn)",
+        "dims_str": "1000 → 64 → 32 → 16 → 1",
+        "depth": 3,
+        "params": 66689,
+        "train_time": 9.38,
+        "final_loss": 0.1744,
+        "test_acc": 89.47,
+        "macro_f1": 81.46,
+        "recall_class0": 65.61,
+        "recall_class1": 94.74
+    },
+    {
+        "name": "Wide Text MLP (2 Lớp Ẩn Rộng)",
+        "dims_str": "1000 → 128 → 64 → 1",
+        "depth": 2,
+        "params": 136449,
+        "train_time": 14.8,
+        "final_loss": 0.1916,
+        "test_acc": 89.2,
+        "macro_f1": 82.21,
+        "recall_class0": 73.17,
+        "recall_class1": 92.75
+    }
+]

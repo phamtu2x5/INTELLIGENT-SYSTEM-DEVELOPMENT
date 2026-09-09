@@ -1,0 +1,17 @@
+{
+    "Mô hình": "Mô hình Cải tiến (Clean Data + Stratified + Train-Only Scaler + Optimal Threshold)",
+    "Kiến trúc": "8 -> 16 -> 8 -> 1",
+    "Số lượng tham số": 289,
+    "Tốc độ học (eta)": 0.02,
+    "Số epochs": 1200,
+    "Ngưỡng quyết định": 0.4700000000000001,
+    "Final Train Loss": 0.3565094818455703,
+    "Accuracy": 0.8116883116883117,
+    "Precision": 0.7192982454878424,
+    "Recall": 0.7592592591186557,
+    "F1-Score": 0.7387387336092851,
+    "TP": 41,
+    "TN": 84,
+    "FP": 16,
+    "FN": 13
+}

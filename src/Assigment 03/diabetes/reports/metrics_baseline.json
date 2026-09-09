@@ -1,0 +1,17 @@
+{
+    "Mô hình": "Baseline 3-Layer NN (NumPy From Scratch)",
+    "Kiến trúc": "8 -> 16 -> 8 -> 1",
+    "Số lượng tham số": 289,
+    "Tốc độ học (eta)": 0.01,
+    "Số epochs": 1000,
+    "Ngưỡng quyết định": 0.5,
+    "Final Train Loss": 0.49816233329829585,
+    "Accuracy": 0.6948051948051948,
+    "Precision": 0.6341463413087448,
+    "Recall": 0.44827586199167657,
+    "F1-Score": 0.5252525202938476,
+    "TP": 26,
+    "TN": 81,
+    "FP": 15,
+    "FN": 32
+}

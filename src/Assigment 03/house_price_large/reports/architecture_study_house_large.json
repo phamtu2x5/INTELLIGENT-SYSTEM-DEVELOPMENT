@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Shallow Regressor (1 Lớp Ẩn)",
+        "dims_str": "13 → 32 → 1",
+        "depth": 1,
+        "params": 481,
+        "train_time": 1.79,
+        "final_loss": 0.1876,
+        "rmse": 753945.69,
+        "mae": 171316.29,
+        "r2": 0.7972,
+        "r2_raw": -0.2866
+    },
+    {
+        "name": "Standard Regressor (2 Lớp Ẩn)",
+        "dims_str": "13 → 32 → 16 → 1",
+        "depth": 2,
+        "params": 993,
+        "train_time": 2.98,
+        "final_loss": 0.1844,
+        "rmse": 473815.89,
+        "mae": 165017.9,
+        "r2": 0.8024,
+        "r2_raw": 0.4918
+    },
+    {
+        "name": "Deeper Regressor (3 Lớp Ẩn)",
+        "dims_str": "13 → 64 → 32 → 16 → 1",
+        "depth": 3,
+        "params": 3521,
+        "train_time": 5.59,
+        "final_loss": 0.183,
+        "rmse": 704684.12,
+        "mae": 167077.64,
+        "r2": 0.8009,
+        "r2_raw": -0.124
+    },
+    {
+        "name": "Wide Regressor (2 Lớp Ẩn Rộng)",
+        "dims_str": "13 → 128 → 64 → 1",
+        "depth": 2,
+        "params": 10113,
+        "train_time": 10.18,
+        "final_loss": 0.1787,
+        "rmse": 338439.03,
+        "mae": 160194.44,
+        "r2": 0.8072,
+        "r2_raw": 0.7407
+    }
+]

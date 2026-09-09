@@ -1,6 +1,6 @@
 Model,Accuracy (%),Precision (%),Recall (%),F1-Score (%),ROC-AUC,Threshold,Train Time (s)
-Random Forest,96.78,89.73,71.64,79.67,0.9739,0.32,0.659
-HistGradientBoosting,96.54,85.0,73.82,79.02,0.9769,0.32,1.068
-Decision Tree,96.53,85.75,72.76,78.72,0.9701,0.32,0.156
-Linear SVM,95.15,73.38,70.7,72.01,0.9589,0.32,0.609
-Logistic Regression,95.04,72.39,70.81,71.59,0.9595,0.32,0.301
+Random Forest,96.97,92.68,71.68,80.84,0.977,0.32,0.523
+Decision Tree,96.92,91.78,71.8,80.57,0.9748,0.32,0.115
+HistGradientBoosting,96.76,88.17,73.45,80.14,0.9798,0.32,0.408
+Linear SVM,95.33,74.92,71.56,73.2,0.9616,0.32,0.467
+Logistic Regression,95.27,74.22,71.86,73.02,0.9625,0.32,0.145

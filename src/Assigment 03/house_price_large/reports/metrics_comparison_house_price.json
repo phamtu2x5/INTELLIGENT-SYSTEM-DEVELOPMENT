@@ -1,0 +1,50 @@
+[
+    {
+        "Mô hình": "Linear Regression",
+        "Loại mô hình": "Hồi quy Tuyến tính (OLS)",
+        "Số tham số": "14",
+        "Thời gian Train (s)": "0.014",
+        "R² (Log)": "0.7829",
+        "R² (Raw)": "0.5018",
+        "MAE (USD)": "$177,171.70",
+        "RMSE (USD)": "$469,154.45",
+        "MAPE (%)": "32.43%",
+        "Tính giải thích": "Cao (Hệ số hồi quy)"
+    },
+    {
+        "Mô hình": "Decision Tree Regressor",
+        "Loại mô hình": "Cây hồi quy đơn lẻ",
+        "Số tham số": "4,187 nút",
+        "Thời gian Train (s)": "0.597",
+        "R² (Log)": "0.7937",
+        "R² (Raw)": "0.7566",
+        "MAE (USD)": "$163,461.17",
+        "RMSE (USD)": "$327,903.46",
+        "MAPE (%)": "30.69%",
+        "Tính giải thích": "Rất cao (Luật rẽ nhánh)"
+    },
+    {
+        "Mô hình": "Random Forest Regressor",
+        "Loại mô hình": "Ensemble 100 Cây hồi quy",
+        "Số tham số": "1,071,202 nút",
+        "Thời gian Train (s)": "8.394",
+        "R² (Log)": "0.8339",
+        "R² (Raw)": "0.8109",
+        "MAE (USD)": "$143,552.38",
+        "RMSE (USD)": "$289,004.44",
+        "MAPE (%)": "26.94%",
+        "Tính giải thích": "Trung bình (Feature Importance)"
+    },
+    {
+        "Mô hình": "Wide DL Regressor Scratch",
+        "Loại mô hình": "Mạng nơ-ron 2 lớp ẩn rộng (13 → 128 → 64 → 1)",
+        "Số tham số": "10,113 trọng số",
+        "Thời gian Train (s)": "10.180",
+        "R² (Log)": "0.8072",
+        "R² (Raw)": "0.7407",
+        "MAE (USD)": "$160,194.44",
+        "RMSE (USD)": "$338,439.03",
+        "MAPE (%)": "29.98%",
+        "Tính giải thích": "Thấp (Mạng nơ-ron phi tuyến)"
+    }
+]

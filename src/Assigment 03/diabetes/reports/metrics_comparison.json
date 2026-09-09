@@ -1,0 +1,56 @@
+[
+    {
+        "Tiêu chí Đánh giá": "Tiền xử lý dữ liệu",
+        "Mô hình Cơ sở (Baseline)": "Chuẩn hóa z-score toàn tập (Rò rỉ dữ liệu)",
+        "Mô hình Cải tiến (Improved)": "Làm sạch số 0 y tế + Fit duy nhất trên Train",
+        "Mức độ Cải thiện": "Triệt tiêu Data Leakage"
+    },
+    {
+        "Tiêu chí Đánh giá": "Phân chia Train/Test",
+        "Mô hình Cơ sở (Baseline)": "80/20 ngẫu nhiên thuần túy",
+        "Mô hình Cải tiến (Improved)": "Phân tầng (Stratified) bảo toàn tỷ lệ nhãn",
+        "Mức độ Cải thiện": "Bảo toàn 34.9% nhãn bệnh"
+    },
+    {
+        "Tiêu chí Đánh giá": "Ngưỡng quyết định",
+        "Mô hình Cơ sở (Baseline)": "0.50 (Cố định cứng nhắc)",
+        "Mô hình Cải tiến (Improved)": "0.47 (Dò ngưỡng tối ưu F1)",
+        "Mức độ Cải thiện": "Tối ưu hóa lâm sàng"
+    },
+    {
+        "Tiêu chí Đánh giá": "Final Train Loss",
+        "Mô hình Cơ sở (Baseline)": "0.4982",
+        "Mô hình Cải tiến (Improved)": "0.3565",
+        "Mức độ Cải thiện": "Giảm 28.4% (Hội tụ sâu)"
+    },
+    {
+        "Tiêu chí Đánh giá": "Accuracy (Độ chính xác)",
+        "Mô hình Cơ sở (Baseline)": "69.48%",
+        "Mô hình Cải tiến (Improved)": "81.17%",
+        "Mức độ Cải thiện": "+11.69%"
+    },
+    {
+        "Tiêu chí Đánh giá": "Recall (Độ nhạy phát hiện bệnh)",
+        "Mô hình Cơ sở (Baseline)": "44.83%",
+        "Mô hình Cải tiến (Improved)": "75.93%",
+        "Mức độ Cải thiện": "+31.10% (Tăng vượt bậc)"
+    },
+    {
+        "Tiêu chí Đánh giá": "Precision (Độ chính xác chẩn đoán)",
+        "Mô hình Cơ sở (Baseline)": "63.41%",
+        "Mô hình Cải tiến (Improved)": "71.93%",
+        "Mức độ Cải thiện": "+8.52%"
+    },
+    {
+        "Tiêu chí Đánh giá": "F1-Score",
+        "Mô hình Cơ sở (Baseline)": "52.53%",
+        "Mô hình Cải tiến (Improved)": "73.87%",
+        "Mức độ Cải thiện": "+21.34%"
+    },
+    {
+        "Tiêu chí Đánh giá": "Số ca bỏ sót bệnh (FN)",
+        "Mô hình Cơ sở (Baseline)": "32 ca",
+        "Mô hình Cải tiến (Improved)": "13 ca",
+        "Mức độ Cải thiện": "Giảm 59.4% ca nguy hiểm"
+    }
+]
