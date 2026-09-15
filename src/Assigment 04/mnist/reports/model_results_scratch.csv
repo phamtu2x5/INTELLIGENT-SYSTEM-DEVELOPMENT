@@ -1,0 +1,3 @@
+Phiên bản,Bộ lọc,Dense,Khởi tạo,Optimizer,Tham số,Thời gian (s),Loss cuối,Accuracy (%),Macro F1,Weighted F1
+Baseline Scratch CNN,4 Filters (3x3),32 Units,Xavier Init,Mini-batch GD (lr=0.1),22034,32.62,0.1799,94.37,0.9429,0.9436
+Improved Scratch CNN,8 Filters (3x3),64 Units,He Normal Init,Mini-batch GD (lr=0.1),87322,45.64,0.0818,97.24,0.9722,0.9724

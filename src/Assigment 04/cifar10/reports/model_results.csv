@@ -1,0 +1,4 @@
+Framework / Triển khai,Số tham số,Thời gian train (s),Thiết bị thực thi,Test Accuracy (%),Macro F1 (%),Weighted F1 (%)
+Improved Scratch (NumPy),526154,451.2,CPU (Pure NumPy),52.12,49.93,49.93
+PyTorch (3-Block CNN),189130,73.8,MPS,70.64,70.41,70.41
+TensorFlow / Keras (3-Block CNN),189450,236.0,CPU (TensorFlow),64.9,64.97,64.97

@@ -1,0 +1,4 @@
+Mô hình,Framework,Tham số,Thời gian (s),Accuracy (%),Macro F1,Weighted F1
+Improved Scratch CNN,Pure NumPy,87322,45.64,97.24,0.9722,0.9724
+PyTorch CNN,PyTorch (MPS/GPU),207018,11.3,98.67,0.9866,0.9867
+Keras CNN,TensorFlow / Keras,207114,21.46,98.47,0.9845,0.9847

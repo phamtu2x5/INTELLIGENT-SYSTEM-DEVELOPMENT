@@ -1,0 +1,5 @@
+Bộ Dữ Liệu,Kiến Trúc,Số Tham Số,Thời Gian (s),Test Accuracy (%),Macro F1 (%),Độ Chênh Lệch so với CNN
+MNIST (Grayscale 28x28),MLP (3 Layers),235914,36.5,98.16,98.15,-0.51%
+MNIST (Grayscale 28x28),CNN (PyTorch Hierarchical),207018,11.3,98.67,98.66,Baseline CNN (0.00%)
+CIFAR-10 (RGB 32x32x3),MLP (3 Layers),1708810,30.1,53.72,52.8,-16.92%
+CIFAR-10 (RGB 32x32x3),CNN (PyTorch Hierarchical),189130,73.8,70.64,70.41,Baseline CNN (0.00%)
