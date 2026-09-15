@@ -1247,22 +1247,6 @@ Bảng~\ref{tab:master_benchmark} tổng hợp toàn bộ các kết quả thự
     Cung cấp giao diện lập trình cấp cao (High-level API) rất trực quan thông qua API tuần tự \texttt{Sequential} của TensorFlow/Keras. Các phương thức \texttt{compile()}, \texttt{fit()}, \texttt{evaluate()} giúp tinh gọn hóa mã nguồn. Kết quả đối chuẩn giữa PyTorch và Keras gần như tương đồng tuyệt đối trên mọi tập dữ liệu (chênh lệch dưới 1\%), khẳng định tính vững chắc của nền tảng toán học đằng sau.
 \end{enumerate}
 
-\section[Kiểm Toán Khả Năng Tái Lập Thực Nghiệm (Reproducibility Audit)]{Kiểm Toán Khả Năng Tái Lập Thực Nghiệm\\(Reproducibility Audit)}
-Tuân thủ nghiêm ngặt các tiêu chuẩn phương pháp luận khoa học, toàn bộ mã nguồn và kết quả trong báo cáo đáp ứng $100\%$ tính tái lập:
-\begin{itemize}[topsep=2pt, itemsep=2pt, parsep=0pt, leftmargin=1.2em]
-    \item \textbf{Kho lưu trữ mã nguồn GitHub chính thức của Dự án:}\\ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}{\texttt{phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT}}
-    \item \textbf{Liên kết trực tiếp tới các Notebook thực nghiệm Assignment 04:}
-    \begin{itemize}[topsep=1pt, itemsep=1.5pt, parsep=0pt, leftmargin=1.2em]
-        \item \textit{2D CNN MNIST (Thị giác số):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/01_mnist_cnn_scratch.ipynb}{\texttt{Scratch}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/02_mnist_frameworks_comparison.ipynb}{\texttt{PyTorch/Keras}}
-        \item \textit{2D CNN CIFAR-10 (Thị giác màu):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/01_cifar10_cnn_scratch.ipynb}{\texttt{Scratch}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/02_cifar10_frameworks_experiments.ipynb}{\texttt{PyTorch/Keras}}
-        \item \textit{Đối kháng MLP vs CNN \& PCA:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/03_mlp_mnist_cifar_comparison.ipynb}{\texttt{03\_mlp\_mnist\_cifar\_comparison.ipynb}}
-        \item \textit{1D CNN Comments (NLP):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/01_comments_1d_cnn_numpy.ipynb}{\texttt{NumPy}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/02_comments_1d_cnn_pytorch.ipynb}{\texttt{PyTorch}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/03_comments_1d_cnn_tensorflow.ipynb}{\texttt{TF}}
-        \item \textit{1D CNN Diabetes (Bảng):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/01_diabetes_1d_cnn_numpy.ipynb}{\texttt{NumPy}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/02_diabetes_1d_cnn_pytorch.ipynb}{\texttt{PyTorch}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/03_diabetes_1d_cnn_tensorflow.ipynb}{\texttt{TF}}
-        \item \textit{1D CNN House Price (Bảng):} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/01_house_price_1d_cnn_numpy.ipynb}{\texttt{NumPy}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/02_house_price_1d_cnn_pytorch.ipynb}{\texttt{PyTorch}} $\cdot$ \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/03_house_price_1d_cnn_tensorflow.ipynb}{\texttt{TF}}
-    \end{itemize}
-    \item \textbf{Cố định Seed ngẫu nhiên:} Mọi phân chia tập dữ liệu (\texttt{train\_test\_split}) và khởi tạo trọng số đều cố định \texttt{seed = 42}.
-    \item \textbf{Tính toàn vẹn thực thi (Execution Integrity):} Toàn bộ các notebook đều đã được chạy tuần tự từ cell đầu đến cell cuối không lỗi, lưu lại đầy đủ outputs, biểu đồ và tệp trọng số nén \texttt{.joblib} / \texttt{.pt}.
-\end{itemize}
 
 
 % =========================================================================
