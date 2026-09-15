@@ -432,10 +432,12 @@ Trong mô hình hóa học máy, việc ứng dụng toán tử tích chập đ�
 \section{Thực Nghiệm 1D CNN Phân Loại Cảm Xúc Nhận Xét Khách Hàng (Customer Comments)}
 
 \begin{itemize}[leftmargin=1.5em, itemsep=2pt]
-    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 1D CNN NLP:}\\
-    NumPy From Scratch: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/01_comments_1d_cnn_numpy.ipynb}{\texttt{01\_comments\_1d\_cnn\_numpy.ipynb}} $\cdot$
-    PyTorch 2.0: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/02_comments_1d_cnn_pytorch.ipynb}{\texttt{02\_comments\_1d\_cnn\_pytorch.ipynb}} $\cdot$
-    TensorFlow / Keras: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/03_comments_1d_cnn_tensorflow.ipynb}{\texttt{03\_comments\_1d\_cnn\_tensorflow.ipynb}}
+    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 1D CNN NLP:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt]
+        \item \textit{NumPy From Scratch:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/01_comments_1d_cnn_numpy.ipynb}{\texttt{01\_comments\_1d\_cnn\_numpy.ipynb}}
+        \item \textit{PyTorch 2.0:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/02_comments_1d_cnn_pytorch.ipynb}{\texttt{02\_comments\_1d\_cnn\_pytorch.ipynb}}
+        \item \textit{TensorFlow / Keras:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/customer_comments/notebooks/03_comments_1d_cnn_tensorflow.ipynb}{\texttt{03\_comments\_1d\_cnn\_tensorflow.ipynb}}
+    \end{itemize}
 \end{itemize}
 
 \subsection{Mô tả tập dữ liệu và tiền xử lý chuỗi}
@@ -546,13 +548,16 @@ TensorFlow / Keras & 0.3325 & 86.64\% & \textbf{87.10\%} & 86.10\% & 86.60\% \\
 
 Cả ba framework đều đạt độ chính xác trên 85.5\%, chứng minh tính tương đương hoàn hảo giữa công thức toán giải tích và các framework thương mại.
 
+\clearpage
 \section{Khảo Sát Thực Nghiệm 1D CNN Trên Dữ Liệu Bảng Y Tế (Diabetes)}
 
 \begin{itemize}[leftmargin=1.5em, itemsep=2pt]
-    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 1D CNN Diabetes:}\\
-    NumPy From Scratch: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/01_diabetes_1d_cnn_numpy.ipynb}{\texttt{01\_diabetes\_1d\_cnn\_numpy.ipynb}} $\cdot$
-    PyTorch 2.0: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/02_diabetes_1d_cnn_pytorch.ipynb}{\texttt{02\_diabetes\_1d\_cnn\_pytorch.ipynb}} $\cdot$
-    TensorFlow / Keras: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/03_diabetes_1d_cnn_tensorflow.ipynb}{\texttt{03\_diabetes\_1d\_cnn\_tensorflow.ipynb}}
+    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 1D CNN Diabetes:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt]
+        \item \textit{NumPy From Scratch:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/01_diabetes_1d_cnn_numpy.ipynb}{\texttt{01\_diabetes\_1d\_cnn\_numpy.ipynb}}
+        \item \textit{PyTorch 2.0:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/02_diabetes_1d_cnn_pytorch.ipynb}{\texttt{02\_diabetes\_1d\_cnn\_pytorch.ipynb}}
+        \item \textit{TensorFlow / Keras:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/diabetes/notebooks/03_diabetes_1d_cnn_tensorflow.ipynb}{\texttt{03\_diabetes\_1d\_cnn\_tensorflow.ipynb}}
+    \end{itemize}
 \end{itemize}
 
 Mô hình xử lý 8 đặc trưng y sinh của bệnh nhân được cấu hình tương thích với chuỗi 1D chiều dài 8: $[x_1, x_2, \dots, x_8]$.
@@ -618,13 +623,16 @@ TensorFlow / Keras & 77.27\% & 70.37\% & 52.78\% & 60.32\% \\
 
 Kết quả khẳng định: Mô hình 1D CNN hội tụ ổn định với độ chính xác đạt trên 77\%, tuy nhiên độ nhạy (Recall) dao động trong khoảng 52--55\%, phản ánh sự giới hạn của toán tử tích chập khi hoạt động trên các thuộc tính bảng không mang tính liên tục tô-pô không gian.
 
+\clearpage
 \section{Khảo Sát Thực Nghiệm 1D CNN Hồi Quy Bất Động Sản (House Price)}
 
 \begin{itemize}[leftmargin=1.5em, itemsep=2pt]
-    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 1D CNN House Price:}\\
-    NumPy From Scratch: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/01_house_price_1d_cnn_numpy.ipynb}{\texttt{01\_house\_price\_1d\_cnn\_numpy.ipynb}} $\cdot$
-    PyTorch 2.0: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/02_house_price_1d_cnn_pytorch.ipynb}{\texttt{02\_house\_price\_1d\_cnn\_pytorch.ipynb}} $\cdot$
-    TensorFlow / Keras: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/03_house_price_1d_cnn_tensorflow.ipynb}{\texttt{03\_house\_price\_1d\_cnn\_tensorflow.ipynb}}
+    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 1D CNN House Price:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt]
+        \item \textit{NumPy From Scratch:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/01_house_price_1d_cnn_numpy.ipynb}{\texttt{01\_house\_price\_1d\_cnn\_numpy.ipynb}}
+        \item \textit{PyTorch 2.0:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/02_house_price_1d_cnn_pytorch.ipynb}{\texttt{02\_house\_price\_1d\_cnn\_pytorch.ipynb}}
+        \item \textit{TensorFlow / Keras:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/house_price/notebooks/03_house_price_1d_cnn_tensorflow.ipynb}{\texttt{03\_house\_price\_1d\_cnn\_tensorflow.ipynb}}
+    \end{itemize}
 \end{itemize}
 
 Đối với bài toán hồi quy định giá nhà, nơ-ron đầu ra được chuyển đổi thành hàm tuyến tính (\textbf{Linear Activation}) và hàm mất mát là sai số toàn phương trung bình (\textbf{Mean Squared Error -- MSE Loss}):
@@ -816,10 +824,12 @@ class MaxPool2D:
 \section{Thực Nghiệm 2D CNN Trên Tập Dữ Liệu MNIST}
 
 \begin{itemize}[leftmargin=1.5em, itemsep=2pt]
-    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 2D CNN MNIST:}\\
-    Trực quan hóa EDA: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/00_mnist_visualization.ipynb}{\texttt{00\_mnist\_visualization.ipynb}} $\cdot$
-    NumPy Scratch: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/01_mnist_cnn_scratch.ipynb}{\texttt{01\_mnist\_cnn\_scratch.ipynb}} $\cdot$
-    Frameworks: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/02_mnist_frameworks_comparison.ipynb}{\texttt{02\_mnist\_frameworks\_comparison.ipynb}}
+    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 2D CNN MNIST:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt]
+        \item \textit{Trực quan hóa EDA:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/00_mnist_visualization.ipynb}{\texttt{00\_mnist\_visualization.ipynb}}
+        \item \textit{NumPy Scratch:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/01_mnist_cnn_scratch.ipynb}{\texttt{01\_mnist\_cnn\_scratch.ipynb}}
+        \item \textit{Frameworks:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/mnist/notebooks/02_mnist_frameworks_comparison.ipynb}{\texttt{02\_mnist\_frameworks\_comparison.ipynb}}
+    \end{itemize}
 \end{itemize}
 
 \subsection{So sánh mô hình cơ sở (Baseline) và mô hình cải tiến (Improved) From Scratch}
@@ -909,10 +919,12 @@ Khi triển khai trên các framework công nghiệp với kiến trúc sâu hơ
 \section{Thực Nghiệm 2D CNN Trên Tập Dữ Liệu CIFAR-10}
 
 \begin{itemize}[leftmargin=1.5em, itemsep=2pt]
-    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 2D CNN CIFAR-10:}\\
-    Trực quan hóa EDA: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/00_cifar10_visualization.ipynb}{\texttt{00\_cifar10\_visualization.ipynb}} $\cdot$
-    NumPy Scratch: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/01_cifar10_cnn_scratch.ipynb}{\texttt{01\_cifar10\_cnn\_scratch.ipynb}} $\cdot$
-    Frameworks: \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/02_cifar10_frameworks_experiments.ipynb}{\texttt{02\_cifar10\_frameworks\_experiments.ipynb}}
+    \item \textbf{Mã nguồn Notebooks Huấn luyện \& Đối chuẩn 2D CNN CIFAR-10:}
+    \begin{itemize}[leftmargin=1.2em, itemsep=1.5pt]
+        \item \textit{Trực quan hóa EDA:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/00_cifar10_visualization.ipynb}{\texttt{00\_cifar10\_visualization.ipynb}}
+        \item \textit{NumPy Scratch:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/01_cifar10_cnn_scratch.ipynb}{\texttt{01\_cifar10\_cnn\_scratch.ipynb}}
+        \item \textit{Frameworks:} \href{https://github.com/phamtu2x5/INTELLIGENT-SYSTEM-DEVELOPMENT/blob/main/src/Assigment%2004/cifar10/notebooks/02_cifar10_frameworks_experiments.ipynb}{\texttt{02\_cifar10\_frameworks\_experiments.ipynb}}
+    \end{itemize}
 \end{itemize}
 
 \subsection{Phân chia tập dữ liệu 3 phần chuẩn mực}
@@ -1200,13 +1212,13 @@ Bảng~\ref{tab:master_benchmark} tổng hợp toàn bộ các kết quả thự
 \begin{table}[H]
 \centering
 \small
-\setlength{\tabcolsep}{5pt}
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.18}
 \caption{Bảng tổng hợp đối chuẩn toàn diện các mô hình CNN trong Assignment 04}
 \label{tab:master_benchmark}
-\begin{tabularx}{\textwidth}{lll >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+\begin{tabularx}{\textwidth}{@{}ll >{\raggedright\arraybackslash}X >{\centering\arraybackslash}p{2.0cm} >{\centering\arraybackslash}p{2.0cm} >{\centering\arraybackslash}p{2.0cm}@{}}
 \toprule
-\textbf{Miền Dữ Liệu} & \textbf{Bài Toán} & \textbf{Kiến Trúc} & \textbf{NumPy Scratch} & \textbf{PyTorch 2.0} & \textbf{TensorFlow} \\
+\textbf{Miền Dữ Liệu} & \textbf{Bài Toán} & \textbf{Kiến Trúc} & \textbf{\makecell{NumPy\\Scratch}} & \textbf{\makecell{PyTorch\\2.0}} & \textbf{\makecell{TensorFlow\\Keras}} \\
 \midrule
 \textbf{Văn Bản (NLP)} & Customer Comments & 1D CNN + GlobalPool & \makecell{\textbf{87.55\%}\\\scriptsize (F1: 92.38\%)} & \makecell{85.54\%\\\scriptsize (F1: 91.38\%)} & \makecell{86.64\%\\\scriptsize (F1: 91.81\%)} \\
 \midrule
