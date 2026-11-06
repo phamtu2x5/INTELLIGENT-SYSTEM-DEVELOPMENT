@@ -1,0 +1,1001 @@
+﻿Patient_ID,Tuoi,Gioi_Tinh,BMI,HbA1c_Phan_Tram,Glucose_Doi_mg_dL,Huyet_Ap_Tam_Thu,Chan_Doan_ICD10,Thuoc_Dang_Dung,Thoi_Quen_Ruou_Bia
+VN-MED-10001,63,Nam,20.8,5.8,123.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10002,76,Nam,22.0,7.9,163.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10003,53,Nam,22.4,7.7,171.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10004,39,Nam,23.6,6.5,149.2,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10005,67,Nam,21.8,8.5,170.9,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10006,32,Nam,24.3,6.3,134.6,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10007,45,Nam,22.3,6.4,141.2,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10008,63,Nam,26.4,4.8,90.1,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10009,43,Nam,27.4,7.3,164.6,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10010,47,Nam,24.5,5.2,132.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10011,35,Nam,25.6,6.1,141.8,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10012,35,Nữ,30.8,5.6,103.7,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10013,48,Nữ,20.6,6.4,109.8,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10014,77,Nam,20.4,7.3,158.6,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10015,60,Nữ,26.4,6.8,131.7,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10016,64,Nữ,30.2,7.7,160.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10017,48,Nam,23.4,8.3,187.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10018,27,Nữ,29.6,6.4,125.5,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10019,46,Nữ,24.5,6.2,125.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10020,77,Nam,22.1,7.9,164.5,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10021,26,Nam,21.1,8.0,147.4,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10022,48,Nữ,26.2,7.7,148.4,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10023,68,Nữ,21.4,5.7,120.7,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10024,54,Nam,24.5,7.3,146.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10025,62,Nam,29.1,6.9,150.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10026,26,Nam,23.2,8.1,198.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10027,45,Nữ,28.3,6.1,129.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10028,57,Nữ,20.4,4.8,93.7,120,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10029,36,Nam,22.5,7.6,172.6,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10030,46,Nam,19.8,4.8,84.7,160,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10031,68,Nữ,24.4,5.9,107.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10032,49,Nam,26.6,5.6,111.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10033,73,Nam,24.4,5.6,115.2,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10034,51,Nữ,28.0,5.9,116.7,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10035,66,Nữ,21.9,8.3,168.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10036,52,Nữ,24.9,7.8,162.6,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10037,40,Nữ,22.6,6.5,148.1,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10038,39,Nam,25.3,8.2,167.8,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10039,71,Nam,25.8,5.5,110.0,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10040,75,Nữ,26.0,5.4,127.1,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10041,68,Nam,20.9,7.8,149.5,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10042,79,Nam,21.4,7.5,134.2,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10043,76,Nam,22.0,6.2,144.2,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10044,27,Nam,23.5,5.4,128.6,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10045,61,Nam,24.5,8.6,164.6,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10046,75,Nam,26.4,4.8,99.0,110,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10047,31,Nam,21.6,6.1,116.8,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10048,45,Nam,19.2,7.1,150.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10049,33,Nữ,30.9,9.0,202.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10050,63,Nữ,20.7,7.3,158.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10051,42,Nữ,26.8,7.4,164.3,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10052,28,Nữ,24.3,6.1,137.7,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10053,49,Nữ,25.0,7.5,153.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10054,38,Nam,24.2,6.9,155.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10055,74,Nữ,23.0,4.9,114.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10056,33,Nữ,25.6,7.8,176.6,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10057,50,Nữ,22.8,8.0,157.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10058,77,Nam,27.8,7.8,138.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10059,26,Nam,26.0,6.8,153.3,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10060,44,Nam,26.1,5.7,124.6,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10061,52,Nam,22.6,4.8,100.2,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10062,71,Nữ,23.5,7.0,141.6,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10063,31,Nữ,20.5,8.1,195.5,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10064,68,Nam,23.1,8.0,155.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10065,32,Nữ,21.0,7.8,149.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10066,71,Nữ,28.3,6.7,140.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10067,59,Nam,24.4,8.1,179.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10068,38,Nam,24.7,7.9,188.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10069,41,Nam,23.5,6.3,139.4,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10070,60,Nam,24.8,7.6,140.4,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10071,74,Nam,31.8,6.2,153.4,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10072,64,Nam,23.3,7.4,151.7,120,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10073,28,Nam,22.2,5.2,101.1,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10074,26,Nam,25.8,5.3,100.1,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10075,30,Nữ,17.5,8.1,174.9,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10076,78,Nam,24.4,7.9,164.0,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10077,66,Nữ,23.0,7.6,159.7,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10078,28,Nam,21.1,6.9,158.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10079,78,Nữ,25.8,4.8,94.2,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10080,53,Nam,24.4,6.7,155.3,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10081,42,Nam,18.6,7.3,143.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10082,50,Nữ,22.2,6.2,155.7,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10083,68,Nữ,17.5,5.9,131.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10084,58,Nữ,25.1,8.5,161.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10085,34,Nam,25.1,6.7,114.6,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10086,60,Nam,21.7,7.3,159.8,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10087,38,Nữ,25.9,7.7,153.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10088,55,Nữ,20.2,5.6,116.7,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10089,72,Nữ,21.2,7.0,153.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10090,39,Nữ,25.5,8.4,182.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10091,32,Nam,22.1,9.0,196.2,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10092,38,Nữ,24.0,6.8,126.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10093,47,Nam,22.5,6.5,152.4,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10094,64,Nam,22.9,7.1,139.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10095,45,Nam,23.1,7.1,119.3,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10096,40,Nữ,22.0,8.5,158.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10097,69,Nam,25.1,5.6,121.2,150,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10098,42,Nam,22.3,6.5,123.5,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10099,71,Nữ,24.2,5.5,115.7,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10100,77,Nam,21.9,5.6,122.7,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10101,48,Nữ,19.4,7.3,147.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10102,50,Nam,27.0,7.8,153.4,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10103,49,Nữ,25.7,6.0,111.0,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10104,69,Nữ,31.3,7.7,157.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10105,65,Nam,21.0,8.1,140.1,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10106,53,Nam,23.6,9.1,175.1,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10107,39,Nam,23.8,6.9,131.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10108,69,Nam,27.3,6.0,123.1,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10109,25,Nữ,22.6,5.6,116.0,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10110,49,Nam,20.6,5.5,128.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10111,31,Nữ,27.9,8.3,187.6,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10112,33,Nam,23.2,5.0,94.1,120,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10113,48,Nữ,26.9,8.3,192.5,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10114,25,Nữ,26.6,5.8,112.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10115,68,Nữ,24.1,6.0,128.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10116,32,Nam,23.7,6.6,143.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10117,48,Nam,23.0,6.0,155.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10118,35,Nam,24.2,7.9,154.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10119,75,Nữ,26.9,9.0,159.9,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10120,41,Nữ,21.7,6.0,143.9,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10121,32,Nữ,24.5,6.3,121.5,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10122,59,Nam,20.7,6.6,132.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10123,59,Nữ,21.1,7.4,138.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10124,57,Nữ,24.1,6.6,132.8,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10125,29,Nam,18.1,8.5,162.2,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10126,66,Nam,30.6,8.2,174.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10127,63,Nữ,20.5,5.4,115.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10128,65,Nữ,24.1,7.4,143.7,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10129,52,Nữ,27.8,8.6,186.1,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10130,31,Nam,21.5,6.2,132.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10131,33,Nữ,17.5,6.4,111.2,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10132,32,Nam,22.8,6.2,140.7,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10133,36,Nam,21.5,6.2,131.9,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10134,58,Nam,17.5,4.8,120.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10135,57,Nữ,25.1,5.2,112.7,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10136,72,Nữ,24.8,6.9,133.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10137,79,Nữ,27.7,8.6,171.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10138,47,Nam,20.7,6.1,137.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10139,48,Nữ,19.2,6.0,116.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10140,61,Nam,22.9,8.8,172.5,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10141,59,Nữ,23.9,5.5,114.1,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10142,68,Nam,27.1,4.8,90.0,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10143,64,Nam,28.6,5.8,113.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10144,46,Nam,28.0,6.0,128.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10145,51,Nam,25.1,4.8,118.2,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10146,59,Nữ,26.7,6.6,140.9,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10147,25,Nữ,22.2,7.9,160.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10148,59,Nam,24.7,5.3,103.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10149,61,Nữ,20.5,6.9,155.8,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10150,71,Nam,24.4,7.3,155.3,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10151,38,Nữ,24.5,6.7,130.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10152,27,Nữ,29.5,7.0,155.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10153,25,Nữ,23.5,7.0,151.2,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10154,29,Nam,24.5,5.8,112.5,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10155,50,Nữ,24.9,8.6,172.9,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10156,79,Nữ,22.8,8.3,162.6,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10157,38,Nam,21.7,8.2,198.3,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10158,63,Nam,28.2,8.0,169.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10159,51,Nữ,21.2,4.9,107.9,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10160,33,Nữ,20.1,7.9,166.8,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10161,39,Nữ,26.3,7.6,172.1,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10162,39,Nữ,27.8,5.0,106.5,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10163,50,Nữ,22.8,6.5,128.2,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10164,66,Nam,22.8,7.1,156.5,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10165,37,Nam,25.1,8.8,175.7,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10166,75,Nam,22.0,7.7,144.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10167,56,Nữ,21.8,5.8,107.1,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10168,63,Nam,26.9,8.8,196.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10169,73,Nữ,26.1,6.9,144.2,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10170,76,Nữ,28.3,6.5,128.2,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10171,56,Nữ,20.3,6.4,130.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10172,28,Nam,22.6,4.9,115.3,150,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10173,54,Nữ,25.1,6.7,135.4,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10174,61,Nam,21.3,7.4,134.5,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10175,47,Nữ,26.2,6.3,135.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10176,63,Nam,28.0,7.3,164.6,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10177,69,Nam,22.4,5.8,136.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10178,39,Nữ,24.3,6.6,130.4,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10179,67,Nam,28.7,7.2,163.4,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10180,53,Nam,29.8,7.0,147.1,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10181,60,Nữ,26.5,4.9,120.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10182,37,Nữ,26.0,6.3,138.4,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10183,56,Nữ,21.6,8.8,159.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10184,31,Nữ,25.3,6.2,150.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10185,75,Nữ,25.9,6.8,141.4,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10186,46,Nam,23.5,6.7,145.9,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10187,52,Nam,22.4,8.7,159.8,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10188,26,Nam,20.2,8.3,174.6,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10189,66,Nữ,18.8,7.8,172.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10190,69,Nữ,18.2,5.6,141.8,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10191,77,Nam,26.0,7.2,165.0,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10192,30,Nam,24.7,7.5,160.4,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10193,52,Nữ,22.7,6.0,107.5,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10194,52,Nam,23.2,5.8,123.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10195,68,Nữ,24.9,8.8,170.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10196,68,Nữ,23.7,6.4,136.2,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10197,44,Nữ,20.0,8.7,161.4,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10198,54,Nam,27.0,8.0,160.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10199,35,Nữ,25.1,7.3,143.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10200,79,Nữ,25.0,7.3,143.5,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10201,52,Nữ,26.8,5.1,102.9,160,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10202,49,Nữ,21.7,7.0,142.9,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10203,63,Nữ,28.0,8.5,175.7,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10204,57,Nữ,23.8,7.6,125.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10205,25,Nam,27.0,7.0,116.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10206,51,Nữ,26.5,8.9,175.6,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10207,76,Nữ,21.0,6.6,134.7,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10208,37,Nam,25.8,6.1,130.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10209,65,Nữ,25.2,7.0,135.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10210,27,Nữ,24.3,7.7,157.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10211,63,Nữ,23.9,4.8,105.3,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10212,30,Nam,23.9,7.1,137.5,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10213,32,Nam,26.7,7.8,171.5,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10214,51,Nữ,26.0,6.5,137.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10215,33,Nữ,24.3,8.1,171.4,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10216,61,Nam,19.6,7.6,156.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10217,57,Nữ,25.7,9.4,214.1,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10218,75,Nữ,26.4,5.9,131.3,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10219,66,Nữ,31.3,7.8,153.4,130,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10220,68,Nữ,27.5,5.6,128.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10221,48,Nam,18.3,4.9,86.0,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10222,39,Nam,24.4,4.8,105.2,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10223,78,Nam,29.8,7.4,155.7,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10224,56,Nữ,26.1,7.0,146.1,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10225,56,Nam,25.2,6.2,125.7,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10226,48,Nam,27.0,4.8,91.7,130,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10227,65,Nam,22.3,6.0,116.5,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10228,76,Nữ,25.7,6.8,142.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10229,73,Nữ,23.4,7.8,145.9,150,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10230,73,Nam,24.1,6.8,162.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10231,76,Nam,26.8,7.1,114.7,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10232,36,Nữ,21.3,6.3,127.7,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10233,63,Nam,28.2,8.9,181.0,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10234,26,Nam,22.9,5.6,124.7,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10235,27,Nam,25.0,6.0,115.0,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10236,73,Nam,19.9,6.2,143.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10237,61,Nam,26.4,7.5,137.0,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10238,73,Nữ,28.7,5.6,111.8,140,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10239,41,Nam,22.6,7.0,151.9,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10240,73,Nữ,20.8,7.0,157.0,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10241,26,Nam,25.1,6.0,109.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10242,26,Nữ,28.7,7.2,179.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10243,52,Nữ,19.7,5.6,107.8,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10244,78,Nam,20.8,5.5,101.0,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10245,47,Nữ,22.8,6.9,148.7,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10246,61,Nam,21.7,4.8,99.6,110,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10247,56,Nữ,21.7,4.8,97.8,110,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10248,57,Nam,17.7,7.4,159.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10249,25,Nam,26.0,8.1,146.5,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10250,43,Nam,25.3,6.2,109.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10251,26,Nữ,18.9,6.0,118.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10252,77,Nữ,28.7,8.0,175.9,130,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10253,68,Nữ,29.4,5.4,108.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10254,50,Nam,21.9,5.2,130.4,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10255,56,Nữ,27.8,7.6,170.0,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10256,30,Nam,22.4,6.8,144.2,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10257,56,Nữ,24.8,8.1,168.9,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10258,79,Nam,21.6,4.8,107.2,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10259,28,Nam,31.1,5.1,111.3,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10260,79,Nam,23.3,6.8,136.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10261,35,Nam,24.6,7.3,147.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10262,41,Nữ,22.1,7.8,146.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10263,62,Nam,30.0,7.0,118.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10264,48,Nữ,30.0,7.0,157.7,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10265,29,Nam,29.3,6.3,133.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10266,76,Nữ,27.2,8.7,176.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10267,58,Nam,22.3,5.5,121.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10268,30,Nam,26.8,7.2,138.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10269,46,Nữ,24.2,5.6,106.6,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10270,35,Nam,28.3,7.4,148.5,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10271,72,Nam,27.7,5.6,135.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10272,40,Nữ,22.2,7.7,143.4,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10273,57,Nữ,27.1,6.9,111.1,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10274,33,Nam,26.3,8.9,173.4,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10275,30,Nam,17.5,6.5,149.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10276,40,Nữ,26.7,7.3,129.3,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10277,53,Nam,22.9,5.9,110.0,140,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10278,27,Nam,21.5,6.5,138.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10279,44,Nam,21.6,6.9,173.5,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10280,60,Nữ,23.8,5.0,91.2,130,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10281,43,Nữ,25.7,5.1,92.6,120,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10282,50,Nam,20.0,7.5,157.8,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10283,27,Nam,24.8,6.6,151.6,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10284,43,Nam,26.0,6.1,120.4,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10285,44,Nữ,30.0,5.9,104.7,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10286,56,Nam,20.9,6.0,131.2,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10287,31,Nam,23.1,6.9,150.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10288,76,Nữ,25.0,7.3,171.4,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10289,65,Nam,27.8,4.8,111.7,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10290,57,Nữ,23.3,8.5,182.2,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10291,64,Nam,27.9,8.4,167.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10292,63,Nam,18.2,4.8,133.1,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10293,42,Nam,20.3,8.1,160.1,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10294,64,Nữ,25.3,8.1,157.5,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10295,25,Nữ,19.8,6.8,162.5,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10296,35,Nữ,20.6,5.2,93.5,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10297,52,Nam,22.6,8.0,140.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10298,49,Nữ,26.6,6.5,136.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10299,74,Nam,18.3,7.5,153.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10300,47,Nam,24.7,9.5,188.0,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10301,55,Nữ,27.4,7.1,158.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10302,54,Nam,23.6,5.7,109.6,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10303,66,Nam,23.1,6.4,134.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10304,59,Nam,25.4,5.9,119.8,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10305,31,Nam,23.6,7.3,139.4,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10306,40,Nam,28.5,5.8,121.6,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10307,50,Nữ,20.8,6.2,139.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10308,72,Nam,24.0,5.3,138.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10309,76,Nữ,24.8,6.6,144.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10310,73,Nữ,23.0,7.0,114.4,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10311,26,Nam,17.5,4.8,103.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10312,25,Nam,23.7,7.1,146.9,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10313,72,Nam,27.0,6.7,150.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10314,36,Nữ,26.6,5.9,126.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10315,29,Nam,25.3,9.2,200.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10316,61,Nữ,20.8,8.0,167.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10317,56,Nam,25.4,5.5,135.5,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10318,79,Nữ,22.4,7.8,154.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10319,33,Nam,25.3,8.3,170.3,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10320,65,Nam,24.6,7.0,154.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10321,59,Nữ,21.2,7.2,141.3,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10322,43,Nữ,21.4,7.2,138.7,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10323,72,Nam,25.3,4.8,96.2,120,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10324,40,Nữ,23.5,6.6,128.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10325,27,Nữ,21.6,6.5,141.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10326,44,Nữ,21.3,8.5,150.2,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10327,48,Nữ,23.3,7.2,129.5,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10328,78,Nam,29.1,6.4,155.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10329,57,Nam,22.6,6.7,130.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10330,48,Nam,24.2,8.0,165.4,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10331,76,Nữ,24.5,6.6,119.2,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10332,35,Nữ,20.7,6.0,127.1,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10333,73,Nam,18.7,6.5,126.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10334,32,Nam,21.0,7.9,142.4,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10335,60,Nữ,25.0,7.4,167.9,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10336,62,Nữ,24.5,6.9,156.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10337,64,Nữ,26.4,7.0,143.2,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10338,44,Nam,24.5,6.1,139.8,140,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10339,59,Nam,23.9,6.6,159.9,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10340,72,Nam,22.3,6.0,135.0,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10341,49,Nữ,26.9,6.4,139.2,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10342,59,Nam,21.4,8.4,172.8,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10343,49,Nữ,20.8,5.5,124.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10344,53,Nam,26.0,6.0,121.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10345,42,Nữ,20.1,5.3,109.7,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10346,70,Nữ,31.7,5.0,112.9,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10347,42,Nữ,24.4,6.6,131.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10348,26,Nam,25.3,6.1,123.5,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10349,78,Nam,21.7,8.9,179.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10350,59,Nam,23.2,6.5,149.1,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10351,40,Nữ,22.9,8.3,155.0,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10352,65,Nữ,22.5,8.0,172.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10353,60,Nữ,26.2,6.5,144.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10354,57,Nữ,22.8,9.3,196.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10355,28,Nữ,27.4,7.1,136.7,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10356,57,Nam,32.5,8.6,153.8,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10357,38,Nữ,23.3,8.5,179.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10358,45,Nam,24.7,7.3,152.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10359,72,Nam,25.4,7.7,169.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10360,44,Nữ,29.8,7.5,145.3,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10361,32,Nam,23.9,5.4,124.0,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10362,31,Nam,21.6,6.9,155.3,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10363,27,Nữ,20.3,8.1,163.7,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10364,41,Nam,24.0,8.6,179.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10365,57,Nữ,22.8,5.9,128.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10366,72,Nam,30.4,7.4,142.0,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10367,36,Nam,29.7,7.0,150.9,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10368,75,Nam,21.0,6.7,158.4,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10369,46,Nam,22.0,7.2,148.5,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10370,79,Nữ,24.4,7.1,128.8,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10371,46,Nam,28.5,7.4,143.7,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10372,70,Nữ,24.4,8.5,150.9,150,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10373,54,Nam,22.2,7.7,172.9,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10374,62,Nữ,24.0,7.2,157.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10375,62,Nữ,22.3,9.0,175.5,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10376,69,Nữ,26.1,8.1,147.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10377,75,Nam,22.0,6.7,129.0,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10378,78,Nam,22.6,5.3,105.4,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10379,32,Nam,27.8,5.6,119.9,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10380,51,Nữ,21.8,7.9,162.1,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10381,51,Nam,19.7,6.0,142.1,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10382,58,Nữ,24.5,5.6,110.3,110,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10383,45,Nữ,23.1,5.9,106.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10384,54,Nam,25.8,6.0,112.1,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10385,57,Nữ,25.2,7.8,159.0,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10386,52,Nam,24.1,6.6,128.4,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10387,71,Nam,24.0,5.2,107.7,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10388,57,Nữ,21.9,6.8,135.4,130,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10389,29,Nữ,24.5,7.1,158.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10390,72,Nữ,26.9,6.2,122.7,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10391,43,Nam,21.2,8.2,162.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10392,28,Nam,24.2,6.3,140.2,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10393,59,Nữ,27.4,8.1,158.1,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10394,73,Nữ,25.8,7.5,158.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10395,41,Nữ,28.3,7.9,165.1,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10396,68,Nam,22.4,5.5,118.5,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10397,52,Nữ,18.5,6.9,129.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10398,54,Nam,24.8,6.7,153.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10399,53,Nam,25.3,5.1,136.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10400,70,Nữ,28.4,8.1,165.0,160,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10401,77,Nam,27.9,5.8,109.7,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10402,30,Nữ,25.9,6.1,128.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10403,59,Nam,26.6,5.6,130.5,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10404,65,Nam,23.6,7.6,148.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10405,61,Nữ,20.4,5.0,106.0,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10406,48,Nữ,24.6,7.5,157.8,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10407,53,Nữ,27.2,8.1,179.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10408,73,Nữ,26.2,7.4,161.2,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10409,70,Nữ,26.8,7.7,167.3,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10410,77,Nữ,22.9,7.7,152.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10411,55,Nữ,23.4,5.7,125.3,140,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10412,59,Nam,25.7,8.5,163.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10413,57,Nữ,22.5,6.2,139.8,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10414,76,Nam,22.6,6.7,152.8,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10415,45,Nữ,25.1,6.4,140.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10416,56,Nữ,26.6,7.4,147.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10417,47,Nam,23.6,6.2,127.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10418,57,Nữ,20.6,6.9,164.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10419,27,Nữ,21.9,5.3,108.8,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10420,42,Nam,24.8,8.2,179.3,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10421,49,Nữ,24.8,7.6,159.7,120,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10422,66,Nữ,24.9,6.4,129.4,110,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10423,55,Nam,25.8,6.2,113.6,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10424,78,Nữ,24.2,7.6,158.1,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10425,27,Nam,25.0,6.0,127.1,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10426,64,Nữ,24.1,7.0,166.2,150,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10427,70,Nữ,27.8,8.2,156.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10428,48,Nữ,28.6,5.8,149.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10429,74,Nam,20.5,7.2,152.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10430,56,Nữ,23.4,7.2,152.7,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10431,71,Nữ,24.3,6.7,131.8,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10432,46,Nam,23.4,6.2,133.5,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10433,47,Nữ,29.8,8.3,174.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10434,26,Nam,24.9,6.1,139.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10435,51,Nữ,21.7,4.8,92.1,110,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10436,66,Nam,26.0,7.6,172.5,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10437,26,Nam,25.0,5.4,119.2,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10438,50,Nam,25.1,7.6,162.9,160,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10439,41,Nữ,29.8,8.4,167.7,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10440,64,Nam,25.3,7.6,144.5,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10441,57,Nữ,23.3,8.1,165.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10442,33,Nam,18.1,9.2,187.4,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10443,67,Nam,23.7,8.0,146.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10444,78,Nữ,28.2,7.2,157.7,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10445,72,Nữ,23.9,8.8,189.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10446,63,Nam,17.5,8.9,170.9,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10447,53,Nữ,22.7,8.9,167.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10448,66,Nữ,27.3,6.2,126.1,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10449,79,Nữ,25.9,5.2,111.5,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10450,50,Nam,21.6,6.1,124.7,110,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10451,59,Nam,22.4,7.6,154.9,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10452,74,Nữ,22.9,7.0,147.2,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10453,49,Nam,22.1,6.6,120.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10454,48,Nữ,17.9,7.5,138.7,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10455,37,Nữ,26.6,5.0,74.8,140,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10456,31,Nữ,28.1,7.0,155.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10457,60,Nữ,19.5,8.1,165.0,130,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10458,69,Nữ,28.1,7.5,166.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10459,44,Nam,23.9,7.6,141.9,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10460,25,Nữ,28.0,8.7,176.2,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10461,32,Nam,24.3,6.7,141.5,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10462,70,Nam,24.6,6.0,119.3,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10463,40,Nữ,25.4,8.2,148.1,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10464,38,Nữ,21.8,8.2,187.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10465,36,Nữ,27.9,7.5,170.5,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10466,75,Nữ,20.7,6.6,132.5,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10467,47,Nam,23.0,6.8,146.9,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10468,39,Nam,25.8,5.3,107.2,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10469,52,Nữ,22.6,8.1,152.9,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10470,58,Nam,26.6,8.1,186.8,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10471,26,Nam,28.5,5.2,91.3,130,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10472,56,Nam,27.3,7.8,155.9,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10473,47,Nam,18.2,7.3,151.1,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10474,46,Nam,24.6,5.6,138.4,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10475,75,Nam,27.4,5.4,125.7,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10476,49,Nam,20.1,7.2,128.1,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10477,46,Nam,26.4,6.3,131.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10478,46,Nữ,26.3,9.0,181.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10479,73,Nam,20.4,7.9,158.4,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10480,76,Nam,26.8,7.4,159.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10481,66,Nữ,25.0,7.4,135.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10482,30,Nam,26.2,8.4,165.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10483,39,Nữ,21.2,7.8,165.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10484,78,Nữ,24.7,7.4,160.1,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10485,67,Nam,18.9,5.6,120.4,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10486,61,Nam,17.5,10.5,205.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10487,57,Nữ,24.6,5.5,115.3,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10488,32,Nữ,27.6,6.4,142.3,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10489,77,Nam,25.0,4.8,104.2,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10490,68,Nữ,24.0,7.4,139.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10491,68,Nam,23.6,7.0,129.7,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10492,29,Nữ,21.3,7.7,139.6,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10493,63,Nam,23.5,4.8,121.3,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10494,28,Nữ,25.5,8.1,174.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10495,30,Nữ,22.9,5.8,121.0,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10496,69,Nữ,26.5,6.6,131.7,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10497,56,Nữ,24.8,7.9,154.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10498,76,Nam,25.2,7.1,159.5,140,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10499,54,Nam,27.0,7.2,171.1,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10500,71,Nam,22.6,7.8,152.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10501,59,Nam,26.2,7.3,163.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10502,79,Nữ,23.0,6.4,133.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10503,64,Nam,25.3,6.6,134.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10504,76,Nam,22.2,7.1,164.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10505,40,Nữ,21.4,5.7,120.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10506,37,Nữ,24.5,8.0,166.6,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10507,74,Nữ,18.4,7.1,149.3,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10508,66,Nữ,23.3,6.9,123.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10509,54,Nam,19.2,8.2,170.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10510,43,Nam,26.6,6.7,132.2,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10511,41,Nữ,27.5,6.6,120.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10512,43,Nữ,21.5,6.2,123.5,110,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10513,52,Nam,25.5,7.2,141.9,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10514,79,Nữ,27.0,7.2,160.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10515,50,Nam,27.0,6.0,113.2,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10516,61,Nam,24.9,6.6,127.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10517,50,Nữ,26.5,6.0,128.8,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10518,77,Nữ,22.2,6.0,110.1,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10519,47,Nữ,24.5,4.8,95.9,150,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10520,33,Nam,22.8,6.5,115.3,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10521,36,Nữ,21.9,4.8,114.8,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10522,77,Nam,24.3,6.2,126.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10523,25,Nam,25.3,6.1,127.7,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10524,25,Nữ,27.8,8.1,175.8,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10525,71,Nữ,25.0,5.6,109.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10526,58,Nữ,26.2,5.9,120.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10527,56,Nữ,26.2,6.3,118.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10528,78,Nữ,32.5,6.1,115.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10529,72,Nữ,18.6,8.4,159.4,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10530,49,Nam,22.1,5.4,109.0,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10531,64,Nam,28.8,6.3,126.9,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10532,69,Nam,23.1,7.2,151.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10533,77,Nam,26.9,7.9,150.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10534,25,Nữ,24.9,6.3,135.4,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10535,40,Nữ,30.7,4.8,109.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10536,63,Nam,20.7,6.6,131.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10537,29,Nam,28.0,8.4,160.7,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10538,46,Nữ,29.6,7.1,147.4,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10539,53,Nam,21.1,7.1,143.9,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10540,79,Nữ,26.6,5.5,119.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10541,27,Nữ,21.2,5.4,133.7,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10542,36,Nữ,24.3,6.8,141.6,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10543,50,Nữ,23.4,5.1,101.7,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10544,40,Nữ,17.5,7.7,146.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10545,75,Nam,25.5,5.8,112.1,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10546,61,Nữ,24.6,6.8,123.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10547,46,Nữ,28.8,4.8,115.0,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10548,53,Nam,26.1,6.3,104.8,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10549,38,Nữ,31.3,5.4,120.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10550,52,Nữ,24.5,4.8,93.4,110,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10551,29,Nữ,23.9,7.5,147.6,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10552,71,Nữ,23.6,8.8,167.0,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10553,73,Nữ,22.8,8.2,184.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10554,54,Nữ,17.5,7.6,155.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10555,70,Nữ,23.5,6.3,141.0,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10556,76,Nữ,17.8,7.8,174.9,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10557,29,Nữ,25.6,8.3,170.5,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10558,36,Nữ,20.4,7.0,130.2,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10559,40,Nữ,21.4,5.4,112.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10560,50,Nam,22.1,6.2,120.8,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10561,50,Nữ,23.6,8.8,171.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10562,72,Nữ,24.2,6.7,137.8,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10563,45,Nam,27.6,4.8,102.2,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10564,63,Nữ,22.4,5.0,112.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10565,60,Nam,25.7,6.3,138.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10566,57,Nam,32.7,8.0,161.4,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10567,54,Nữ,25.4,6.5,140.1,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10568,61,Nam,23.6,8.1,158.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10569,47,Nữ,21.8,6.2,145.5,150,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10570,34,Nữ,23.6,4.8,97.0,130,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10571,78,Nữ,21.5,6.2,144.1,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10572,29,Nam,25.0,7.2,130.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10573,60,Nam,24.5,7.1,141.8,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10574,58,Nữ,17.5,5.3,109.1,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10575,76,Nữ,24.1,6.4,136.7,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10576,55,Nữ,27.5,10.0,210.3,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10577,34,Nam,23.0,5.3,98.1,140,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10578,43,Nữ,22.2,7.6,142.3,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10579,56,Nữ,19.9,4.8,87.0,120,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10580,25,Nữ,18.4,7.8,175.1,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10581,29,Nam,26.8,5.7,124.0,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10582,69,Nữ,23.6,7.3,137.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10583,28,Nữ,26.6,5.3,107.7,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10584,40,Nữ,28.9,7.1,160.5,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10585,48,Nam,27.1,5.7,117.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10586,40,Nữ,22.5,5.9,120.1,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10587,79,Nữ,24.6,7.3,140.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10588,26,Nam,22.3,6.3,119.3,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10589,73,Nữ,22.0,7.3,164.2,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10590,52,Nữ,25.3,6.6,157.2,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10591,56,Nam,21.6,6.9,130.8,110,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10592,51,Nam,17.5,7.3,166.9,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10593,44,Nữ,21.4,6.4,127.6,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10594,48,Nam,23.2,5.6,125.0,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10595,36,Nữ,28.9,6.2,146.6,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10596,74,Nam,22.7,8.2,165.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10597,59,Nữ,25.8,6.9,138.7,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10598,57,Nam,23.7,5.8,131.9,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10599,57,Nữ,28.0,7.3,136.7,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10600,75,Nữ,27.8,7.4,165.7,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10601,67,Nữ,27.8,7.4,153.6,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10602,61,Nữ,18.8,5.6,111.7,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10603,36,Nam,24.8,6.0,118.7,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10604,27,Nữ,26.6,6.0,109.4,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10605,25,Nam,25.4,6.4,127.0,140,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10606,57,Nam,26.2,7.4,148.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10607,64,Nam,24.4,7.2,135.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10608,34,Nữ,21.9,7.3,149.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10609,67,Nữ,18.9,8.4,176.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10610,68,Nữ,22.2,7.6,153.0,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10611,53,Nam,32.5,6.6,145.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10612,37,Nam,22.7,5.4,105.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10613,36,Nữ,18.1,5.9,136.2,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10614,55,Nam,26.5,6.5,136.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10615,70,Nam,26.9,7.8,177.8,110,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10616,26,Nam,28.2,6.8,169.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10617,75,Nữ,25.7,6.0,120.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10618,74,Nữ,26.8,5.9,119.0,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10619,59,Nam,29.9,6.7,136.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10620,47,Nam,21.9,7.9,168.3,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10621,41,Nữ,21.3,8.7,191.9,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10622,50,Nữ,20.8,6.6,129.3,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10623,32,Nam,23.4,6.7,143.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10624,53,Nữ,28.6,5.3,111.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10625,50,Nam,25.8,9.1,190.8,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10626,34,Nam,25.7,5.1,127.5,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10627,50,Nữ,18.6,8.2,163.8,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10628,58,Nam,22.1,6.4,113.4,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10629,75,Nữ,18.5,6.1,136.8,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10630,65,Nam,27.8,5.5,106.8,150,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10631,31,Nam,29.1,9.7,192.7,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10632,28,Nữ,26.6,7.1,155.8,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10633,77,Nam,21.1,6.8,144.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10634,74,Nữ,28.8,7.9,159.9,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10635,69,Nam,23.4,6.0,119.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10636,35,Nam,20.4,6.8,106.0,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10637,53,Nam,21.2,6.9,151.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10638,60,Nữ,22.9,6.2,126.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10639,49,Nam,24.4,8.2,184.9,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10640,45,Nữ,23.7,6.5,140.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10641,60,Nam,19.8,4.9,99.2,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10642,34,Nữ,28.0,6.4,146.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10643,61,Nam,23.7,7.1,160.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10644,33,Nữ,22.0,5.7,117.8,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10645,48,Nữ,27.6,5.8,136.6,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10646,59,Nữ,20.5,6.1,121.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10647,73,Nữ,19.2,8.3,170.5,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10648,59,Nữ,28.1,6.2,136.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10649,72,Nữ,30.1,8.5,181.7,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10650,60,Nam,22.8,6.1,135.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10651,42,Nam,24.1,7.2,144.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10652,73,Nữ,20.6,6.3,144.7,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10653,63,Nữ,24.2,7.7,156.0,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10654,56,Nữ,22.7,5.5,109.9,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10655,48,Nữ,23.9,7.7,150.8,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10656,47,Nam,25.5,6.9,165.9,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10657,56,Nam,20.8,6.0,117.1,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10658,61,Nữ,23.1,6.6,152.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10659,36,Nam,18.6,8.6,160.5,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10660,73,Nam,23.1,7.0,150.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10661,79,Nữ,23.9,6.0,129.6,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10662,37,Nam,24.9,5.4,134.4,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10663,47,Nữ,24.9,7.4,144.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10664,49,Nam,27.0,7.0,133.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10665,59,Nữ,19.4,7.6,154.2,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10666,65,Nam,19.6,5.0,127.5,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10667,54,Nam,25.8,5.4,104.3,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10668,41,Nam,17.9,8.2,135.6,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10669,73,Nam,24.8,7.2,148.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10670,44,Nam,20.5,7.4,163.3,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10671,72,Nam,29.1,5.6,106.4,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10672,49,Nữ,25.0,5.6,128.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10673,46,Nam,23.5,8.0,150.6,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10674,37,Nữ,28.0,8.0,161.2,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10675,43,Nữ,20.9,5.5,125.8,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10676,73,Nữ,21.5,5.3,98.8,120,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10677,60,Nam,20.3,6.7,141.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10678,36,Nữ,21.5,5.8,136.9,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10679,65,Nam,24.4,5.8,128.0,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10680,43,Nam,25.7,5.3,104.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10681,36,Nữ,27.2,6.2,147.9,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10682,33,Nam,18.5,5.4,122.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10683,31,Nữ,23.7,5.5,94.4,110,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10684,52,Nữ,20.8,7.2,158.6,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10685,38,Nữ,23.6,6.7,132.1,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10686,55,Nữ,31.4,7.4,154.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10687,76,Nam,25.1,4.8,115.9,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10688,43,Nam,27.0,6.8,134.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10689,71,Nữ,30.3,9.3,167.3,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10690,40,Nam,27.7,6.4,151.5,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10691,77,Nam,22.8,7.8,173.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10692,29,Nam,20.2,7.8,158.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10693,59,Nam,24.1,7.8,169.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10694,36,Nam,22.4,7.0,140.1,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10695,49,Nam,19.5,7.5,154.9,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10696,76,Nữ,24.9,7.6,153.9,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10697,45,Nữ,25.0,7.6,151.7,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10698,60,Nữ,29.7,5.5,121.1,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10699,77,Nam,23.1,4.8,89.3,140,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10700,47,Nam,25.1,4.9,102.6,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10701,40,Nam,22.1,6.5,139.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10702,63,Nữ,26.9,7.5,175.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10703,69,Nữ,23.8,5.5,102.7,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10704,77,Nam,20.6,7.9,167.4,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10705,66,Nữ,24.2,6.2,137.3,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10706,63,Nam,25.4,6.2,107.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10707,38,Nữ,25.0,5.8,127.2,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10708,55,Nữ,27.4,4.8,114.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10709,29,Nữ,19.7,7.1,153.4,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10710,59,Nữ,21.6,8.9,178.6,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10711,47,Nữ,26.2,6.7,142.9,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10712,53,Nam,22.0,4.8,105.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10713,67,Nữ,24.9,7.7,137.2,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10714,35,Nam,17.5,4.9,108.0,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10715,42,Nữ,32.6,5.3,108.6,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10716,71,Nữ,23.4,6.5,126.8,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10717,36,Nữ,27.9,6.9,172.5,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10718,33,Nam,23.2,5.6,133.6,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10719,34,Nữ,25.5,6.5,121.4,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10720,68,Nữ,28.8,7.7,161.6,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10721,41,Nữ,27.8,7.8,176.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10722,62,Nam,23.6,8.3,150.6,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10723,31,Nam,23.8,9.1,184.3,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10724,70,Nam,27.3,7.8,160.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10725,37,Nam,31.4,6.5,120.0,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10726,64,Nữ,24.8,7.8,163.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10727,66,Nam,30.3,7.4,165.3,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10728,33,Nữ,23.5,7.4,170.0,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10729,74,Nam,27.2,7.0,141.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10730,51,Nam,27.6,5.7,150.5,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10731,26,Nữ,22.9,5.6,93.9,160,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10732,29,Nữ,21.9,6.7,143.2,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10733,53,Nữ,27.8,7.0,127.6,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10734,61,Nữ,22.6,6.0,127.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10735,62,Nữ,21.4,7.3,143.8,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10736,43,Nam,22.1,9.3,193.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10737,32,Nữ,22.5,4.8,102.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10738,72,Nữ,26.9,7.5,143.8,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10739,69,Nữ,25.8,6.7,129.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10740,25,Nam,26.4,7.3,173.2,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10741,46,Nữ,25.5,6.3,136.9,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10742,76,Nam,22.4,6.6,116.7,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10743,41,Nam,26.4,7.0,151.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10744,31,Nam,27.9,6.4,131.1,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10745,49,Nam,26.0,5.0,107.6,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10746,69,Nữ,25.6,6.5,145.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10747,28,Nữ,21.8,5.1,123.5,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10748,60,Nữ,24.9,7.6,145.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10749,30,Nam,21.7,4.8,103.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10750,55,Nam,24.1,8.0,156.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10751,43,Nam,19.1,7.3,157.2,150,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10752,68,Nữ,19.1,7.3,147.3,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10753,78,Nam,23.6,4.8,104.2,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10754,63,Nữ,22.5,6.4,130.2,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10755,51,Nữ,24.5,8.2,165.4,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10756,34,Nam,23.8,6.2,150.2,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10757,50,Nữ,24.3,5.5,145.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10758,43,Nữ,26.1,6.0,130.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10759,63,Nữ,22.8,6.7,137.8,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10760,27,Nữ,23.5,5.8,103.2,110,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10761,69,Nam,28.7,8.3,159.4,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10762,37,Nam,24.2,6.7,137.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10763,74,Nữ,23.6,6.1,119.3,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10764,52,Nữ,24.5,5.2,103.9,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10765,44,Nam,23.7,7.4,170.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10766,52,Nữ,22.0,7.4,152.2,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10767,32,Nữ,21.1,5.8,123.7,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10768,65,Nữ,21.8,4.8,95.7,120,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10769,63,Nam,26.9,7.3,164.2,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10770,25,Nữ,22.2,6.6,134.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10771,27,Nữ,23.7,7.2,141.9,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10772,37,Nam,26.4,9.1,164.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10773,52,Nam,23.3,6.8,140.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10774,73,Nữ,26.2,6.2,123.1,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10775,49,Nam,19.4,5.4,135.1,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10776,57,Nữ,23.8,6.4,155.5,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10777,62,Nữ,24.4,7.0,129.7,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10778,77,Nam,24.3,6.9,129.2,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10779,30,Nữ,19.1,8.9,176.3,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10780,68,Nam,27.9,7.4,142.1,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10781,69,Nữ,21.6,6.6,139.7,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10782,56,Nam,25.2,6.0,122.1,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10783,69,Nữ,24.2,7.1,149.7,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10784,71,Nam,27.3,5.7,132.6,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10785,45,Nam,31.0,7.0,131.7,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10786,40,Nữ,20.2,7.4,163.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10787,78,Nam,22.2,6.5,126.5,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10788,45,Nữ,24.8,6.0,151.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10789,35,Nam,20.8,4.8,123.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10790,61,Nữ,26.6,8.2,165.3,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10791,60,Nam,26.8,7.3,138.5,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10792,59,Nữ,25.9,7.3,136.2,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10793,43,Nam,24.9,4.9,116.1,140,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10794,44,Nam,28.4,8.5,171.9,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10795,42,Nam,20.6,6.2,140.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10796,71,Nam,24.4,6.5,161.7,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10797,65,Nữ,21.9,5.5,107.5,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10798,73,Nam,27.0,4.8,89.0,130,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10799,38,Nữ,18.5,8.2,169.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10800,39,Nam,24.1,8.3,182.3,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10801,55,Nam,25.2,6.6,125.8,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10802,25,Nữ,21.3,6.0,126.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10803,77,Nữ,22.3,6.3,148.0,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10804,78,Nam,24.2,6.4,113.8,120,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10805,78,Nam,27.2,5.4,117.7,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10806,27,Nam,21.0,6.4,126.9,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10807,40,Nữ,21.5,7.0,146.0,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10808,47,Nữ,27.7,8.0,171.5,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10809,35,Nam,23.4,6.8,143.4,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10810,36,Nữ,21.8,4.9,93.5,150,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10811,34,Nữ,26.5,7.2,142.2,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10812,56,Nữ,22.7,6.5,152.4,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10813,40,Nữ,27.4,8.4,174.3,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10814,32,Nam,22.1,8.5,182.3,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10815,62,Nam,23.7,8.6,177.1,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10816,36,Nam,27.1,6.1,137.6,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10817,48,Nam,23.5,9.2,180.4,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10818,52,Nữ,26.5,7.2,139.0,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10819,77,Nữ,24.0,8.8,187.0,120,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10820,32,Nam,30.3,6.2,143.2,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10821,52,Nam,29.1,6.4,122.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10822,60,Nam,20.1,7.1,139.4,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10823,50,Nữ,25.8,7.0,142.5,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10824,32,Nam,21.7,8.3,188.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10825,74,Nữ,24.8,6.5,142.0,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10826,52,Nam,24.4,8.2,150.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10827,52,Nam,20.9,7.7,156.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10828,61,Nữ,27.5,6.5,132.3,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10829,65,Nữ,24.8,7.6,141.5,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10830,60,Nam,23.3,6.2,128.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10831,51,Nữ,22.8,9.6,189.1,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10832,78,Nữ,24.6,4.8,99.5,120,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10833,41,Nữ,25.5,7.6,150.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10834,33,Nam,23.8,4.8,121.5,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10835,57,Nữ,17.5,6.5,130.9,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10836,77,Nữ,24.3,6.7,139.5,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10837,44,Nữ,19.7,8.6,173.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10838,37,Nam,23.6,6.0,119.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10839,52,Nam,19.8,8.4,171.4,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10840,72,Nam,19.8,5.4,115.7,130,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Thường xuyên (uống hàng tuần)
+VN-MED-10841,53,Nữ,28.0,8.4,171.4,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10842,37,Nam,23.2,6.2,119.4,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10843,70,Nữ,23.0,6.9,140.2,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10844,59,Nữ,25.7,6.4,142.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10845,30,Nam,23.1,8.3,166.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10846,42,Nữ,30.7,8.1,166.8,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10847,75,Nam,23.4,7.3,152.1,150,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10848,29,Nữ,25.3,5.4,119.9,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10849,71,Nam,27.2,5.9,130.9,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10850,49,Nữ,29.2,5.6,116.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10851,26,Nữ,21.9,4.8,92.9,140,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10852,34,Nữ,22.9,8.3,153.9,140,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10853,54,Nữ,28.2,6.4,145.6,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10854,74,Nữ,26.7,6.4,142.6,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10855,69,Nữ,27.5,8.6,181.9,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10856,29,Nữ,20.0,6.2,139.4,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10857,79,Nữ,29.0,5.8,120.4,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10858,57,Nam,21.8,6.5,127.8,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10859,78,Nữ,24.8,5.4,103.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10860,25,Nữ,23.7,7.2,135.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10861,42,Nữ,21.5,6.4,147.9,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10862,56,Nam,19.8,6.2,123.8,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10863,71,Nữ,18.8,6.1,140.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10864,73,Nam,24.6,6.7,136.7,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10865,35,Nữ,19.5,6.9,134.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10866,45,Nam,20.7,6.2,116.6,140,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10867,50,Nữ,23.5,6.4,126.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10868,49,Nữ,17.5,6.7,156.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10869,46,Nam,26.6,6.6,124.1,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10870,51,Nữ,17.5,6.8,166.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10871,73,Nam,24.0,6.0,115.9,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10872,37,Nữ,24.2,8.0,172.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10873,57,Nữ,25.9,6.9,140.9,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10874,58,Nữ,24.1,6.2,125.9,160,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10875,65,Nữ,30.5,7.2,132.9,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10876,59,Nữ,24.9,6.7,137.8,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10877,25,Nam,27.5,4.8,89.9,130,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10878,45,Nam,22.0,7.2,128.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10879,72,Nữ,24.6,5.6,120.0,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10880,79,Nữ,29.0,7.9,153.5,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10881,30,Nữ,23.5,6.5,155.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10882,52,Nữ,24.8,7.7,169.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10883,41,Nam,27.2,6.0,146.4,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10884,29,Nữ,21.9,6.9,134.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10885,55,Nam,17.5,8.3,170.2,120,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10886,29,Nữ,25.0,6.5,103.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10887,62,Nam,27.3,6.1,124.5,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10888,27,Nam,20.0,7.6,156.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10889,77,Nam,26.3,7.6,157.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10890,47,Nam,26.3,6.1,127.3,140,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10891,61,Nữ,17.5,4.8,104.6,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10892,77,Nam,21.3,6.1,95.3,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10893,61,Nam,23.0,7.6,158.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10894,34,Nam,23.6,5.9,130.0,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10895,34,Nam,21.9,6.8,156.9,130,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10896,43,Nam,21.7,6.0,130.4,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10897,41,Nam,29.4,4.8,102.2,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10898,45,Nữ,23.9,6.0,139.3,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10899,38,Nữ,22.0,7.6,127.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10900,33,Nữ,24.1,4.8,97.6,160,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10901,70,Nam,25.9,7.1,137.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10902,25,Nam,24.4,5.4,114.5,150,Tiền đái tháo đường (R73.0),Metformin 500mg (Dự phòng),Không uống
+VN-MED-10903,75,Nữ,23.6,7.5,127.4,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10904,69,Nữ,22.2,7.7,173.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10905,37,Nam,22.1,6.6,134.1,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10906,28,Nam,22.3,6.6,140.9,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10907,25,Nam,25.3,5.8,125.0,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10908,73,Nam,21.1,5.2,126.3,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10909,64,Nam,25.4,8.8,155.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10910,56,Nữ,28.6,5.8,123.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10911,58,Nữ,25.2,8.7,189.7,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10912,52,Nữ,23.1,5.8,121.1,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10913,55,Nữ,20.2,7.4,140.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10914,32,Nữ,29.1,5.4,107.7,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10915,63,Nữ,20.6,7.4,147.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10916,50,Nữ,26.8,6.4,124.7,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10917,58,Nam,26.2,6.4,131.6,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10918,78,Nam,23.5,7.5,171.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10919,78,Nam,23.4,6.2,122.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10920,27,Nữ,18.5,5.1,103.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10921,74,Nữ,25.2,7.7,163.0,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10922,36,Nam,26.1,5.4,112.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10923,25,Nữ,20.8,7.4,135.9,150,Đái tháo đường Típ 2 (E11),Insulin,Không uống
+VN-MED-10924,78,Nam,23.7,8.0,162.3,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10925,68,Nữ,24.3,6.3,130.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10926,29,Nam,26.0,8.2,178.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10927,54,Nam,24.2,7.4,140.2,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10928,54,Nữ,19.2,6.0,137.8,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10929,41,Nam,22.6,8.5,171.1,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10930,72,Nam,24.9,5.4,101.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10931,71,Nam,26.8,6.3,115.8,120,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10932,47,Nữ,22.3,6.6,160.3,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10933,39,Nữ,31.0,7.5,151.8,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10934,61,Nam,18.3,8.1,176.1,160,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10935,45,Nữ,22.5,8.1,144.4,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10936,38,Nữ,23.9,7.1,178.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10937,26,Nam,23.6,6.5,146.0,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10938,35,Nam,20.4,4.8,100.7,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10939,75,Nam,25.6,5.2,107.5,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10940,63,Nam,25.4,8.9,188.5,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10941,62,Nữ,24.3,4.8,111.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10942,58,Nam,25.2,5.9,126.3,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10943,62,Nữ,22.9,8.2,166.8,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10944,74,Nữ,19.2,7.1,153.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10945,58,Nam,22.0,7.9,140.2,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10946,42,Nữ,24.7,7.5,149.3,130,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10947,54,Nam,24.7,8.6,154.3,120,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10948,39,Nữ,24.3,7.2,155.5,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10949,51,Nữ,25.9,7.6,147.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thường xuyên (uống hàng tuần)
+VN-MED-10950,75,Nữ,22.4,5.9,105.3,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10951,58,Nữ,24.3,7.5,144.2,140,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10952,76,Nam,26.0,6.3,133.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10953,62,Nữ,23.9,6.3,129.1,110,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10954,57,Nữ,20.3,7.9,147.1,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10955,48,Nữ,21.2,7.9,140.7,160,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10956,39,Nữ,26.8,8.8,178.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10957,54,Nữ,28.5,8.7,169.0,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10958,79,Nam,27.8,7.9,158.1,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10959,66,Nam,24.9,4.8,101.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10960,75,Nữ,20.5,9.0,186.7,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10961,41,Nam,24.2,7.9,171.3,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10962,29,Nữ,29.0,5.9,125.9,150,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10963,53,Nữ,26.1,7.7,153.6,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10964,28,Nam,23.6,5.6,118.9,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thường xuyên (uống hàng tuần)
+VN-MED-10965,34,Nam,26.1,7.5,149.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10966,41,Nữ,20.3,5.2,91.5,150,Bình thường,Không dùng thuốc,Không uống
+VN-MED-10967,34,Nam,22.0,5.8,135.4,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10968,41,Nữ,20.8,7.7,168.3,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10969,44,Nam,25.7,8.1,188.7,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10970,48,Nữ,26.4,7.2,175.6,120,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10971,29,Nam,23.7,6.5,121.1,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10972,58,Nữ,21.5,4.8,99.8,130,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10973,30,Nam,24.1,6.5,165.4,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10974,77,Nữ,22.7,7.4,151.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10975,26,Nam,21.7,6.4,136.3,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10976,37,Nữ,25.3,6.8,122.5,130,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10977,67,Nữ,21.9,6.6,138.9,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10978,67,Nam,19.3,6.4,156.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10979,72,Nam,20.0,6.9,158.1,120,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10980,35,Nam,19.2,6.5,127.9,150,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10981,75,Nữ,25.0,8.5,167.5,150,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10982,71,Nữ,24.7,4.8,90.2,120,Bình thường,Không dùng thuốc,Thường xuyên (uống hàng tuần)
+VN-MED-10983,47,Nữ,24.5,6.1,117.6,110,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10984,79,Nam,26.0,5.8,99.4,140,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10985,40,Nam,27.9,7.1,145.3,140,Đái tháo đường Típ 2 (E11),Metformin 500mg,Không uống
+VN-MED-10986,55,Nữ,22.4,6.9,160.8,160,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-10987,35,Nữ,25.5,8.7,180.2,150,Đái tháo đường Típ 2 (E11),Insulin,Thường xuyên (uống hàng tuần)
+VN-MED-10988,78,Nữ,19.3,9.1,199.7,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10989,40,Nam,28.5,5.9,137.0,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10990,32,Nữ,20.3,6.8,134.2,110,Đái tháo đường Típ 2 (E11),Metformin 500mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10991,28,Nam,22.0,7.0,135.4,120,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thường xuyên (uống hàng tuần)
+VN-MED-10992,64,Nam,22.3,5.8,113.6,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10993,28,Nữ,19.5,7.6,135.0,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thường xuyên (uống hàng tuần)
+VN-MED-10994,49,Nữ,24.3,6.5,135.6,130,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Không uống
+VN-MED-10995,27,Nữ,24.9,5.5,81.9,140,Bình thường,Không dùng thuốc,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10996,56,Nam,23.6,6.5,142.3,120,Đái tháo đường Típ 2 (E11),Insulin,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10997,27,Nam,19.4,5.6,119.5,130,Tiền đái tháo đường (R73.0),Không dùng thuốc (Điều chỉnh lối sống),Không uống
+VN-MED-10998,51,Nữ,30.3,8.0,168.7,110,Đái tháo đường Típ 2 (E11),Metformin 1000mg,Thỉnh thoảng (dưới 1 lần/tuần)
+VN-MED-10999,53,Nữ,25.9,9.1,196.0,130,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Không uống
+VN-MED-11000,56,Nam,32.4,7.1,148.7,140,Đái tháo đường Típ 2 (E11),Metformin + Gliclazide,Thỉnh thoảng (dưới 1 lần/tuần)

@@ -55,10 +55,14 @@ wheels/
 # Environment
 .env
 
-# Assignment 04 Datasets (exclude raw image folders and large data dumps)
+# Assignment Datasets (exclude large data dumps)
 src/Assigment 04/mnist/data/train/
 src/Assigment 04/mnist/data/test/
 src/Assigment 04/cifar10/data/train/
 src/Assigment 04/cifar10/data/test/
 src/Assigment 04/mnist/data/
 src/Assigment 04/cifar10/data/
+src/Assigment 05/data/
+
+#slide 
+TAILIEU/slide_cnn&rnn&lstm

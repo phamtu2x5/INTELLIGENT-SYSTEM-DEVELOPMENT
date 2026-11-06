@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhận Diện Chữ Số Viết Tay - PyTorch CNN</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Chống kéo trang khi vẽ trên màn hình cảm ứng */
+    #drawCanvas {
+      touch-action: none;
+      cursor: crosshair;
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col items-center justify-between p-4 sm:p-8 font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="w-full max-w-4xl text-center mb-6">
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">
+      Nhận Diện Chữ Số Viết Tay MNIST
+    </h1>
+    <p class="text-slate-400 text-sm mt-2 max-w-xl mx-auto">
+      Dùng chuột hoặc ngón tay vẽ một chữ số (0 – 9) vào bảng bên dưới. Mạng nơ-ron tích chập (PyTorch CNN) sẽ xử lý và dự đoán theo thời gian thực.
+    </p>
+  </header>
+
+  <!-- Main Content Grid -->
+  <main class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+    
+    <!-- CỘT TRÁI: BẢNG VẼ & CÔNG CỤ -->
+    <div class="md:col-span-6 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur flex flex-col items-center">
+      
+      <div class="w-full flex items-center justify-between mb-3 text-xs font-medium text-slate-400">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+          </svg>
+          Bảng Vẽ Cảm Ứng (280 × 280)
+        </span>
+        <span id="canvasStatus" class="text-slate-500">Sẵn sàng</span>
+      </div>
+
+      <!-- Canvas Box -->
+      <div class="relative rounded-xl overflow-hidden border-2 border-slate-700 bg-black shadow-inner">
+        <canvas id="drawCanvas" width="280" height="280" class="block bg-black"></canvas>
+        <div id="drawingHint" class="pointer-events-none absolute inset-0 flex items-center justify-center text-slate-600 text-xs italic">
+          Vẽ một chữ số vào đây...
+        </div>
+      </div>
+
+      <!-- Thanh chỉnh kích thước cọ -->
+      <div class="w-full mt-4 flex items-center justify-between gap-3 text-xs text-slate-400 bg-slate-950/60 px-3 py-2 rounded-lg border border-slate-800/80">
+        <span>Kích thước cọ:</span>
+        <input id="brushSize" type="range" min="12" max="32" value="22" class="w-1/2 accent-indigo-500 cursor-pointer">
+        <span id="brushSizeVal" class="font-mono text-indigo-400">22px</span>
+      </div>
+
+      <!-- Toggle Auto-predict -->
+      <div class="w-full mt-3 flex items-center justify-between text-xs text-slate-300 px-1">
+        <label for="autoPredictToggle" class="flex items-center gap-2 cursor-pointer select-none">
+          <input id="autoPredictToggle" type="checkbox" checked class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 bg-slate-800 border-slate-700">
+          <span>Tự động dự đoán khi nhấc bút</span>
+        </label>
+        <span class="text-slate-500 text-[11px]">(phím tắt: Enter)</span>
+      </div>
+
+      <!-- Nút thao tác -->
+      <div class="w-full grid grid-cols-2 gap-3 mt-4">
+        <button id="btnClear" type="button" class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-slate-700 hover:bg-slate-800 text-slate-300 text-sm font-semibold transition active:scale-95">
+          <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+          Xóa Bảng (C)
+        </button>
+
+        <button id="btnPredict" type="button" class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-500 hover:to-indigo-600 text-white text-sm font-bold shadow-lg shadow-indigo-600/30 transition active:scale-95">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          Dự Đoán Ngay
+        </button>
+      </div>
+
+    </div>
+
+    <!-- CỘT PHẢI: KẾT QUẢ DỰ ĐOÁN & PHÂN TÍCH XÁC SUẤT -->
+    <div class="md:col-span-6 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur flex flex-col gap-4">
+      
+      <!-- Card Kết quả chính -->
+      <div class="flex items-center justify-between bg-slate-950/80 border border-slate-800 rounded-xl p-4">
+        <div>
+          <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Chữ Số Dự Đoán</span>
+          <div class="flex items-baseline gap-3 mt-1">
+            <div id="predictedDigit" class="text-6xl font-black text-indigo-400 tracking-tight">-</div>
+            <div class="flex flex-col">
+              <span id="confidenceBadge" class="text-xs font-medium px-2 py-0.5 rounded-md bg-slate-800 text-slate-400">
+                Độ tin cậy: --%
+              </span>
+              <span id="latencyBadge" class="text-[11px] text-slate-500 mt-1">
+                Độ trễ: -- ms
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ảnh 28x28 sau khi tiền xử lý -->
+        <div class="flex flex-col items-center">
+          <span class="text-[11px] font-medium text-slate-400 mb-1">Ảnh CNN thấy (28×28)</span>
+          <div class="w-16 h-16 rounded-lg border border-slate-700 bg-black flex items-center justify-center overflow-hidden shadow-inner">
+            <img id="previewImg" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="28x28 Preview" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+
+      <!-- Phân phối xác suất 10 lớp (0 - 9) -->
+      <div class="flex-1 flex flex-col">
+        <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-2">
+          <span>Phân Phối Xác Suất Softmax (0 – 9)</span>
+          <span class="text-[11px] text-slate-500 font-normal">Tầng phân loại 10 lớp</span>
+        </div>
+
+        <div id="probBarsContainer" class="flex flex-col gap-1.5">
+          <!-- Sẽ được điền động bằng JavaScript -->
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full max-w-4xl text-center text-xs text-slate-500 mt-8">
+    Assignment 04 • Intelligent Systems Development • Mô hình: PyTorch 2-layer CNN + BatchNorm + GAP
+  </footer>
+
+  <!-- SCRIPT ĐIỀU KHIỂN CANVAS VÀ GỌI API -->
+  <script>
+    const canvas = document.getElementById('drawCanvas');
+    const ctx = canvas.getContext('2d');
+    const hint = document.getElementById('drawingHint');
+    const brushSlider = document.getElementById('brushSize');
+    const brushVal = document.getElementById('brushSizeVal');
+    const autoPredict = document.getElementById('autoPredictToggle');
+    const btnClear = document.getElementById('btnClear');
+    const btnPredict = document.getElementById('btnPredict');
+
+    const digitDisplay = document.getElementById('predictedDigit');
+    const confBadge = document.getElementById('confidenceBadge');
+    const latencyBadge = document.getElementById('latencyBadge');
+    const previewImg = document.getElementById('previewImg');
+    const probContainer = document.getElementById('probBarsContainer');
+    const canvasStatus = document.getElementById('canvasStatus');
+
+    let isDrawing = false;
+    let hasDrawn = false;
+    let brushSize = parseInt(brushSlider.value);
+    let predictTimeout = null;
+
+    // Khởi tạo nền đen
+    function clearCanvas() {
+      ctx.fillStyle = '#000000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      hasDrawn = false;
+      hint.style.opacity = '1';
+      canvasStatus.innerText = 'Sẵn sàng';
+      resetResultDisplay();
+    }
+
+    function resetResultDisplay() {
+      digitDisplay.innerText = '-';
+      digitDisplay.className = 'text-6xl font-black text-slate-600 tracking-tight';
+      confBadge.innerText = 'Độ tin cậy: --%';
+      confBadge.className = 'text-xs font-medium px-2 py-0.5 rounded-md bg-slate-800 text-slate-400';
+      latencyBadge.innerText = 'Độ trễ: -- ms';
+      previewImg.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
+      renderEmptyProbBars();
+    }
+
+    function renderEmptyProbBars() {
+      probContainer.innerHTML = '';
+      for (let i = 0; i < 10; i++) {
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-2 text-xs font-mono';
+        row.innerHTML = `
+          <span class="w-4 text-right text-slate-400 font-bold">${i}</span>
+          <div class="flex-1 h-3.5 bg-slate-950 rounded-full overflow-hidden border border-slate-800/80">
+            <div id="bar-${i}" class="h-full bg-slate-800 transition-all duration-300" style="width: 0%"></div>
+          </div>
+          <span id="val-${i}" class="w-12 text-right text-slate-500 text-[11px]">0.0%</span>
+        `;
+        probContainer.appendChild(row);
+      }
+    }
+
+    // Xử lý tọa độ chuột/cảm ứng chính xác
+    function getPointerPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      let clientX = e.clientX;
+      let clientY = e.clientY;
+      if (e.touches && e.touches.length > 0) {
+        clientX = e.touches[0].clientX;
+        clientY = e.touches[0].clientY;
+      }
+      return {
+        x: (clientX - rect.left) * scaleX,
+        y: (clientY - rect.top) * scaleY
+      };
+    }
+
+    function startDraw(e) {
+      e.preventDefault();
+      isDrawing = true;
+      hasDrawn = true;
+      hint.style.opacity = '0';
+      canvasStatus.innerText = 'Đang vẽ...';
+
+      const pos = getPointerPos(e);
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.strokeStyle = '#FFFFFF';
+      ctx.lineWidth = brushSize;
+    }
+
+    function draw(e) {
+      if (!isDrawing) return;
+      e.preventDefault();
+      const pos = getPointerPos(e);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+    }
+
+    function endDraw(e) {
+      if (!isDrawing) return;
+      isDrawing = false;
+      ctx.closePath();
+      canvasStatus.innerText = 'Đã vẽ xong';
+
+      if (autoPredict.checked && hasDrawn) {
+        clearTimeout(predictTimeout);
+        predictTimeout = setTimeout(sendPrediction, 120); // Debounce nhẹ
+      }
+    }
+
+    // Lắng nghe sự kiện vẽ
+    canvas.addEventListener('mousedown', startDraw);
+    canvas.addEventListener('mousemove', draw);
+    window.addEventListener('mouseup', endDraw);
+
+    canvas.addEventListener('touchstart', startDraw, { passive: false });
+    canvas.addEventListener('touchmove', draw, { passive: false });
+    window.addEventListener('touchend', endDraw);
+
+    // Kích thước cọ vẽ
+    brushSlider.addEventListener('input', (e) => {
+      brushSize = parseInt(e.target.value);
+      brushVal.innerText = brushSize + 'px';
+    });
+
+    // Nút Xóa
+    btnClear.addEventListener('click', clearCanvas);
+
+    // Phím tắt bàn phím: C xóa, Enter dự đoán
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'c' || e.key === 'C' || e.key === 'Escape') {
+        clearCanvas();
+      } else if (e.key === 'Enter') {
+        sendPrediction();
+      }
+    });
+
+    // Gửi ảnh canvas lên backend
+    async function sendPrediction() {
+      if (!hasDrawn) return;
+
+      canvasStatus.innerText = 'Đang nhận diện...';
+      const dataUrl = canvas.toDataURL('image/png');
+
+      try {
+        const response = await fetch('/api/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ image: dataUrl })
+        });
+
+        const res = await response.json();
+        if (res.success) {
+          updateUI(res);
+          canvasStatus.innerText = 'Nhận diện hoàn tất';
+        } else {
+          canvasStatus.innerText = res.error || 'Có lỗi xảy ra';
+        }
+      } catch (err) {
+        console.error(err);
+        canvasStatus.innerText = 'Lỗi kết nối máy chủ';
+      }
+    }
+
+    btnPredict.addEventListener('click', sendPrediction);
+
+    // Cập nhật giao diện kết quả
+    function updateUI(res) {
+      const digit = res.digit;
+      const conf = (res.confidence * 100).toFixed(1);
+      const latency = res.latency_ms.toFixed(1);
+
+      digitDisplay.innerText = digit;
+      digitDisplay.className = 'text-6xl font-black text-emerald-400 tracking-tight animate-bounce';
+      setTimeout(() => {
+        digitDisplay.className = 'text-6xl font-black text-emerald-400 tracking-tight';
+      }, 400);
+
+      confBadge.innerText = `Độ tin cậy: ${conf}%`;
+      if (res.confidence > 0.85) {
+        confBadge.className = 'text-xs font-semibold px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
+      } else {
+        confBadge.className = 'text-xs font-semibold px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30';
+      }
+
+      latencyBadge.innerText = `Độ trễ: ${latency} ms`;
+
+      if (res.preprocessed_image) {
+        previewImg.src = res.preprocessed_image;
+      }
+
+      // Cập nhật 10 thanh xác suất
+      for (let i = 0; i < 10; i++) {
+        const prob = (res.probabilities[i] * 100).toFixed(1);
+        const bar = document.getElementById(`bar-${i}`);
+        const label = document.getElementById(`val-${i}`);
+
+        if (bar && label) {
+          bar.style.width = `${prob}%`;
+          label.innerText = `${prob}%`;
+
+          if (i === digit) {
+            bar.className = 'h-full bg-gradient-to-r from-emerald-500 to-indigo-500 transition-all duration-300';
+            label.className = 'w-12 text-right text-emerald-300 font-bold text-[11px]';
+          } else {
+            bar.className = 'h-full bg-slate-700/80 transition-all duration-300';
+            label.className = 'w-12 text-right text-slate-500 text-[11px]';
+          }
+        }
+      }
+    }
+
+    // Khởi tạo ban đầu
+    clearCanvas();
+  </script>
+</body>
+</html>

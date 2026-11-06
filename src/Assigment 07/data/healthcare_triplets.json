@@ -1,0 +1,113 @@
+[
+  {
+    "subject": "HbA1c_Mau_Lon_Hon_6.5",
+    "predicate": "TIEU_CHUAN_CHAN_DOAN",
+    "object": "Dai_Thao_Duong_Tip_2",
+    "source": "QD_5481_QD_BYT",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Glucose_Doi_Lon_Hon_126",
+    "predicate": "TIEU_CHUAN_CHAN_DOAN",
+    "object": "Dai_Thao_Duong_Tip_2",
+    "source": "QD_5481_QD_BYT",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Nghiem_Phap_OGTT_Lon_Hon_200",
+    "predicate": "TIEU_CHUAN_CHAN_DOAN",
+    "object": "Dai_Thao_Duong_Tip_2",
+    "source": "WHO_BYT",
+    "confidence": 1.0
+  },
+  {
+    "subject": "BMI_Chau_A_Lon_Hon_23",
+    "predicate": "YEU_TO_NGUY_CO",
+    "object": "Dai_Thao_Duong_Tip_2",
+    "odds_ratio": 2.4,
+    "note": "Chuẩn thừa cân WPRO"
+  },
+  {
+    "subject": "Tang_Huyet_Ap_140_90",
+    "predicate": "YEU_TO_NGUY_CO",
+    "object": "Dai_Thao_Duong_Tip_2",
+    "odds_ratio": 1.8
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "DIEU_TRI_DAU_TAY",
+    "object": "Metformin_Biguanide",
+    "dose": "500-1000mg x 2 lan/ngay"
+  },
+  {
+    "subject": "Metformin_Biguanide",
+    "predicate": "CHONG_CHI_DINH_TUONG_TAC_CAP_TINH",
+    "object": "Ruou_Bia_Con",
+    "severity": "FATAL_RISK",
+    "effect": "Toan Lactic tu vong 50%"
+  },
+  {
+    "subject": "Gliclazide_MR",
+    "predicate": "CHONG_CHI_DINH_TUONG_TAC",
+    "object": "Ruou_Bia_Con",
+    "severity": "HIGH",
+    "effect": "Ha duong huyet dot ngot keo dai"
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "PHOI_HOP_THUOC_BAC_2",
+    "object": "SGLT2_Inhibitor",
+    "benefit": "Bao ve tim mach va than"
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "BIEN_CHUNG_MAN_TINH",
+    "object": "Benh_Vong_Mac_Tieu_Duong",
+    "icd10": "H36.0"
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "BIEN_CHUNG_MAN_TINH",
+    "object": "Suy_Than_Man_Tinh",
+    "icd10": "N18"
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "BIEN_CHUNG_MAN_TINH",
+    "object": "Dot_Quy_Va_Nhoi_Mau_Co_Tim",
+    "icd10": "I21_I63"
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "KHUYEN_NGHI_DINH_DUONG",
+    "object": "Uc_Ga_Nac_Bo_Da_Luoc",
+    "gi_index": 0,
+    "protein_clean": true
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "KHUYEN_NGHI_DINH_DUONG",
+    "object": "Rau_Xanh_Chat_Xo_Hoa_Tan",
+    "gi_index": 15,
+    "fiber_high": true
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "KHUYEN_NGHI_DINH_DUONG",
+    "object": "Gao_Lut_Nguyen_Cam",
+    "gi_index": 50,
+    "fiber_high": true
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "NGHIEM_CAM_AN",
+    "object": "Da_Ga_Va_Ga_Chien_Dau",
+    "reason": "Chat beo bao hoa gay de khang insulin"
+  },
+  {
+    "subject": "Dai_Thao_Duong_Tip_2",
+    "predicate": "NGHIEM_CAM_AN",
+    "object": "Nuoc_Ngot_Co_Ga_Banh_Keo",
+    "reason": "GI > 70 gay soc duong huyet cap"
+  }
+]

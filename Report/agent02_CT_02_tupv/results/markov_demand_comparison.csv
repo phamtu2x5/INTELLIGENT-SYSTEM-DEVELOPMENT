@@ -1,0 +1,3 @@
+model,rl_reward,rule_reward,rl_discount_rate
+I.I.D. Demand,35.1275,34.9685,0.0
+Markov Demand (P=0.8),34.9965,35.225,0.0

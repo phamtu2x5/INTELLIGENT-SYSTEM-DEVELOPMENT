@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full bg-slate-950 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự Báo Chuỗi Thời Gian & Hành Vi Khách Hàng (RNN / LSTM / GRU)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="min-h-full flex flex-col items-center justify-between p-4 sm:p-8 font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="w-full max-w-5xl text-center mb-6">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold uppercase tracking-wider mb-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      Mạng Nơ-ron Hồi Quy • RNN / LSTM / GRU / BiLSTM
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 via-indigo-300 to-emerald-400 bg-clip-text text-transparent">
+      Hệ Thống Dự Báo Chuỗi Thời Gian & Hành Vi Khách Hàng
+    </h1>
+    <p class="text-slate-400 text-sm mt-2 max-w-2xl mx-auto">
+      Khảo sát thực nghiệm và triển khai mô hình học sâu tuần tự trên 2 bài toán lớn: Dự báo giá cổ phiếu Amazon (AMZN 6,903 phiên) và Phân tích chuỗi hành vi khách hàng rời bỏ dịch vụ.
+    </p>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="w-full max-w-5xl flex items-center justify-center gap-3 mb-6">
+    <button id="tabBtnStock" onclick="switchTab('stock')" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 transition">
+      📈 Phân Hệ 1: Dự Báo Giá Cổ Phiếu Amazon
+    </button>
+    <button id="tabBtnCust" onclick="switchTab('cust')" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-slate-800 text-slate-400 hover:text-slate-200 transition">
+      👥 Phân Hệ 2: Đánh Giá Rủi Ro Khách Hàng Rời Bỏ
+    </button>
+  </div>
+
+  <!-- TAB 1: DỰ BÁO CỔ PHIẾU AMAZON -->
+  <div id="tabContentStock" class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+    
+    <!-- Cột trái: Biểu đồ giá 100 phiên -->
+    <div class="md:col-span-8 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur flex flex-col">
+      <div class="flex items-center justify-between mb-3 text-xs font-medium text-slate-400">
+        <span class="font-bold text-slate-300 flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+          Diễn Biến Giá Đóng Cửa (100 Phiên Giao Dịch Gần Nhất)
+        </span>
+        <span class="text-slate-500">Mã: AMZN (NASDAQ)</span>
+      </div>
+
+      <div class="h-64 sm:h-72 w-full">
+        <canvas id="stockChart"></canvas>
+      </div>
+
+      <div class="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-slate-800 text-center text-xs">
+        <div>
+          <span class="text-slate-500 block">Số phiên khảo sát</span>
+          <span class="font-bold text-slate-200">6,903 ngày</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">Cửa sổ trượt (Lag)</span>
+          <span class="font-bold text-indigo-400">30 phiên liên tiếp</span>
+        </div>
+        <div>
+          <span class="text-slate-500 block">Chỉ báo kèm theo</span>
+          <span class="font-bold text-emerald-400">MA20, RSI-14, Return</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột phải: Bảng điều khiển dự báo -->
+    <div class="md:col-span-4 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur flex flex-col gap-4">
+      <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider">Cấu Hình Dự Đoán</h3>
+      
+      <div>
+        <label class="text-xs text-slate-400 block mb-1 font-medium">Lựa chọn kiến trúc mô hình:</label>
+        <select id="stockModelSelect" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+          <option value="lstm">LSTM (Long Short-Term Memory)</option>
+          <option value="gru">GRU (Gated Recurrent Unit)</option>
+          <option value="bilstm">BiLSTM (Bidirectional LSTM)</option>
+          <option value="simple_rnn">Simple RNN (Elman RNN)</option>
+        </select>
+      </div>
+
+      <button id="btnPredictStock" onclick="runStockPrediction()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition active:scale-95 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        Dự Đoán Giá Ngày Kế Tiếp
+      </button>
+
+      <!-- Kết quả dự đoán -->
+      <div id="stockResultBox" class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col gap-2">
+        <span class="text-xs font-semibold text-slate-400 uppercase">Kết Quả Dự Báo Mô Hình</span>
+        <div class="flex items-baseline justify-between mt-1">
+          <div>
+            <div id="stockPredPrice" class="text-3xl font-black text-sky-400 tracking-tight">-- USD</div>
+            <div id="stockDiffBadge" class="text-xs text-slate-400 mt-0.5">Biến động: --%</div>
+          </div>
+          <span id="stockDirBadge" class="text-xs font-bold px-2.5 py-1 rounded-md bg-slate-800 text-slate-400">
+            --
+          </span>
+        </div>
+        <div class="flex items-center justify-between text-[11px] text-slate-500 pt-2 border-t border-slate-800/80">
+          <span>Giá phiên gần nhất: <b id="stockLastActual">--</b></span>
+          <span id="stockLatency">Độ trễ: -- ms</span>
+        </div>
+      </div>
+
+      <div class="text-[11px] text-slate-500 italic bg-slate-950/40 p-2.5 rounded-lg border border-slate-800/60">
+        📌 <b>Lưu ý khoa học:</b> Thị trường tài chính chứa nhiễu ngẫu nhiên cao. Mô hình nắm bắt động lượng ngắn hạn từ chuỗi quá khứ, không loại trừ hoàn toàn các biến động bất ngờ ngoài hệ thống.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TAB 2: ĐÁNH GIÁ RỦI RO KHÁCH HÀNG RỜI BỎ -->
+  <div id="tabContentCust" class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-6 items-start hidden">
+    
+    <!-- Cột trái: Quỹ đạo chuỗi tương tác của khách hàng -->
+    <div class="md:col-span-7 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur flex flex-col">
+      <div class="flex items-center justify-between mb-3 text-xs font-medium text-slate-400">
+        <span class="font-bold text-slate-300 flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          Quỹ Đạo Chuỗi Tương Tác 12 Tháng Của Khách Hàng
+        </span>
+        <span class="text-slate-500">Chuỗi: 12 mốc thời gian</span>
+      </div>
+
+      <div class="h-64 sm:h-72 w-full">
+        <canvas id="custChart"></canvas>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
+        <span class="text-slate-400">Kịch bản khảo sát mẫu:</span>
+        <div class="flex gap-2">
+          <button onclick="setCustPreset('churn')" class="px-3 py-1 rounded-lg bg-rose-500/20 text-rose-300 border border-rose-500/30 font-semibold hover:bg-rose-500/30">
+            Nguy cơ rời bỏ cao
+          </button>
+          <button onclick="setCustPreset('loyal')" class="px-3 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold hover:bg-emerald-500/30">
+            Khách hàng trung thành
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột phải: Đánh giá nguy cơ rời bỏ -->
+    <div class="md:col-span-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-2xl backdrop-blur flex flex-col gap-4">
+      <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wider">Đánh Giá Nguy Cơ Rời Bỏ</h3>
+
+      <div>
+        <label class="text-xs text-slate-400 block mb-1 font-medium">Mô hình phân loại chuỗi:</label>
+        <select id="custModelSelect" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-indigo-500">
+          <option value="lstm">LSTM (Bộ nhớ ngắn hạn dài hạn)</option>
+          <option value="gru">GRU (Gated Recurrent Unit)</option>
+          <option value="simple_rnn">Simple RNN</option>
+        </select>
+      </div>
+
+      <button id="btnPredictCust" onclick="runCustPrediction()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition active:scale-95 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Phân Tích Nguy Cơ Rời Bỏ
+      </button>
+
+      <!-- Kết quả rủi ro -->
+      <div id="custResultBox" class="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col gap-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-400 uppercase">Xác Suất Khách Rời Bỏ</span>
+          <span id="custRiskBadge" class="text-xs font-bold px-2 py-0.5 rounded-md bg-slate-800 text-slate-400">Mức: --</span>
+        </div>
+
+        <div class="flex items-baseline gap-2">
+          <div id="custChurnProb" class="text-4xl font-black text-rose-400">--%</div>
+          <span class="text-xs text-slate-500">xác suất Churn trong kỳ tới</span>
+        </div>
+
+        <!-- Thanh phần trăm -->
+        <div class="w-full h-3 bg-slate-900 rounded-full overflow-hidden border border-slate-800">
+          <div id="custProbBar" class="h-full bg-slate-700 transition-all duration-500" style="width: 0%"></div>
+        </div>
+
+        <div class="text-xs text-slate-300 pt-2 border-t border-slate-800">
+          <span class="text-slate-500 block text-[11px] mb-0.5">Khuyến nghị can thiệp kinh doanh:</span>
+          <div id="custActionText" class="text-slate-300 italic">Vui lòng bấm phân tích để nhận khuyến nghị.</div>
+        </div>
+
+        <div class="text-[11px] text-slate-500 text-right pt-1" id="custLatency">
+          Độ trễ: -- ms
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full max-w-5xl text-center text-xs text-slate-500 mt-8">
+    Assignment 06 • Intelligent Systems Development • Đại học Bưu Chính Viễn Thông (PTIT) • Học viên: Phạm Văn Tư
+  </footer>
+
+  <!-- JAVASCRIPT ĐIỀU KHIỂN & VẼ BIỂU ĐỒ -->
+  <script>
+    let stockChart = null;
+    let custChart = null;
+    let currentPreset = 'churn';
+
+    function switchTab(tab) {
+      const btnStock = document.getElementById('tabBtnStock');
+      const btnCust = document.getElementById('tabBtnCust');
+      const contentStock = document.getElementById('tabContentStock');
+      const contentCust = document.getElementById('tabContentCust');
+
+      if (tab === 'stock') {
+        btnStock.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 transition";
+        btnCust.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-slate-800 text-slate-400 hover:text-slate-200 transition";
+        contentStock.classList.remove('hidden');
+        contentCust.classList.add('hidden');
+      } else {
+        btnCust.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-emerald-600 text-white shadow-lg shadow-emerald-600/30 transition";
+        btnStock.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-slate-800 text-slate-400 hover:text-slate-200 transition";
+        contentCust.classList.remove('hidden');
+        contentStock.classList.add('hidden');
+        if (!custChart) {
+          runCustPrediction();
+        }
+      }
+    }
+
+    // Load Stock History on startup
+    async function loadStockHistory() {
+      try {
+        const res = await fetch('/api/stock/history');
+        const data = await res.json();
+        
+        const ctx = document.getElementById('stockChart').getContext('2d');
+        stockChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: data.dates.map(d => d.slice(5)),
+            datasets: [
+              {
+                label: 'Giá Đóng Cửa (Close USD)',
+                data: data.close,
+                borderColor: '#38bdf8',
+                backgroundColor: 'rgba(56, 189, 248, 0.1)',
+                borderWidth: 2,
+                pointRadius: 0,
+                fill: true
+              },
+              {
+                label: 'Đường MA-20',
+                data: data.ma20,
+                borderColor: '#f59e0b',
+                borderWidth: 1.5,
+                borderDash: [4, 4],
+                pointRadius: 0
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', maxTicksLimit: 8 } },
+              y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } }
+            },
+            plugins: {
+              legend: { labels: { color: '#cbd5e1', font: { size: 11 } } }
+            }
+          }
+        });
+
+        // Run initial stock prediction
+        runStockPrediction();
+      } catch (err) {
+        console.error("Lỗi nạp dữ liệu chứng khoán:", err);
+      }
+    }
+
+    async function runStockPrediction() {
+      const model = document.getElementById('stockModelSelect').value;
+      try {
+        const res = await fetch('/api/stock/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ model: model })
+        });
+        const d = await res.json();
+        if (d.success) {
+          document.getElementById('stockPredPrice').innerText = `$${d.predicted_price}`;
+          document.getElementById('stockDiffBadge').innerText = `Biến động: ${d.difference > 0 ? '+' : ''}${d.difference} USD (${d.percent_change}%)`;
+          document.getElementById('stockLastActual').innerText = `$${d.last_actual_price}`;
+          document.getElementById('stockLatency').innerText = `Độ trễ: ${d.latency_ms} ms`;
+
+          const dirBadge = document.getElementById('stockDirBadge');
+          dirBadge.innerText = d.direction;
+          if (d.direction === 'TĂNG') {
+            dirBadge.className = 'text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+          } else {
+            dirBadge.className = 'text-xs font-bold px-2.5 py-1 rounded-md bg-rose-500/20 text-rose-400 border border-rose-500/30';
+          }
+        }
+      } catch (err) {
+        console.error("Lỗi dự báo chứng khoán:", err);
+      }
+    }
+
+    function setCustPreset(preset) {
+      currentPreset = preset;
+      runCustPrediction();
+    }
+
+    async function runCustPrediction() {
+      const model = document.getElementById('custModelSelect').value;
+      try {
+        const res = await fetch('/api/customer/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ model: model, preset: currentPreset })
+        });
+        const d = await res.json();
+        if (d.success) {
+          document.getElementById('custChurnProb').innerText = `${d.churn_probability}%`;
+          document.getElementById('custActionText').innerText = d.recommendation;
+          document.getElementById('custLatency').innerText = `Độ trễ: ${d.latency_ms} ms`;
+
+          const bar = document.getElementById('custProbBar');
+          bar.style.width = `${d.churn_probability}%`;
+          bar.style.backgroundColor = d.risk_color;
+
+          const badge = document.getElementById('custRiskBadge');
+          badge.innerText = `Mức: ${d.risk_level}`;
+          badge.style.color = d.risk_color;
+          badge.style.borderColor = d.risk_color;
+
+          // Cập nhật biểu đồ chuỗi khách hàng
+          const ctx = document.getElementById('custChart').getContext('2d');
+          if (custChart) custChart.destroy();
+          custChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: d.months.map(m => `Tháng ${m}`),
+              datasets: [
+                {
+                  label: 'Số Phiên Truy Cập (Sessions)',
+                  data: d.sessions,
+                  borderColor: '#10b981',
+                  backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                  yAxisID: 'y',
+                  tension: 0.2
+                },
+                {
+                  label: 'Chi Tiêu ($)',
+                  data: d.spent,
+                  borderColor: '#38bdf8',
+                  yAxisID: 'y1',
+                  borderDash: [3, 3],
+                  tension: 0.2
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              scales: {
+                x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+                y: { type: 'linear', position: 'left', grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#10b981' } },
+                y1: { type: 'linear', position: 'right', grid: { drawOnChartArea: false }, ticks: { color: '#38bdf8' } }
+              },
+              plugins: { legend: { labels: { color: '#cbd5e1', font: { size: 11 } } } }
+            }
+          });
+        }
+      } catch (err) {
+        console.error("Lỗi phân tích rủi ro khách hàng:", err);
+      }
+    }
+
+    // Khởi tạo
+    loadStockHistory();
+  </script>
+</body>
+</html>

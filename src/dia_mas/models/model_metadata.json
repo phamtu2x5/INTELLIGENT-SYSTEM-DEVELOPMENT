@@ -1,0 +1,27 @@
+{
+  "best_model": "LightGBM Gradient Boosting",
+  "input_features": [
+    "age",
+    "hypertension",
+    "heart_disease",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level",
+    "gender_Male",
+    "gender_Other",
+    "smoking_history_current",
+    "smoking_history_ever",
+    "smoking_history_former",
+    "smoking_history_never",
+    "smoking_history_not current"
+  ],
+  "num_features": 13,
+  "metrics_test": {
+    "f1_score": 0.6307609860664523,
+    "roc_auc": 0.9797424492431308,
+    "recall": 0.925314465408805,
+    "precision": 0.47845528455284553,
+    "accuracy": 0.9044515323810844
+  },
+  "threshold": 0.5
+}

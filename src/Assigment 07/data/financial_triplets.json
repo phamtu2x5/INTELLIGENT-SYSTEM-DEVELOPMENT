@@ -1,0 +1,59 @@
+[
+  {
+    "subject": "Ngan_Hang_Nha_Nuoc",
+    "predicate": "DIEU_HANH_CHINH_SACH",
+    "object": "Lai_Suat_Tai_Cap_Von_4_5",
+    "status": "On dinh ho tro tang truong"
+  },
+  {
+    "subject": "Ngan_Hang_Nha_Nuoc",
+    "predicate": "CAN_THIEP_THI_TRUONG",
+    "object": "Ty_Gia_USD_VND",
+    "mechanism": "Ban ngoai te can thiep & tin phieu SBV"
+  },
+  {
+    "subject": "Chinh_Phu_NHNN",
+    "predicate": "BAN_HANH_QUAN_LY",
+    "object": "Nghi_Dinh_24_2012_ND_CP",
+    "scope": "Doc quyen san xuat vang mieng SJC"
+  },
+  {
+    "subject": "Nghi_Dinh_24_2012_ND_CP",
+    "predicate": "TAC_DONG_NGUON_CUNG",
+    "object": "Vang_Mieng_SJC",
+    "effect": "Khan hiem cung, chenh lech gia the gioi 16-18 trieu"
+  },
+  {
+    "subject": "Ty_Gia_USD_VND_Tang",
+    "predicate": "HUONG_LOI_TY_GIA_DUONG",
+    "object": "Co_Phieu_FPT",
+    "mechanism": "Xuat khau phan mem thu ngoai te USD/JPY chiem 50% doanh thu"
+  },
+  {
+    "subject": "Ty_Gia_USD_VND_Tang",
+    "predicate": "AP_LUC_CHI_PHI_VON_AM",
+    "object": "Co_Phieu_HPG",
+    "mechanism": "Nhap khau 100% quang sat va than mo tinh bang USD"
+  },
+  {
+    "subject": "Co_Phieu_FPT",
+    "predicate": "DU_BAO_BiLSTM",
+    "object": "Muc_Tieu_138_142K",
+    "expected_return": "+1.8%",
+    "confidence": 0.842
+  },
+  {
+    "subject": "Co_Phieu_HPG",
+    "predicate": "DU_BAO_BiLSTM",
+    "object": "Vung_Ho_Tro_27_5_28_2K",
+    "expected_return": "0.0%",
+    "recommendation": "Quan sat"
+  },
+  {
+    "subject": "Vang_Mieng_SJC",
+    "predicate": "DU_BAO_BiLSTM",
+    "object": "Bien_Do_89_8_91_5_Trieu",
+    "volatility": "HIGH",
+    "recommendation": "Tranh fomo du dinh"
+  }
+]

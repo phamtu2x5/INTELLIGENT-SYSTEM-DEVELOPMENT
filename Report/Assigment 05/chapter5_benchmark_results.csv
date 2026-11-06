@@ -1,0 +1,10 @@
+Dataset,Model,Input_Dim,Accuracy,Precision,Recall,F1_Score,Params_M,FLOPs_M,Latency_ms,FPS
+Diabetes Prediction (100k),1D-CNN,"(1, 8)",95.52%,85.63%,87.16%,86.37%,0.036 M,0.16 M,0.42 ms,"152,000 FPS"
+SVHN (99k),Baseline CNN,3x32x32,49.50%,46.86%,40.22%,38.67%,0.09 M,10.6 M,1.17 ms,"54,475 FPS"
+SVHN (99k),VGG-11,3x32x32,87.62%,87.21%,85.96%,86.40%,9.36 M,153.5 M,9.44 ms,"6,780 FPS"
+SVHN (99k),ResNet-18,3x32x32,88.10%,87.23%,87.01%,87.06%,11.18 M,37.2 M,14.09 ms,"4,541 FPS"
+SVHN (99k),MobileNetV2,3x32x32,31.47%,23.66%,21.80%,18.17%,2.24 M,6.7 M,12.59 ms,"5,085 FPS"
+EuroSAT (27k),Baseline CNN,3x64x64,81.23%,80.43%,81.17%,80.49%,0.09 M,42.2 M,1.19 ms,"53,747 FPS"
+EuroSAT (27k),VGG-11,3x64x64,85.87%,85.90%,85.82%,85.63%,9.36 M,613.6 M,53.24 ms,"1,202 FPS"
+EuroSAT (27k),ResNet-18,3x64x64,87.13%,86.98%,86.91%,86.86%,11.18 M,148.9 M,32.26 ms,"1,984 FPS"
+EuroSAT (27k),MobileNetV2,3x64x64,78.30%,77.48%,78.26%,77.67%,2.24 M,26.6 M,33.66 ms,"1,902 FPS"

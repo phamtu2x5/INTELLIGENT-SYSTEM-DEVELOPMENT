@@ -1,0 +1,30 @@
+[
+  {
+    "id": "RAG-MED-01",
+    "domain": "Y Tế",
+    "source": "Quyết định 5481/QĐ-BYT Bộ Y Tế",
+    "title": "Hướng dẫn chẩn đoán và điều trị đái tháo đường típ 2",
+    "content": "Metformin (thuộc nhóm Biguanide) là lựa chọn đầu tay trong điều trị đái tháo đường típ 2, bắt đầu với liều 500mg hoặc 850mg cùng bữa ăn để giảm tác dụng phụ trên đường tiêu hóa. Chống chỉ định tuyệt đối Metformin đối với bệnh nhân suy thận nặng (eGFR < 30 mL/phút/1.73 m2) và người lạm dụng rượu bia cấp hoặc mạn tính do nguy cơ nhiễm toan acid lactic có tỷ lệ tử vong lên tới 50%."
+  },
+  {
+    "id": "RAG-MED-02",
+    "domain": "Y Tế",
+    "source": "Viện Dinh Dưỡng Quốc Gia Việt Nam",
+    "title": "Chỉ số đường huyết (GI) và chế độ ăn người tiểu đường",
+    "content": "Bệnh nhân đái tháo đường cần được tư vấn kiểm soát khẩu phần carbohydrate, ưu tiên thực phẩm có chỉ số đường huyết thấp (GI < 55) như rau xanh, các loại đậu, ngũ cốc nguyên cám. Về nguồn đạm, ức gà nạc bỏ da luộc hoặc hấp là nguồn protein sinh học cao với GI = 0, không làm tăng đường huyết. Cần kiêng tuyệt đối da gà và các món gà rán tẩm bột chiên ngập dầu do lượng chất béo bão hòa và trans-fat cao gây nặng thêm tình trạng kháng insulin."
+  },
+  {
+    "id": "RAG-FIN-01",
+    "domain": "Tài Chính",
+    "source": "Báo cáo phân tích vĩ mô CTCK SSI & Ngân Hàng Nhà Nước",
+    "title": "Tác động của diễn biến tỷ giá USD/VND lên doanh nghiệp niêm yết",
+    "content": "Khi tỷ giá USD/VND chịu áp lực tăng giá, các doanh nghiệp có tỷ trọng doanh thu xuất khẩu bằng đồng USD chiếm đa số như Tập đoàn FPT (xuất khẩu phần mềm sang Mỹ, Nhật Bản, châu Âu) sẽ được hưởng lợi chênh lệch tỷ giá dương, góp phần cải thiện biên lợi nhuận gộp. Ngược lại, các doanh nghiệp sản xuất thâm dụng nguyên liệu nhập khẩu như Hòa Phát (HPG) phải chịu chi phí vốn tăng cao do nguyên liệu quặng sắt và than mỡ luyện cốc được niêm yết bằng USD."
+  },
+  {
+    "id": "RAG-FIN-02",
+    "domain": "Tài Chính",
+    "source": "Ngân Hàng Nhà Nước Việt Nam",
+    "title": "Chính sách quản lý thị trường vàng và Nghị định 24/2012/NĐ-CP",
+    "content": "Nghị định 24/2012/NĐ-CP quy định Nhà nước độc quyền sản xuất vàng miếng và quản lý chặt chẽ hoạt động xuất nhập khẩu vàng nguyên liệu. Điều này dẫn đến sự chênh lệch lớn giữa giá vàng miếng SJC trong nước và giá vàng thế giới quy đổi, có thời điểm lên đến 16 - 18 triệu đồng/lượng. Nhà đầu tư cá nhân cần hết sức thận trọng khi giao dịch vàng SJC ở vùng đỉnh lịch sử để tránh rủi ro điều chỉnh mạnh khi chính sách được nới lỏng."
+  }
+]
